@@ -5,15 +5,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
-const OUT = path.join(__dirname, 'prj/inema/outputs/saude-tecnologia_2026-04-22/imgs');
+const OUT = path.join(__dirname, 'prj/ARCKHÉ/outputs/saude-tecnologia_2026-04-22/imgs');
 
 const BASE = 'Brazilian woman of Afro-Brazilian descent, medium brown skin, natural curly dark hair, warm expressive eyes, attentive compassionate expression';
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir clinical lighting, clean glassmorphism, teal and soft cyan accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (age, extra = '') => `${BASE}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -75,9 +75,9 @@ const scenes = [
   { file: 'cena14-ini.png', prompt: `Bright modern training room with a diverse group of young healthcare professionals gathered around a large digital display, notebooks open, ${S_MID}` },
   { file: 'cena14-fim.png', prompt: `${char(59, 'mentor, silver-gray curly hair elegantly natural, warm blazer over scrubs')} guiding a group of diverse young healthcare students, pointing at a digital screen, generous teaching smile, ${S_MID}` },
 
-  // 15 — Hero futuro + fundo para INEMA.CLUB
+  // 15 — Hero futuro + fundo para ARCKHÉ AI
   { file: 'cena15-ini.png', prompt: `Minimalist futuristic medical space with soft warm-cool gradient light, floating translucent UI panels showing anonymized health data, sense of calm and possibility, ${S_FUT}` },
-  { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 62 years old, silver-gray curly natural hair, elegant simple blouse with a stethoscope around her neck, quietly confident proud smile, looking slightly upward, deep blue futuristic background with faint medical UI out of focus, soft rim light, editorial quality, ${S_FUT}` },
+  { file: 'cena15-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of the same ${BASE}, about 62 years old, silver-gray curly natural hair, elegant simple blouse with a stethoscope around her neck, quietly confident proud smile, looking slightly upward, deep blue futuristic background with faint medical UI out of focus, soft rim light, editorial quality, ${S_FUT}` },
 ];
 
 (async () => {

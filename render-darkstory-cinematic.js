@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 /**
- * Render DarkStory Cinematic — multi-shot edit com hard-cuts dentro do beat.
+ * Render DarkStory CARCKHÉtic — multi-shot edit com hard-cuts dentro do beat.
  *
  * Pipeline:
  *   1. Lê beat_plan.json
  *   2. Gera narraçêo POR BEAT via Chatterbox TTS
  *   3. Concat narrações + gaps → narration.mp3
  *   4. Cada SHOT vira um seg.mp4 com motion conforme tipo de plano
- *   5. HARD CUTS entre shots dentro do mesmo beat (cinema)
+ *   5. HARD CUTS entre shots dentro do mesmo beat (cARCKHÉ)
  *   6. Crossfade só ENTRE beats; fade-to-black antes do darkest; flash branco no mid
  *   7. Captions ASS por beat
  *
- * Uso: node render-darkstory-cinematic.js <slug>_<date>
+ * Uso: node render-darkstory-cARCKHÉtic.js <slug>_<date>
  */
 
 const fs = require('fs');
@@ -19,7 +19,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const slug = process.argv[2];
-if (!slug) { console.error('Uso: node render-darkstory-cinematic.js <slug>_<date>'); process.exit(1); }
+if (!slug) { console.error('Uso: node render-darkstory-cARCKHÉtic.js <slug>_<date>'); process.exit(1); }
 
 const DIR = path.join(__dirname, `output/videos/darkstory/${slug}`);
 const meta = JSON.parse(fs.readFileSync(path.join(DIR, 'meta.json'), 'utf-8'));
@@ -204,7 +204,7 @@ function renderShots(shotList) {
 }
 
 // ── Concat: hard-cuts entre shots do MESMO beat; xfade ENTRE beats ─────────
-function concatCinematic(segs) {
+function concatCARCKHÉtic(segs) {
   // Group by beat
   const byBeat = new Map();
   for (const s of segs) {
@@ -314,7 +314,7 @@ ${events.join('\n')}
   const segs = renderShots(shotList);
   if (segs.length === 0) { console.error('Nenhum segmento renderizado.'); process.exit(1); }
 
-  const concat = concatCinematic(segs);
+  const concat = concatCARCKHÉtic(segs);
   console.log(`[concat] vídeo total: ${concat.duration.toFixed(1)}s`);
 
   // Captions + áudio final

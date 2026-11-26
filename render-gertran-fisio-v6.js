@@ -48,7 +48,7 @@ const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
   t0: c.t0 + NARR_OFFSET,
   t1: c.t1 + NARR_OFFSET,
-  text: c.text.replace(/inema\.?(cube|clube)/gi, 'INEMA.CLUB').replace(/ponto/gi, '.'),
+  text: c.text.replace(/ARCKHÉ\.?(cube|clube)/gi, 'ARCKHÉ AI').replace(/ponto/gi, '.'),
 }));
 
 const ascii = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -130,18 +130,18 @@ function buildRender(captionY, outFile) {
   }));
 
   const watermark = drawtext({
-    text: 'INEMA.CLUB', t0: 0, t1: T5, y: 48, size: 64,
+    text: 'ARCKHÉ AI', t0: 0, t1: T5, y: 48, size: 64,
     color: 'white@0.95', bord: 6, bordColor: 'black@0.7', x: '48',
   });
   const handle = drawtext({
-    text: '@inema.club', t0: 0.5, t1: T5, y: 1850, size: 40,
+    text: '@ARCKHÉ AI', t0: 0.5, t1: T5, y: 1850, size: 40,
     color: 'white@0.85', font: FONT_CAPS, bord: 3, bordColor: 'black@0.6',
   });
   const cta = [
     drawtext({ text: 'GERACAO DE',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 420,  size: 72,  bord: 5 }),
     drawtext({ text: 'TRANSFORMACAO',          t0: T5 + 0.2, t1: TOTAL_DUR, y: 520,  size: 72,  color: '#FFEB3B', bord: 5 }),
     drawtext({ text: 'CONTINUE APRENDENDO EM', t0: T5 + 0.2, t1: TOTAL_DUR, y: 780,  size: 50,  bord: 3 }),
-    drawtext({ text: 'INEMA.CLUB',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
+    drawtext({ text: 'ARCKHÉ AI',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
     drawtext({ text: 'LINK NA BIO',            t0: T5 + 0.2, t1: TOTAL_DUR, y: 1200, size: 64,  bord: 4 }),
   ];
 

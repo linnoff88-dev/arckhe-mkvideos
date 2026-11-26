@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Render DarkStory Cinematic V2 — pacote completo:
+ * Render DarkStory CARCKHÉtic V2 — pacote completo:
  *   A) Música atmosférica de fundo + SFX por shot type
  *   B) Camera-moves vocabulary (lib/camera-moves)
  *   C) Aronofsky hip-hop montage no DARKEST (8 inserts × 8 frames)
@@ -8,7 +8,7 @@
  *   E) Speed ramp + freeze frame no peak do darkest
  *   F) Black frames + audio ducking antes do darkest e CTA
  *
- * Uso: node render-darkstory-cinematic-v2.js <slug>_<date>
+ * Uso: node render-darkstory-cARCKHÉtic-v2.js <slug>_<date>
  *
  * Requer prévio:
  *   - imgs/ com cenas + 8 montage{01..08}_*.jpg
@@ -23,7 +23,7 @@ const { spawnSync } = require('child_process');
 const { buildVF, buildMove } = require('./lib/camera-moves');
 
 const slug = process.argv[2];
-if (!slug) { console.error('Uso: node render-darkstory-cinematic-v2.js <slug>_<date>'); process.exit(1); }
+if (!slug) { console.error('Uso: node render-darkstory-cARCKHÉtic-v2.js <slug>_<date>'); process.exit(1); }
 
 const ROOT = __dirname;
 const DIR = path.join(ROOT, `output/videos/darkstory/${slug}`);
@@ -242,11 +242,11 @@ function renderBlack(dur) {
   const blackBeforeCta = renderBlack(0.8);
   console.log('cards e blacks gerados');
 
-  // 4) Monta a sequência cinematográfica:
+  // 4) Monta a sequência cARCKHÉtográfica:
   //    [shots beat 1 (HOOK)] → cardSetup → [shots beats 2-5] → cardRitual → [shots beat 6 (MID)] →
   //    blackBeforeDarkest → [shots beat 7 (DARKEST) AntiBefore montage no meio] → blackBeforeCta →
   //    cardIgreja → [shots beats 8-10] → [shot beat 11 CTA]
-  console.log(`\n=== Compor ediçêo cinematográfica ===`);
+  console.log(`\n=== Compor ediçêo cARCKHÉtográfica ===`);
   const sequence = [];
   // Funçêo de agrupamento por beat
   const byBeat = new Map();

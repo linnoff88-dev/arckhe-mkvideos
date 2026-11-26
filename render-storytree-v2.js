@@ -27,7 +27,7 @@ const { validateShotPlan, printReport } = require('./lib/storytree-qa');
 const { buildPlanFromImages } = require('./lib/storytree-shot-schema');
 
 const ROOT = '/home/nmaldaner/projetos/mkvideos';
-const SRC = path.join(ROOT, 'output/videos/darkstory/papai-noel-cinematic-v2_2026-05-06/imgs');
+const SRC = path.join(ROOT, 'output/videos/darkstory/papai-noel-cARCKHÉtic-v2_2026-05-06/imgs');
 const OUT = path.join(ROOT, 'output/videos/darkstory/storytree-v2_2026-05-06');
 const VIDEO = path.join(OUT, 'video');
 const TMP = path.join(OUT, 'tmp');

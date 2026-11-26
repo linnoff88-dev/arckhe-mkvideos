@@ -6,15 +6,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
-const OUT = path.join(__dirname, 'prj/inema/outputs/mulheres-tecnologia_2026-04-22/imgs');
+const OUT = path.join(__dirname, 'prj/ARCKHÉ/outputs/mulheres-tecnologia_2026-04-22/imgs');
 
 const BASE = 'Brazilian woman of Mediterranean descent, warm olive skin, long wavy dark hair, expressive brown eyes, determined thoughtful expression';
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir lighting, glassmorphism, teal accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (age, extra = '') => `${BASE}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -78,7 +78,7 @@ const scenes = [
 
   // 15 — futuro: inspirando a próxima geraçêo + hero final
   { file: 'cena15-ini.png', prompt: `Minimalist futuristic space with soft gradient light from warm to cool, floating translucent UI panels, sense of openness and possibility, no people, ${S_FUT}` },
-  { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 55 years old, full silver-gray wavy hair elegantly loose, subtle makeup, black blazer, quietly confident smile, looking slightly upward, soft rim light on hair, deep blue futuristic background with faint holographic UI out of focus, editorial quality, ${S_FUT}` },
+  { file: 'cena15-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of the same ${BASE}, about 55 years old, full silver-gray wavy hair elegantly loose, subtle makeup, black blazer, quietly confident smile, looking slightly upward, soft rim light on hair, deep blue futuristic background with faint holographic UI out of focus, editorial quality, ${S_FUT}` },
 ];
 
 (async () => {

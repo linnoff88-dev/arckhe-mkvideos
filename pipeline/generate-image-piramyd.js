@@ -27,7 +27,7 @@ function buildImagePrompt(brief, brand, format, index, total, sceneType, sceneDe
     cta: 'optimistic, inviting, forward momentum',
   };
   const mood = moodMap[sceneType] || moodMap.solution;
-  const visualScene = sceneDescription || 'professional cinematic scene';
+  const visualScene = sceneDescription || 'professional cARCKHÉtic scene';
   const colorHint = brand?.colors?.length ? `Colors: ${brand.colors.slice(0, 2).join(', ')}.` : '';
 
   const parts = [
@@ -35,7 +35,7 @@ function buildImagePrompt(brief, brand, format, index, total, sceneType, sceneDe
     mood + '.',
     orientation + '.',
     colorHint,
-    'Cinematic lighting, photorealistic.',
+    'CARCKHÉtic lighting, photorealistic.',
     'No text, no watermark, no logos.',
     'Brazilian professionals, diverse, modern environment.',
   ];

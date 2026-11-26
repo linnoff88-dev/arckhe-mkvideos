@@ -4,7 +4,7 @@
  * Mudanças vs versões anteriores:
  *   - Legendas sincronizadas automaticamente via Whisper (word-level)
  *   - Legendas posicionadas dentro da imagem (y=940, bottom do 1080x1080)
- *   - Tudo mais preservado (zoom 0.0022, 30 imgs x 1s, música, INEMA.CLUB final)
+ *   - Tudo mais preservado (zoom 0.0022, 30 imgs x 1s, música, ARCKHÉ AI final)
  *
  * Uso: node render-criaprof.js <profession>
  *   profession: mulheres-tecnologia | saude-tecnologia | crianca-medica |
@@ -76,7 +76,7 @@ const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
   t0: c.t0 + NARR_OFFSET,
   t1: c.t1 + NARR_OFFSET,
-  text: c.text.replace(/inema\.?(cube|clube)/gi, 'INEMA.CLUB').replace(/ponto/gi, '.'),
+  text: c.text.replace(/ARCKHÉ\.?(cube|clube)/gi, 'ARCKHÉ AI').replace(/ponto/gi, '.'),
 }));
 console.log(`[${profession}] ${capChunks.length} captions via whisper (offset +${NARR_OFFSET}s)`);
 
@@ -134,14 +134,14 @@ const captions = capChunks.map((b) => drawtext({
   color: '#FFEB3B', font: FONT_CAPS, bord: 7, bordColor: 'black@0.92',
 }));
 
-// Mantém o INEMA.CLUB textêo do original (últimos 3s)
+// Mantém o ARCKHÉ AI textêo do original (últimos 3s)
 const outro = drawtext({
-  text: 'INEMA.CLUB',
+  text: 'ARCKHÉ AI',
   t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: '(h-th)/2', size: 140,
   color: 'white', font: FONT_CAPS, bord: 4, bordColor: 'black@0.5',
 });
 
-// enable customizado pra fade in/out do INEMA.CLUB final (se quiser)
+// enable customizado pra fade in/out do ARCKHÉ AI final (se quiser)
 // por simplicidade deixo estático entre 27-30
 
 const allOverlays = [...captions, outro].join(',');

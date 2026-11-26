@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Gen DarkStory Cinematic — versêo multi-shot por beat com continuidade textual.
+ * Gen DarkStory CARCKHÉtic — versêo multi-shot por beat com continuidade textual.
  *
  * Diferencial vs gen-darkstory.js:
  *   - Cada beat narrativo tem 1-5 shots (wide/medium/close/insert/OTS/POV)
@@ -8,18 +8,18 @@
  *   - Pacing variável: hook 4s, darkest 10s, etc (nêo uniforme)
  *
  * Saída:
- *   output/videos/darkstory/<slug>-cinematic_<date>/
+ *   output/videos/darkstory/<slug>-cARCKHÉtic_<date>/
  *     imgs/beat01_shot01_wide.jpg ... beat11_shot01_wide.jpg (~30 imgs)
  *     beat_plan.json
  *     meta.json
  *
- * Uso: node gen-darkstory-cinematic.js --titulo "<assunto>" [--duracao 60] [--formato 9:16]
+ * Uso: node gen-darkstory-cARCKHÉtic.js --titulo "<assunto>" [--duracao 60] [--formato 9:16]
  */
 
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const DEFAULTS = { duracao: 60, voz: 'rachel', captions: true, formato: '9:16' };
 
@@ -45,12 +45,12 @@ function slugify(s) {
 
 const args = parseArgs(process.argv);
 if (!args.titulo) {
-  console.error('Uso: node gen-darkstory-cinematic.js --titulo "<assunto>" [--duracao 60] [--formato 9:16]');
+  console.error('Uso: node gen-darkstory-cARCKHÉtic.js --titulo "<assunto>" [--duracao 60] [--formato 9:16]');
   process.exit(1);
 }
 
 const baseSlug = slugify(args.titulo);
-const slug = `${baseSlug}-cinematic`;
+const slug = `${baseSlug}-cARCKHÉtic`;
 const DATE = new Date().toISOString().slice(0, 10);
 const OUT = path.join(__dirname, `output/videos/darkstory/${slug}_${DATE}`);
 const IMGS_DIR = path.join(OUT, 'imgs');
@@ -67,13 +67,13 @@ function generateBeatPlan() {
     return JSON.parse(fs.readFileSync(planPath, 'utf-8'));
   }
 
-  const prompt = `Você é diretor/roteirista de canal "dark" do YouTube com background em cinema.
-Gere um BEAT PLAN cinematográfico em JSON puro (sem markdown) para o tema:
+  const prompt = `Você é diretor/roteirista de canal "dark" do YouTube com background em cARCKHÉ.
+Gere um BEAT PLAN cARCKHÉtográfico em JSON puro (sem markdown) para o tema:
 
 TEMA: "${args.titulo}"
 DURAÇêO ALVO: ${args.duracao}s · FORMATO: ${RATIO} · IDIOMA: PT-BR
 
-DIFERENCIAL: cada beat narrativo tem MÚLTIPLOS PLANOS (cinema, nêo slideshow). Use:
+DIFERENCIAL: cada beat narrativo tem MÚLTIPLOS PLANOS (cARCKHÉ, nêo slideshow). Use:
 - "wide" — plano aberto, estabelecedor (4-6s)
 - "medium" — meio corpo, açêo (2-3s)
 - "close" — close no rosto/objeto, emoçêo (1.5-2.5s)
@@ -107,7 +107,7 @@ OUTPUT — array de beats em JSON. Cada beat:
       "n": 1..5,
       "type": "wide|medium|close|insert|ots|pov",
       "duration_s": 1..6,
-      "visual_prompt": "prompt EM INGLÊS para flux2-klein. SEMPRE inclua o subject_lock relevante quando aplicável. Estilo: cinematic dark, low-key lighting, deep shadows, atmospheric fog, muted palette with single warm highlight, no text/logos/captions. Aspect ${RATIO}.",
+      "visual_prompt": "prompt EM INGLÊS para flux2-klein. SEMPRE inclua o subject_lock relevante quando aplicável. Estilo: cARCKHÉtic dark, low-key lighting, deep shadows, atmospheric fog, muted palette with single warm highlight, no text/logos/captions. Aspect ${RATIO}.",
       "subject_lock": "krampus|floresta|crianca|igreja|nenhum (referência semântica pra continuidade)"
     }
   ]
@@ -185,5 +185,5 @@ async function generateImages(beats) {
 
   console.log(`\n[${slug}] ✅ ${r.ok}/${r.total} imgs em ${meta.elapsed_s}s`);
   console.log(`  → ${OUT}`);
-  console.log(`  Próximo: node render-darkstory-cinematic.js ${slug}_${DATE}`);
+  console.log(`  Próximo: node render-darkstory-cARCKHÉtic.js ${slug}_${DATE}`);
 })().catch((e) => { console.error('FATAL:', e.stack || e.message); process.exit(1); });

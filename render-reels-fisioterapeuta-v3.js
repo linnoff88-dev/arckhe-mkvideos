@@ -4,7 +4,7 @@
  * Estrutura:
  *   0–2s   : Padding (hero frame com zoom + hook bomba pra segurar scroll)
  *   2–27s  : Main (25s, 30 imagens ken-burns + narraçêo com CTA embutido)
- *   27–30s : Tela preta + INEMA.CLUB enorme + "APRENDA COM ELA"
+ *   27–30s : Tela preta + ARCKHÉ AI enorme + "APRENDA COM ELA"
  */
 
 const fs = require('fs');
@@ -144,7 +144,7 @@ const hookMain = [
 ];
 
 // Captions (sincronizadas à narraçêo que começa em ~2.3s, fim ~21.2s)
-// Narraçêo: "Desde criança, ela entendia o corpo pelas mêos. Massageava a avó, ajudava amigos, aprendeu anatomia. Formou-se fisioterapeuta, aliviou dor após dor. Hoje mistura mêos experientes, sensores e inteligência artificial para tratar o que outros desistiram. Aprenda com ela no INEMA ponto CLUB."
+// Narraçêo: "Desde criança, ela entendia o corpo pelas mêos. Massageava a avó, ajudava amigos, aprendeu anatomia. Formou-se fisioterapeuta, aliviou dor após dor. Hoje mistura mêos experientes, sensores e inteligência artificial para tratar o que outros desistiram. Aprenda com ela no ARCKHÉ ponto CLUB."
 const capBlocks = [
   { t0: 2.3,  t1: 4.2,  text: 'Desde crianca' },
   { t0: 4.2,  t1: 6.2,  text: 'ela entendia o corpo' },
@@ -157,30 +157,30 @@ const capBlocks = [
   { t0: 16.2, t1: 17.8, text: 'Mistura maos + sensores + IA' },
   { t0: 17.8, t1: 19.6, text: 'trata o que outros desistiram' },
   { t0: 19.6, t1: 22.2, text: 'APRENDA COM ELA' },
-  { t0: 22.2, t1: 27.0, text: 'NO INEMA.CLUB' },
+  { t0: 22.2, t1: 27.0, text: 'NO ARCKHÉ AI' },
 ];
 const captions = capBlocks.map((b) => drawtext({
   text: b.text, t0: b.t0, t1: b.t1, y: 1680, size: 56,
   color: '#FFEB3B', font: FONT_HOOK, bord: 7, bordColor: 'black@0.9',
 }));
 
-// Watermark INEMA.CLUB maior durante padding e main (nêo no black end porque CTA toma a tela)
+// Watermark ARCKHÉ AI maior durante padding e main (nêo no black end porque CTA toma a tela)
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: 27, y: 48, size: 64,
+  text: 'ARCKHÉ AI', t0: 0, t1: 27, y: 48, size: 64,
   color: 'white@0.92', font: FONT_HOOK, bord: 5, bordColor: 'black@0.7', x: '48',
 });
 
-// Handle @inema.club no rodapé só main
+// Handle @ARCKHÉ AI no rodapé só main
 const handle = drawtext({
-  text: '@inema.club', t0: 2.0, t1: 27.0, y: 1840, size: 40,
+  text: '@ARCKHÉ AI', t0: 2.0, t1: 27.0, y: 1840, size: 40,
   color: 'white@0.85', font: FONT_CAPS, bord: 3, bordColor: 'black@0.6',
 });
 
-// CTA final (27-30s) — tela preta + INEMA.CLUB gigante + subline
+// CTA final (27-30s) — tela preta + ARCKHÉ AI gigante + subline
 const cta = [
   drawtext({ text: 'APRENDA COM HISTORIAS', t0: 27.2, t1: 30, y: 600,  size: 68,  font: FONT_HOOK, bord: 4 }),
   drawtext({ text: 'COMO ESSA EM',          t0: 27.2, t1: 30, y: 700,  size: 68,  font: FONT_HOOK, bord: 4 }),
-  drawtext({ text: 'INEMA.CLUB',            t0: 27.2, t1: 30, y: 880,  size: 170, font: FONT_HOOK, color: '#FFEB3B', bord: 10 }),
+  drawtext({ text: 'ARCKHÉ AI',            t0: 27.2, t1: 30, y: 880,  size: 170, font: FONT_HOOK, color: '#FFEB3B', bord: 10 }),
   drawtext({ text: 'LINK NA BIO',           t0: 27.2, t1: 30, y: 1180, size: 70,  font: FONT_HOOK, bord: 4 }),
 ];
 

@@ -1,18 +1,18 @@
 /**
  * Gera imagens inicial + final para cada cena do roteiro "Antes do Futuro" (60s).
- * Usa inemaimg (flux2-klein, fast, 1:1). Sem texto embutido nas imagens.
+ * Usa ARCKHÉimg (flux2-klein, fast, 1:1). Sem texto embutido nas imagens.
  * Estilo: 35mm film (80s/90s) → neo-noir / glassmorphism (moderno/futurista).
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
-const OUT_DIR = path.join(__dirname, 'prj/inema/outputs/antes-do-futuro_2026-04-22/imgs');
+const OUT_DIR = path.join(__dirname, 'prj/ARCKHÉ/outputs/antes-do-futuro_2026-04-22/imgs');
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
 
-const BASE_STYLE_OLD = 'shot on 35mm film, cinematic grading, directional light, warm tungsten highlights, deep shadows, grain, slight vignette, no text, no captions, no typography, no logos';
-const BASE_STYLE_MODERN = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no typography, no logos';
+const BASE_STYLE_OLD = 'shot on 35mm film, cARCKHÉtic grading, directional light, warm tungsten highlights, deep shadows, grain, slight vignette, no text, no captions, no typography, no logos';
+const BASE_STYLE_MODERN = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no typography, no logos';
 const BASE_STYLE_FUTURE = 'neo-noir lighting, glassmorphism, teal and blue accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no typography, no logos';
 
 const scenes = [
@@ -23,7 +23,7 @@ const scenes = [
   },
   {
     file: 'cena01-fim.png',
-    prompt: `Dark void with emerging faint radial glow in the center, trace of TV static dissolving, subtle lens flare hinting at something about to appear, cinematic transition frame, ${BASE_STYLE_OLD}`,
+    prompt: `Dark void with emerging faint radial glow in the center, trace of TV static dissolving, subtle lens flare hinting at something about to appear, cARCKHÉtic transition frame, ${BASE_STYLE_OLD}`,
   },
 
   // Cena 2 — Jovem anos 80/90 no computador antigo
@@ -63,7 +63,7 @@ const scenes = [
   },
   {
     file: 'cena05-fim.png',
-    prompt: `Composite portrait mosaic feel: four diverse Brazilian faces side by side — young Black man smiling proudly, elderly woman with hopeful eyes, teenage girl with quiet confidence, middle-aged man looking forward — each lit with warm cinematic light, editorial poster style, ${BASE_STYLE_MODERN}`,
+    prompt: `Composite portrait mosaic feel: four diverse Brazilian faces side by side — young Black man smiling proudly, elderly woman with hopeful eyes, teenage girl with quiet confidence, middle-aged man looking forward — each lit with warm cARCKHÉtic light, editorial poster style, ${BASE_STYLE_MODERN}`,
   },
 
   // Cena 6 — Pessoas criando, trabalhando, evoluindo
@@ -83,7 +83,7 @@ const scenes = [
   },
   {
     file: 'cena07-fim.png',
-    prompt: `Futuristic urban scene at dusk, silhouette of a person walking through a corridor of glass panels displaying abstract AI visualizations, volumetric blue light, reflections on wet floor, cinematic wide shot, ${BASE_STYLE_FUTURE}`,
+    prompt: `Futuristic urban scene at dusk, silhouette of a person walking through a corridor of glass panels displaying abstract AI visualizations, volumetric blue light, reflections on wet floor, cARCKHÉtic wide shot, ${BASE_STYLE_FUTURE}`,
   },
 
   // Cena 8 — Tela limpa futurista / "Você vai assistir ou construir?"
@@ -93,7 +93,7 @@ const scenes = [
   },
   {
     file: 'cena08-fim.png',
-    prompt: `Powerful hero shot: silhouette of a single person standing at the edge of a luminous horizon, vast open futuristic landscape ahead, warm-cool gradient sky, atmospheric haze, cinematic wide shot conveying choice and determination, ${BASE_STYLE_FUTURE}`,
+    prompt: `Powerful hero shot: silhouette of a single person standing at the edge of a luminous horizon, vast open futuristic landscape ahead, warm-cool gradient sky, atmospheric haze, cARCKHÉtic wide shot conveying choice and determination, ${BASE_STYLE_FUTURE}`,
   },
 ];
 

@@ -24,8 +24,8 @@
  *   }
  */
 
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir clinical lighting, soft glassmorphism, teal accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (p, age, extra = '') => `${p.character}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -118,10 +118,10 @@ function criaProfScenes(p) {
             fim: `${char(p, 48, `senior professional, tanned skin, silver-streaked dark hair`)} mentoring a younger colleague, warm knowing smile, quiet authority, ${S_FUT}` },
     // 24 — hero portrait
     { n: 24, ini: `Bright modern ${c.workplace} space with equipment and tools in soft out-of-focus background, warm-cool gradient ambient light, no people, ${S_FUT}`,
-            fim: `Heroic cinematic close-up portrait of the same ${p.character}, about 50 years old, dark hair with elegant silver streaks in ${p.hair_style}, professional modern top, quietly confident warm smile looking slightly upward, soft rim light, blurred workplace background, editorial quality, ${S_FUT}` },
-    // 25 — wide cinematic final
-    { n: 25, ini: `Wide cinematic shot of ${c.workplace} bathed in golden-hour window light, equipment arranged, sense of legacy and future, no people, ${S_FUT}`,
-            fim: `Wide cinematic shot of the same ${p.character}, about 50 years old with silver-streaked dark hair, standing confidently in ${c.workplace}, golden hour light, professional modern attire, quiet authority in posture, editorial quality, ${S_FUT}` },
+            fim: `Heroic cARCKHÉtic close-up portrait of the same ${p.character}, about 50 years old, dark hair with elegant silver streaks in ${p.hair_style}, professional modern top, quietly confident warm smile looking slightly upward, soft rim light, blurred workplace background, editorial quality, ${S_FUT}` },
+    // 25 — wide cARCKHÉtic final
+    { n: 25, ini: `Wide cARCKHÉtic shot of ${c.workplace} bathed in golden-hour window light, equipment arranged, sense of legacy and future, no people, ${S_FUT}`,
+            fim: `Wide cARCKHÉtic shot of the same ${p.character}, about 50 years old with silver-streaked dark hair, standing confidently in ${c.workplace}, golden hour light, professional modern attire, quiet authority in posture, editorial quality, ${S_FUT}` },
   ];
 
   return scenes.flatMap((s) => [
@@ -150,7 +150,7 @@ function gertranNostalgiaScenes(p) {
     { era: 'MID', subject: `A laptop showing a ${c.remote_session || 'video call'} session, 2020-era improvised home workspace` },
     { era: 'FUT', subject: `Modern monitor showing ${c.data_dashboard || 'a professional dashboard'} with teal UI accents` },
     { era: 'FUT', subject: `Close-up of ${c.ai_daily_tool || 'an AI-assisted tool'} running on a tablet, professional hand swiping` },
-    { era: 'FUT', subject: `Cinematic wide shot of a modern ${c.workplace || 'workplace'} integrating classic expertise and AI technology` },
+    { era: 'FUT', subject: `CARCKHÉtic wide shot of a modern ${c.workplace || 'workplace'} integrating classic expertise and AI technology` },
   ];
   while (list.length < 20) list.push(generic[list.length % generic.length]);
   return list.slice(0, 20).map((s, i) => {
@@ -200,7 +200,7 @@ function pairedChangesScenes(p) {
   const extraAfters = [
     { era: 'FUT', subject: `Modern monitor showing ${c.ai_interface || c.data_dashboard || 'an AI dashboard'} with teal UI accents` },
     { era: 'FUT', subject: `Close-up of ${c.ai_daily_tool || 'an AI-assisted tool'} running on a tablet with precise glowing UI` },
-    { era: 'FUT', subject: `Cinematic wide shot of a modern ${c.workplace || 'workplace'} integrating classic expertise and AI` },
+    { era: 'FUT', subject: `CARCKHÉtic wide shot of a modern ${c.workplace || 'workplace'} integrating classic expertise and AI` },
     { era: 'FUT', subject: `Futuristic professional hand swiping ${c.ai_interface || 'an AI interface'} on a tablet, soft rim light` },
   ];
 
@@ -247,7 +247,7 @@ function artifactTimelineScenes(p) {
     { era: 'FUT', subject: `Futuristic ${c.workplace || 'workspace'} with soft teal ambient light and integrated displays` },
     { era: 'FUT', subject: `Close-up of a professional hand swiping ${c.data_dashboard || 'an AI dashboard'} on a tablet` },
     { era: 'FUT', subject: `Modern ${c.ai_interface || 'AI interface'} running analytical overlays on a high-res display` },
-    { era: 'FUT', subject: `Cinematic wide shot of a modern ${c.workplace || 'workspace'} integrating classic expertise and AI tools, no people` },
+    { era: 'FUT', subject: `CARCKHÉtic wide shot of a modern ${c.workplace || 'workspace'} integrating classic expertise and AI tools, no people` },
     { era: 'FUT', subject: `Close-up of ${c.ai_application || 'an AI prediction'} displayed on a sleek tablet screen` },
     { era: 'FUT', subject: `Futuristic detail of ${c.ai_daily_tool || 'AI tool'} with soft rim light and glowing indicators` },
   ];
@@ -329,7 +329,7 @@ function decadeTimelineScenes(p) {
     `Futuristic 2020s ${c.workplace || 'workspace'} with soft ambient teal light and integrated displays`,
     `Close-up of a professional hand swiping ${c.data_dashboard || 'an AI insight dashboard'} on a tablet`,
     `Modern AI-generated visualization of ${c.ai_application || 'professional outcomes'} on a high-res display`,
-    `Cinematic wide shot of a 2020s ${c.workplace || 'workspace'} integrating classic expertise and AI tools`,
+    `CARCKHÉtic wide shot of a 2020s ${c.workplace || 'workspace'} integrating classic expertise and AI tools`,
     `Close-up of ${c.ai_interface || 'AI interface'} displaying predictive analytics in a modern office`,
     `Futuristic detail of ${c.ai_daily_tool || 'AI tool'} in use on a tablet with soft rim light`,
     `2020s brazilian ${pro} hybrid workspace with laptop, tablet, and AI-assisted overlays`,

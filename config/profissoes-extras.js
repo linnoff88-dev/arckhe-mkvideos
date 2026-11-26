@@ -1,5 +1,5 @@
 /**
- * 30 profissões extras (fase 2) — INEMA.CLUB.
+ * 30 profissões extras (fase 2) — ARCKHÉ AI.
  * Mesmo formato que profissoes-30.js. Merged via ./profissoes-30.js loader.
  */
 
@@ -43,8 +43,8 @@ const profissoes = [
       ai_application: 'AI-assisted arrhythmia detection and risk scoring',
       ai_daily_tool: 'an AI-interpreted ECG overlay on a clinic tablet',
     },
-    narr_criaprof: 'Você foi a criança que ouvia o coraçêo da vó encostando no peito. Estudou cada batida, virou cardiologista, salvou milhares. Viu o eletro de papel virar digital, o exame virar remoto, o holter virar smartwatch. Agora a IA detecta arritmia antes do sintoma. Você continua sendo o que escuta com calma. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o eletro de papel virar digital, o holter virar smartwatch, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ouvia o coraçêo da vó encostando no peito. Estudou cada batida, virou cardiologista, salvou milhares. Viu o eletro de papel virar digital, o exame virar remoto, o holter virar smartwatch. Agora a IA detecta arritmia antes do sintoma. Você continua sendo o que escuta com calma. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o eletro de papel virar digital, o holter virar smartwatch, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE ESCUTOU', 'CORAÇÕES ANTES', 'DO ALGORITMO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s paper EKG strip with hand-written rhythm notes in blue ink' },
@@ -58,7 +58,7 @@ const profissoes = [
       { era: 'FUT', subject: 'Modern monitor displaying AI arrhythmia-detection overlay on a high-res ECG' },
       { era: 'FUT', subject: 'Cardiologist hand swiping an AI-interpreted ECG on a clinic tablet' },
       { era: 'FUT', subject: 'Close-up of a wearable heart patch with continuous AI analysis on a phone' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern cardiology clinic integrating classic expertise and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern cardiology clinic integrating classic expertise and AI' },
     ],
   },
 
@@ -98,8 +98,8 @@ const profissoes = [
       ai_application: 'AI-assisted pediatric milestone and disease screening',
       ai_daily_tool: 'an AI photo-based skin-rash classifier on a clinic tablet',
     },
-    narr_criaprof: 'Você foi a criança que cuidava dos menores no recreio. Estudou cada fase, virou pediatra, acompanhou milhares crescerem. Viu a caderneta de vacina virar app, a curva virar dashboard, a consulta virar videochamada. Agora a IA rastreia marcos do desenvolvimento. Você continua sendo a que tranquiliza a mêe. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a caderneta virar app, a curva virar dashboard, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que cuidava dos menores no recreio. Estudou cada fase, virou pediatra, acompanhou milhares crescerem. Viu a caderneta de vacina virar app, a curva virar dashboard, a consulta virar videochamada. Agora a IA rastreia marcos do desenvolvimento. Você continua sendo a que tranquiliza a mêe. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a caderneta virar app, a curva virar dashboard, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE ACOMPANHOU', 'MILHARES A', 'CRESCEREM.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian pediatric vaccination card with hand-stamped entries' },
@@ -110,7 +110,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a pediatric teleconsultation with a child visible on screen' },
       { era: 'FUT', subject: 'Modern tablet showing AI developmental-screening checklist with progress visualizations' },
       { era: 'FUT', subject: 'Pediatrician using an AI skin-rash classifier on a phone held over a child\'s arm' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern bright pediatric clinic integrating care and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern bright pediatric clinic integrating care and AI tools' },
     ],
   },
 
@@ -150,8 +150,8 @@ const profissoes = [
       ai_application: 'AI-assisted ultrasound and risk screening',
       ai_daily_tool: 'an AI prenatal ultrasound-assistant on a clinic tablet',
     },
-    narr_criaprof: 'Você foi a criança que já acolhia as primas mais novas. Estudou o corpo feminino inteiro, virou ginecologista. Viu o ultrassom virar 3D, a ficha virar digital, a consulta virar remota. Agora a IA ajuda a ler imagens em segundos. Você continua sendo a que escuta sem julgar. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o ultrassom virar 3D, o prontuário virar digital, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que já acolhia as primas mais novas. Estudou o corpo feminino inteiro, virou ginecologista. Viu o ultrassom virar 3D, a ficha virar digital, a consulta virar remota. Agora a IA ajuda a ler imagens em segundos. Você continua sendo a que escuta sem julgar. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o ultrassom virar 3D, o prontuário virar digital, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE ACOLHEU', 'QUEM NINGUEM', 'ACOLHIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s hand-written gynecology patient card with carbon copy' },
@@ -161,7 +161,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote gynecology teleconsultation with patient visible' },
       { era: 'FUT', subject: 'Modern monitor displaying AI ultrasound analysis overlaid on a fetal 3D scan' },
       { era: 'FUT', subject: 'Gynecologist reviewing an AI prenatal-assistant dashboard on a tablet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern women\'s-health clinic integrating care and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern women\'s-health clinic integrating care and AI tools' },
     ],
   },
 
@@ -201,8 +201,8 @@ const profissoes = [
       ai_application: 'AI-assisted veterinary diagnostic imaging',
       ai_daily_tool: 'an AI skin-condition classifier on a smartphone for pets',
     },
-    narr_criaprof: 'Você foi a criança que salvou o cachorro de rua. Estudou cada espécie, virou veterinário, cuidou de milhares. Viu a ficha virar app, o raio-X virar digital, o atendimento virar remoto. Agora a IA lê exame em segundos. Você continua sendo o que acalma o animal com as mêos. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a ficha virar app, o raio-X virar AI, o tutor virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que salvou o cachorro de rua. Estudou cada espécie, virou veterinário, cuidou de milhares. Viu a ficha virar app, o raio-X virar digital, o atendimento virar remoto. Agora a IA lê exame em segundos. Você continua sendo o que acalma o animal com as mêos. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a ficha virar app, o raio-X virar AI, o tutor virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE CUIDOU', 'DE QUEM NAO', 'SABIA PEDIR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s hand-written pet record card with paw-print stamps' },
@@ -213,7 +213,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote veterinary teleconsultation with a pet on screen' },
       { era: 'FUT', subject: 'Modern monitor displaying AI veterinary x-ray analysis with highlighted areas' },
       { era: 'FUT', subject: 'Veterinarian using a smartphone AI skin-condition classifier on a dog\'s coat' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern veterinary clinic integrating pet care and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern veterinary clinic integrating pet care and AI tools' },
     ],
   },
 
@@ -253,8 +253,8 @@ const profissoes = [
       ai_application: 'AI-guided massage pressure and technique suggestions',
       ai_daily_tool: 'an AI body-scan analysis for muscle tension on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que já sabia relaxar quem estava tenso. Estudou cada músculo, virou massoterapeuta, aliviou milhares. Viu o agendamento virar app, o cliente virar Instagram, o tutorial virar vídeo. Agora a IA mapeia tensêo pelo corpo. Você continua sendo a que cura pelo toque. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a agenda virar app, o tutorial virar vídeo, a tensêo virar mapa digital. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que já sabia relaxar quem estava tenso. Estudou cada músculo, virou massoterapeuta, aliviou milhares. Viu o agendamento virar app, o cliente virar Instagram, o tutorial virar vídeo. Agora a IA mapeia tensêo pelo corpo. Você continua sendo a que cura pelo toque. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a agenda virar app, o tutorial virar vídeo, a tensêo virar mapa digital. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE CUROU', 'A TENSAO DO', 'CORPO CANSADO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s wooden massage table with folded white towels and warm lamp' },
@@ -264,7 +264,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote wellness consultation during 2020s' },
       { era: 'FUT', subject: 'Modern tablet showing AI body-scan analysis with muscle tension heatmap' },
       { era: 'FUT', subject: 'Massage therapist reviewing AI pressure-point recommendations on a tablet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern serene massage studio integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern serene massage studio integrating tradition and AI' },
     ],
   },
 
@@ -304,8 +304,8 @@ const profissoes = [
       ai_application: 'AI-assisted labor monitoring and risk detection',
       ai_daily_tool: 'an AI vital-signs monitor for mother and baby on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que ajudava a avó no parto da tia. Aprendeu cada respiraçêo, virou parteira. Viu o parto virar hospital, o hospital virar humanizado, a consulta virar vídeo. Agora a IA monitora mêe e bebê em tempo real. Você continua sendo a mêo que traz a vida. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o parto virar hospital, o hospital virar humanizado, o monitor virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ajudava a avó no parto da tia. Aprendeu cada respiraçêo, virou parteira. Viu o parto virar hospital, o hospital virar humanizado, a consulta virar vídeo. Agora a IA monitora mêe e bebê em tempo real. Você continua sendo a mêo que traz a vida. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o parto virar hospital, o hospital virar humanizado, o monitor virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE TROUXE', 'VIDA AO MUNDO', 'COM AS MAOS.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s rural brazilian birthing room with candles, clean towels and warm water basin' },
@@ -315,7 +315,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a prenatal teleconsultation with an expectant mother on screen' },
       { era: 'FUT', subject: 'Modern tablet displaying AI labor-progression monitoring with fetal heart rate' },
       { era: 'FUT', subject: 'Midwife reviewing AI maternal-wellbeing dashboard beside a traditional birthing suite' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern humanized birthing center integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern humanized birthing center integrating tradition and AI' },
     ],
   },
 
@@ -358,8 +358,8 @@ const profissoes = [
       ai_application: 'AI-assisted literature review and citation discovery',
       ai_daily_tool: 'an AI paper-summarizer on a laptop for research review',
     },
-    narr_criaprof: 'Você foi a criança que dava aula pra enciclopédia. Estudou pra caramba, virou professor universitário, formou milhares. Viu o slide virar PowerPoint, a revista virar JSTOR, a sala virar Zoom. Agora a IA resume papers em segundos. Você continua sendo o que transforma conhecimento em cabeça pensante. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o slide virar PowerPoint, o paper virar PDF, a sala virar Zoom. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que dava aula pra enciclopédia. Estudou pra caramba, virou professor universitário, formou milhares. Viu o slide virar PowerPoint, a revista virar JSTOR, a sala virar Zoom. Agora a IA resume papers em segundos. Você continua sendo o que transforma conhecimento em cabeça pensante. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o slide virar PowerPoint, o paper virar PDF, a sala virar Zoom. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'CABEÇAS PENSANTES', 'EM MILHARES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s university chalkboard with dense hand-written equations' },
@@ -370,7 +370,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a tablet displaying an academic PDF in a library' },
       { era: 'FUT', subject: 'Modern monitor showing AI academic research assistant with citation graph' },
       { era: 'FUT', subject: 'Professor reviewing AI paper-summarizer on a tablet beside classic books' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern university office integrating books and AI research' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern university office integrating books and AI research' },
     ],
   },
 
@@ -410,8 +410,8 @@ const profissoes = [
       ai_application: 'AI-assisted personalized math exercise generation',
       ai_daily_tool: 'an AI homework-feedback tool on a tablet during class',
     },
-    narr_criaprof: 'Você foi a criança que gostava do problema difícil. Estudou cada teorema, virou professora de matemática, desmistificou o medo em milhares. Viu a lousa virar tela, a prova virar PDF, a aula virar remota. Agora a IA explica passo a passo. Você continua sendo a que traduz o abstrato. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o giz virar caneta, a prova virar digital, o exercício virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que gostava do problema difícil. Estudou cada teorema, virou professora de matemática, desmistificou o medo em milhares. Viu a lousa virar tela, a prova virar PDF, a aula virar remota. Agora a IA explica passo a passo. Você continua sendo a que traduz o abstrato. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o giz virar caneta, a prova virar digital, o exercício virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE DESMISTIFICOU', 'O MEDO DE', 'CALCULAR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s chalkboard filled with hand-drawn mathematical equations' },
@@ -422,7 +422,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote math class during 2020s with equations on screen' },
       { era: 'FUT', subject: 'Modern smartboard showing AI step-by-step math solver for a student problem' },
       { era: 'FUT', subject: 'Math teacher reviewing AI-generated personalized exercises on a tablet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern math classroom integrating chalk tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern math classroom integrating chalk tradition and AI' },
     ],
   },
 
@@ -462,8 +462,8 @@ const profissoes = [
       ai_application: 'AI-assisted personalized training plans',
       ai_daily_tool: 'an AI pose-analysis app on a smartphone during training',
     },
-    narr_criaprof: 'Você foi a criança que organizava o campeonato do quarteirêo. Estudou cada músculo, virou professor de educaçêo física, formou milhares de atletas. Viu o cronômetro virar digital, a aula virar online, o aluno virar app. Agora a IA analisa movimento pela câmera. Você continua sendo o que motiva a começar. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o cronômetro virar digital, a aula virar online, o movimento virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que organizava o campeonato do quarteirêo. Estudou cada músculo, virou professor de educaçêo física, formou milhares de atletas. Viu o cronômetro virar digital, a aula virar online, o aluno virar app. Agora a IA analisa movimento pela câmera. Você continua sendo o que motiva a começar. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o cronômetro virar digital, a aula virar online, o movimento virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE MOTIVOU', 'O CORPO', 'A ACORDAR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian school gymnasium with worn basketballs and sports flags' },
@@ -474,7 +474,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote fitness class during 2020s' },
       { era: 'FUT', subject: 'Modern tablet displaying AI movement-analysis with posture detection skeleton' },
       { era: 'FUT', subject: 'PE teacher analyzing AI pose-analysis app on a smartphone during training' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern school gym integrating coaching tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern school gym integrating coaching tradition and AI' },
     ],
   },
 
@@ -514,8 +514,8 @@ const profissoes = [
       ai_application: 'AI-based personalized reading recommendations',
       ai_daily_tool: 'an AI natural-language search for library catalog on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que emprestava livros do quarto. Aprendeu cada gênero, virou bibliotecária, conectou milhares a livros. Viu o fichário virar sistema, o livro virar PDF, a sala virar silenciosa no online. Agora a IA recomenda o próximo livro certo. Você continua sendo a que conhece o leitor pelo pedido. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a ficha virar sistema, o livro virar PDF, a biblioteca virar digital. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que emprestava livros do quarto. Aprendeu cada gênero, virou bibliotecária, conectou milhares a livros. Viu o fichário virar sistema, o livro virar PDF, a sala virar silenciosa no online. Agora a IA recomenda o próximo livro certo. Você continua sendo a que conhece o leitor pelo pedido. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a ficha virar sistema, o livro virar PDF, a biblioteca virar digital. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE ACHOU', 'O LIVRO QUE', 'NINGUEM ACHAVA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s library index-card catalog drawer with typed title cards' },
@@ -526,7 +526,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote reading group during 2020s with participants on screen' },
       { era: 'FUT', subject: 'Modern tablet showing AI personalized book-recommendation dashboard with user history' },
       { era: 'FUT', subject: 'Librarian using AI natural-language search on a tablet beside classic book shelves' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern library integrating books tradition and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern library integrating books tradition and AI tools' },
     ],
   },
 
@@ -566,8 +566,8 @@ const profissoes = [
       ai_application: 'AI-based school performance analytics and risk prediction',
       ai_daily_tool: 'an AI early-dropout detection tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que mediava as brigas do recreio. Estudou gestêo, virou coordenador, segurou escolas inteiras. Viu a ficha virar sistema, o bilhete virar app, a reuniêo virar vídeo. Agora a IA prevê evasêo antes de acontecer. Você continua sendo o que enxerga a escola inteira. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a ficha virar sistema, o bilhete virar app, a reuniêo virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que mediava as brigas do recreio. Estudou gestêo, virou coordenador, segurou escolas inteiras. Viu a ficha virar sistema, o bilhete virar app, a reuniêo virar vídeo. Agora a IA prevê evasêo antes de acontecer. Você continua sendo o que enxerga a escola inteira. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a ficha virar sistema, o bilhete virar app, a reuniêo virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE SEGUROU', 'A ESCOLA', 'INTEIRA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s brazilian school coordinator\'s desk with paper reports and agenda book' },
@@ -577,7 +577,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote school council meeting during 2020s' },
       { era: 'FUT', subject: 'Modern monitor displaying AI school-analytics dashboard with student risk heatmap' },
       { era: 'FUT', subject: 'Coordinator reviewing AI early-dropout detection tool on a laptop with warm expression' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern school coordination office integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern school coordination office integrating tradition and AI' },
     ],
   },
 
@@ -620,8 +620,8 @@ const profissoes = [
       ai_application: 'AI-assisted precedent discovery and case analysis',
       ai_daily_tool: 'an AI decision-drafting tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que queria justiça até em briga de irmêo. Estudou a constituiçêo, virou juíza, decidiu milhares de vidas. Viu o carimbo virar token digital, a audiência virar vídeo, o acórdêo virar banco de dados. Agora a IA pesquisa precedentes em segundos. Você continua sendo a que decide com equilíbrio. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o carimbo virar token, a audiência virar vídeo, o precedente virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que queria justiça até em briga de irmêo. Estudou a constituiçêo, virou juíza, decidiu milhares de vidas. Viu o carimbo virar token digital, a audiência virar vídeo, o acórdêo virar banco de dados. Agora a IA pesquisa precedentes em segundos. Você continua sendo a que decide com equilíbrio. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o carimbo virar token, a audiência virar vídeo, o precedente virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE DECIDIU', 'COM EQUILIBRIO', 'E FIRMEZA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s brazilian courtroom with wooden gavel and law books on the bench' },
@@ -632,7 +632,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote hearing during 2020s with participants on screen' },
       { era: 'FUT', subject: 'Modern monitor showing AI legal-research with highlighted precedents' },
       { era: 'FUT', subject: 'Judge reviewing AI decision-drafting tool on a laptop beside classic code books' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern courtroom integrating judicial tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern courtroom integrating judicial tradition and AI' },
     ],
   },
 
@@ -672,8 +672,8 @@ const profissoes = [
       ai_application: 'AI-assisted evidence correlation and suspect profiling',
       ai_daily_tool: 'an AI facial-recognition and case-linking tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que resolvia o mistério da goiabeira. Estudou o código, virou delegada, tirou milhares de dúvidas. Viu a máquina de escrever virar sistema, o retrato falado virar IA, a vítima virar depoimento online. Agora a IA cruza evidências em segundos. Você continua sendo a que escuta sem prejulgar. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a máquina virar sistema, o retrato virar AI, a vítima virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que resolvia o mistério da goiabeira. Estudou o código, virou delegada, tirou milhares de dúvidas. Viu a máquina de escrever virar sistema, o retrato falado virar IA, a vítima virar depoimento online. Agora a IA cruza evidências em segundos. Você continua sendo a que escuta sem prejulgar. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a máquina virar sistema, o retrato virar AI, a vítima virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE ESCUTOU', 'SEM PREJULGAR,', 'APROFUNDOU.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s typewriter with a half-typed police statement in the carriage' },
@@ -684,7 +684,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote victim hearing during 2020s' },
       { era: 'FUT', subject: 'Modern monitor showing AI investigation pattern-recognition with evidence graph' },
       { era: 'FUT', subject: 'Police chief reviewing AI facial-recognition and case-linking on a tablet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern police station integrating investigation tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern police station integrating investigation tradition and AI' },
     ],
   },
 
@@ -724,8 +724,8 @@ const profissoes = [
       ai_application: 'AI-assisted tax-fraud pattern detection',
       ai_daily_tool: 'an AI invoice-analysis tool on a laptop with anomaly highlighting',
     },
-    narr_criaprof: 'Você foi a criança que sabia onde cada centavo foi. Estudou a receita, virou auditor, garantiu milhares cumprirem. Viu a declaraçêo virar eletrônica, a nota virar XML, a fiscalizaçêo virar big data. Agora a IA detecta fraude em milissegundos. Você continua sendo o que vê o padrêo por trás do número. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a declaraçêo virar eletrônica, a nota virar XML, a fiscalizaçêo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que sabia onde cada centavo foi. Estudou a receita, virou auditor, garantiu milhares cumprirem. Viu a declaraçêo virar eletrônica, a nota virar XML, a fiscalizaçêo virar big data. Agora a IA detecta fraude em milissegundos. Você continua sendo o que vê o padrêo por trás do número. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a declaraçêo virar eletrônica, a nota virar XML, a fiscalizaçêo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE VIU', 'O PADRAO', 'NO NUMERO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s paper tax declaration forms with hand-written entries' },
@@ -736,7 +736,7 @@ const profissoes = [
       { era: 'MID', subject: 'A smartphone showing a tax-code reference app in an office' },
       { era: 'FUT', subject: 'Modern monitor showing AI tax-fraud detection tool with highlighted anomalies' },
       { era: 'FUT', subject: 'Auditor reviewing AI invoice-analysis on a laptop with risk scores on screen' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern tax authority office integrating paper and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern tax authority office integrating paper and AI tools' },
     ],
   },
 
@@ -776,8 +776,8 @@ const profissoes = [
       ai_application: 'AI-driven personalized investment recommendations',
       ai_daily_tool: 'an AI market-sentiment analysis on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que cuidava da mesada. Estudou juros, virou consultor, planejou milhares de vidas. Viu a carta da corretora virar home broker, o boleto virar PIX, a planilha virar dashboard. Agora a IA otimiza portfólio em segundos. Você continua sendo o que explica com paciência. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a carta virar home broker, o boleto virar PIX, o portfólio virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que cuidava da mesada. Estudou juros, virou consultor, planejou milhares de vidas. Viu a carta da corretora virar home broker, o boleto virar PIX, a planilha virar dashboard. Agora a IA otimiza portfólio em segundos. Você continua sendo o que explica com paciência. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a carta virar home broker, o boleto virar PIX, o portfólio virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE GUARDOU', 'O FUTURO DE', 'CADA CLIENTE.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s financial newspaper with stock charts highlighted in pen' },
@@ -788,7 +788,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote client financial consultation during 2020s' },
       { era: 'FUT', subject: 'Modern monitor displaying AI portfolio-optimization tool with risk/reward curves' },
       { era: 'FUT', subject: 'Financial consultant reviewing AI market-sentiment analysis on a laptop' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern financial office integrating market expertise and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern financial office integrating market expertise and AI' },
     ],
   },
 
@@ -831,8 +831,8 @@ const profissoes = [
       ai_application: 'AI-based weld quality inspection and defect detection',
       ai_daily_tool: 'an AI robot-welder programming tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que ficava olhando o clarêo do arco. Aprendeu cada tipo de solda, virou soldador, uniu milhares de peças. Viu o rolo virar MIG, o projeto virar CAD, a inspeçêo virar AI. Agora o robô solda e a IA inspeciona. Você continua sendo o que sente o metal na mêo. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o arco virar MIG, o projeto virar CAD, a inspeçêo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ficava olhando o clarêo do arco. Aprendeu cada tipo de solda, virou soldador, uniu milhares de peças. Viu o rolo virar MIG, o projeto virar CAD, a inspeçêo virar AI. Agora o robô solda e a IA inspeciona. Você continua sendo o que sente o metal na mêo. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o arco virar MIG, o projeto virar CAD, a inspeçêo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE UNIU', 'METAL QUE', 'NINGUEM UNIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s arc welding electrode rods and a dark welding helmet on a workbench' },
@@ -843,7 +843,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of modern MIG welding gun with gas feed beside an older stick electrode setup' },
       { era: 'FUT', subject: 'Modern tablet showing AI weld-quality inspection with flagged defect areas' },
       { era: 'FUT', subject: 'Welder programming a robot-welder arm via tablet with AI path suggestions' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern welding workshop integrating craft and AI inspection' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern welding workshop integrating craft and AI inspection' },
     ],
   },
 
@@ -883,8 +883,8 @@ const profissoes = [
       ai_application: 'AI-based room color visualization from photos',
       ai_daily_tool: 'an AI color-matching tool on a smartphone for custom blends',
     },
-    narr_criaprof: 'Você foi a criança que pintava a parede do quintal. Aprendeu cada tinta, virou pintor, coloriu milhares de casas. Viu a tabela Pantone virar app, o pincel virar pistola, o cliente virar foto. Agora a IA simula a cor na sala antes. Você continua sendo o que faz a parede ficar reta. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a tabela virar app, o pincel virar pistola, a cor virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que pintava a parede do quintal. Aprendeu cada tinta, virou pintor, coloriu milhares de casas. Viu a tabela Pantone virar app, o pincel virar pistola, o cliente virar foto. Agora a IA simula a cor na sala antes. Você continua sendo o que faz a parede ficar reta. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a tabela virar app, o pincel virar pistola, a cor virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE TRANSFORMOU', 'PAREDE EM', 'CASA NOVA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s painter\'s wooden toolbox with brushes, scrapers and paint stirrers' },
@@ -895,7 +895,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a modern airless paint spray gun beside a traditional roller' },
       { era: 'FUT', subject: 'Modern tablet showing AI room color-visualization with photos of a client living room' },
       { era: 'FUT', subject: 'Painter using an AI color-matching tool on a smartphone near a wall' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern residential painting job integrating craft and AI preview' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern residential painting job integrating craft and AI preview' },
     ],
   },
 
@@ -935,8 +935,8 @@ const profissoes = [
       ai_application: 'AI-assisted materials estimation and planning',
       ai_daily_tool: 'an AI progress-monitoring drone app on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que ajudava a levantar muro. Aprendeu cada tijolo, virou pedreiro, ergueu milhares de casas. Viu a planta virar tablet, a obra virar drone, o material virar app. Agora a IA estima concreto em segundos. Você continua sendo o que sente o prumo com o olho. Continue aprendenden no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a planta virar tablet, a obra virar drone, o orçamento virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ajudava a levantar muro. Aprendeu cada tijolo, virou pedreiro, ergueu milhares de casas. Viu a planta virar tablet, a obra virar drone, o material virar app. Agora a IA estima concreto em segundos. Você continua sendo o que sente o prumo com o olho. Continue aprendenden no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a planta virar tablet, a obra virar drone, o orçamento virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE LEVANTOU', 'MUROS QUE', 'VIRARAM LARES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian trowel and level on a dusty construction site' },
@@ -947,7 +947,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a laser level projecting a red line across a construction wall' },
       { era: 'FUT', subject: 'Modern tablet showing AI construction-planning tool with materials-estimation visualization' },
       { era: 'FUT', subject: 'Bricklayer using an AI progress-monitoring drone app on a tablet at a construction site' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern construction site integrating craft tradition and AI drone' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern construction site integrating craft tradition and AI drone' },
     ],
   },
 
@@ -987,8 +987,8 @@ const profissoes = [
       ai_application: 'AI-generated custom shoe designs from customer preferences',
       ai_daily_tool: 'an AI foot-scan tool on a smartphone for personalized shoe fits',
     },
-    narr_criaprof: 'Você foi a criança que colava a sola sozinha. Aprendeu couro, linha, formêo, virou sapateiro, salvou milhares de pares. Viu o catálogo virar site, o molde virar CAD, a encomenda virar WhatsApp. Agora a IA escaneia o pé e gera sapato personalizado. Você continua sendo o que conhece o couro no cheiro. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o catálogo virar site, o molde virar CAD, o sapato virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que colava a sola sozinha. Aprendeu couro, linha, formêo, virou sapateiro, salvou milhares de pares. Viu o catálogo virar site, o molde virar CAD, a encomenda virar WhatsApp. Agora a IA escaneia o pé e gera sapato personalizado. Você continua sendo o que conhece o couro no cheiro. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o catálogo virar site, o molde virar CAD, o sapato virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE CONSERTOU', 'O QUE JA', 'IAM JOGAR FORA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s cobbler\'s bench with leather scraps, awls and wooden shoe lasts' },
@@ -999,7 +999,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a modern heat-activated shoe sole bonding machine' },
       { era: 'FUT', subject: 'Modern tablet showing AI custom-shoe design generator with 3D preview' },
       { era: 'FUT', subject: 'Cobbler using an AI foot-scan tool on a smartphone over a customer\'s foot' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern cobbler shop integrating craft tradition and AI design' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern cobbler shop integrating craft tradition and AI design' },
     ],
   },
 
@@ -1039,8 +1039,8 @@ const profissoes = [
       ai_application: 'AI-based watch movement diagnosis from images',
       ai_daily_tool: 'an AI parts-identification tool on a smartphone',
     },
-    narr_criaprof: 'Você foi a criança que desmontava o despertador. Aprendeu cada engrenagem, virou relojoeiro, trouxe milhares de relógios de volta à vida. Viu o pêndulo virar quartzo, o quartzo virar smartwatch, o catálogo virar site. Agora a IA identifica peça pela foto. Você continua sendo o que sente a cadência. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o pêndulo virar quartzo, o quartzo virar smart, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que desmontava o despertador. Aprendeu cada engrenagem, virou relojoeiro, trouxe milhares de relógios de volta à vida. Viu o pêndulo virar quartzo, o quartzo virar smartwatch, o catálogo virar site. Agora a IA identifica peça pela foto. Você continua sendo o que sente a cadência. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o pêndulo virar quartzo, o quartzo virar smart, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE REACENDEU', 'O TEMPO', 'PARADO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s watchmaker\'s bench with tiny screwdrivers, loupe and a pocket watch' },
@@ -1051,7 +1051,7 @@ const profissoes = [
       { era: 'MID', subject: 'A smartphone showing a client watch-order tracking app on a workbench' },
       { era: 'FUT', subject: 'Modern monitor showing AI watch-diagnosis tool with close-up movement analysis' },
       { era: 'FUT', subject: 'Watchmaker using AI parts-identification tool on a smartphone over a movement' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern watch-repair shop integrating craft tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern watch-repair shop integrating craft tradition and AI' },
     ],
   },
 
@@ -1094,8 +1094,8 @@ const profissoes = [
       ai_application: 'AI-based route optimization and fuel efficiency',
       ai_daily_tool: 'an AI driver-assistance tool on a cabin screen',
     },
-    narr_criaprof: 'Você foi a criança que dormia olhando o mapa rodoviário. Virou caminhoneiro, cruzou o Brasil inteiro. Viu o atlas virar GPS, o rádio CB virar app, a carga virar código de barras. Agora a IA otimiza rota em segundos. Você continua sendo o que lê a estrada com o corpo. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o atlas virar GPS, o CB virar app, a rota virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que dormia olhando o mapa rodoviário. Virou caminhoneiro, cruzou o Brasil inteiro. Viu o atlas virar GPS, o rádio CB virar app, a carga virar código de barras. Agora a IA otimiza rota em segundos. Você continua sendo o que lê a estrada com o corpo. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o atlas virar GPS, o CB virar app, a rota virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE CRUZOU', 'O BRASIL', 'INTEIRO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian highway atlas open on a truck dashboard with coffee cup' },
@@ -1106,7 +1106,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a digital tachograph and electronic logbook in a modern truck' },
       { era: 'FUT', subject: 'Modern tablet showing AI route-optimization tool with real-time traffic and fuel data' },
       { era: 'FUT', subject: 'Trucker using AI driver-assistance tool on a cabin screen with highway visible' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern brazilian highway with a truck driver integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern brazilian highway with a truck driver integrating tradition and AI' },
     ],
   },
 
@@ -1146,8 +1146,8 @@ const profissoes = [
       ai_application: 'AI-assisted flight planning with weather optimization',
       ai_daily_tool: 'an AI cockpit-assistant on an electronic flight bag tablet',
     },
-    narr_criaprof: 'Você foi a criança que olhava o aviêo passar. Estudou cada instrumento, virou piloto, cruzou milhares de fronteiras. Viu o mapa de papel virar EFB, o rádio virar digital, o briefing virar app. Agora a IA otimiza rota com meteorologia. Você continua sendo o que mantém o passageiro no chêo pelo exemplo. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o mapa virar EFB, o rádio virar digital, a rota virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que olhava o aviêo passar. Estudou cada instrumento, virou piloto, cruzou milhares de fronteiras. Viu o mapa de papel virar EFB, o rádio virar digital, o briefing virar app. Agora a IA otimiza rota com meteorologia. Você continua sendo o que mantém o passageiro no chêo pelo exemplo. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o mapa virar EFB, o rádio virar digital, a rota virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE LEVANTOU', 'VOO PARA', 'MILHARES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s aircraft cockpit with analog instruments and paper flight plan' },
@@ -1158,7 +1158,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing remote simulator-based training during 2020s' },
       { era: 'FUT', subject: 'Modern cockpit tablet showing AI flight-planning with weather-routing overlay' },
       { era: 'FUT', subject: 'Pilot reviewing AI cockpit-assistant on an electronic flight bag tablet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern commercial cockpit integrating aviation tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern commercial cockpit integrating aviation tradition and AI' },
     ],
   },
 
@@ -1198,8 +1198,8 @@ const profissoes = [
       ai_application: 'AI-assisted traffic conflict detection',
       ai_daily_tool: 'an AI predictive-routing tool on a control screen',
     },
-    narr_criaprof: 'Você foi a criança que ouvia rádio e organizava tudo. Estudou aerovias, virou controladora, dirigiu milhares de voos. Viu a fita de papel virar tela, o radar virar digital, a torre virar remota. Agora a IA prevê conflitos antes de acontecer. Você continua sendo a voz calma que coordena o céu. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a fita virar tela, o radar virar digital, o conflito virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ouvia rádio e organizava tudo. Estudou aerovias, virou controladora, dirigiu milhares de voos. Viu a fita de papel virar tela, o radar virar digital, a torre virar remota. Agora a IA prevê conflitos antes de acontecer. Você continua sendo a voz calma que coordena o céu. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a fita virar tela, o radar virar digital, o conflito virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE COORDENOU', 'O CEU COM', 'VOZ CALMA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s ATC control tower with paper flight strips and radar scope' },
@@ -1210,7 +1210,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote ATC training simulator during 2020s' },
       { era: 'FUT', subject: 'Modern control screen showing AI traffic-conflict detection with highlighted interactions' },
       { era: 'FUT', subject: 'Controller reviewing AI predictive-routing tool on a control screen with calm focus' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern ATC control tower integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern ATC control tower integrating tradition and AI' },
     ],
   },
 
@@ -1253,8 +1253,8 @@ const profissoes = [
       ai_application: 'AI-based virtual makeup try-on',
       ai_daily_tool: 'an AI skin-tone and color-match tool on a smartphone',
     },
-    narr_criaprof: 'Você foi a criança que pintava a boneca de batom. Aprendeu cada pincelada, virou maquiadora, arrumou milhares de dias especiais. Viu a revista virar Instagram, o catálogo virar filtro, a aula virar YouTube. Agora a IA simula a makeup antes de aplicar. Você continua sendo a que traduz a pele em beleza. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a revista virar Instagram, o catálogo virar filtro, a makeup virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que pintava a boneca de batom. Aprendeu cada pincelada, virou maquiadora, arrumou milhares de dias especiais. Viu a revista virar Instagram, o catálogo virar filtro, a aula virar YouTube. Agora a IA simula a makeup antes de aplicar. Você continua sendo a que traduz a pele em beleza. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a revista virar Instagram, o catálogo virar filtro, a makeup virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'DIA ESPECIAL', 'FICAR INESQUECIVEL.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s makeup vanity with lipstick tubes, compact mirrors and powder' },
@@ -1265,7 +1265,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote makeup consultation with a client on screen' },
       { era: 'FUT', subject: 'Modern tablet showing AI virtual makeup try-on simulator with live camera on client' },
       { era: 'FUT', subject: 'Makeup artist using an AI skin-tone and color-match tool on a smartphone' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern makeup studio integrating artistry and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern makeup studio integrating artistry and AI tools' },
     ],
   },
 
@@ -1305,8 +1305,8 @@ const profissoes = [
       ai_application: 'AI-based personalized floral arrangement suggestions',
       ai_daily_tool: 'an AI flower-identification tool on a smartphone',
     },
-    narr_criaprof: 'Você foi a criança que montava buquê no quintal. Aprendeu cada flor, virou florista, enfeitou milhares de dias. Viu o encomenda virar WhatsApp, a entrega virar app, o casamento virar Instagram. Agora a IA gera arranjo a partir de uma paleta. Você continua sendo a que sabe a emoçêo por trás da flor. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a encomenda virar WhatsApp, a entrega virar app, o arranjo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que montava buquê no quintal. Aprendeu cada flor, virou florista, enfeitou milhares de dias. Viu o encomenda virar WhatsApp, a entrega virar app, o casamento virar Instagram. Agora a IA gera arranjo a partir de uma paleta. Você continua sendo a que sabe a emoçêo por trás da flor. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a encomenda virar WhatsApp, a entrega virar app, o arranjo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'O SIM, O LUTO,', 'O ANIVERSARIO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian flower shop with buckets of roses and pruning shears' },
@@ -1317,7 +1317,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote event-flower consultation during 2020s' },
       { era: 'FUT', subject: 'Modern tablet showing AI floral-design generator with 3D arrangement previews' },
       { era: 'FUT', subject: 'Florist using an AI flower-identification tool on a smartphone over a bouquet' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern flower shop integrating floral craft and AI tools' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern flower shop integrating floral craft and AI tools' },
     ],
   },
 
@@ -1357,8 +1357,8 @@ const profissoes = [
       ai_application: 'AI-generated custom cake designs',
       ai_daily_tool: 'an AI 3D cake visualization tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que esperava a massa crescer. Aprendeu cada ponto de açúcar, virou confeiteiro, fez milhares de aniversários. Viu a encomenda virar WhatsApp, o catálogo virar Instagram, a entrega virar app. Agora a IA gera design de bolo a partir de uma ideia. Você continua sendo o que faz doce saber a afeto. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a encomenda virar WhatsApp, o catálogo virar Instagram, o design virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que esperava a massa crescer. Aprendeu cada ponto de açúcar, virou confeiteiro, fez milhares de aniversários. Viu a encomenda virar WhatsApp, o catálogo virar Instagram, a entrega virar app. Agora a IA gera design de bolo a partir de uma ideia. Você continua sendo o que faz doce saber a afeto. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a encomenda virar WhatsApp, o catálogo virar Instagram, o design virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'DIA FELIZ', 'VIRAR MEMORIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian kitchen with a decorated birthday cake and piping bag' },
@@ -1369,7 +1369,7 @@ const profissoes = [
       { era: 'MID', subject: 'A laptop showing a remote cake design consultation during 2020s' },
       { era: 'FUT', subject: 'Modern tablet showing AI cake-design generator with 3D wedding cake preview' },
       { era: 'FUT', subject: 'Pastry chef reviewing AI 3D cake visualization on a tablet beside ingredients' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern confectionery shop integrating craft tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern confectionery shop integrating craft tradition and AI' },
     ],
   },
 
@@ -1409,8 +1409,8 @@ const profissoes = [
       ai_application: 'AI-assisted beat generation and track mastering',
       ai_daily_tool: 'an AI stem-separation and mastering tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que tocava vinil do pai. Aprendeu a batida, virou DJ produtor, emocionou milhares. Viu o vinil virar MP3, o MP3 virar streaming, o clube virar live online. Agora a IA gera beat, masteriza, separa stems. Você continua sendo o que sente o público antes do drop. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o vinil virar MP3, o clube virar live, a mixagem virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que tocava vinil do pai. Aprendeu a batida, virou DJ produtor, emocionou milhares. Viu o vinil virar MP3, o MP3 virar streaming, o clube virar live online. Agora a IA gera beat, masteriza, separa stems. Você continua sendo o que sente o público antes do drop. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o vinil virar MP3, o clube virar live, a mixagem virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'A MULTIDAO', 'DANÇAR JUNTA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s vinyl turntable with a stack of LPs beside it in a home studio' },
@@ -1421,7 +1421,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a modern DAW on a laptop with waveforms of a track' },
       { era: 'FUT', subject: 'Modern monitor showing AI music-production and beat-generation tool with samples' },
       { era: 'FUT', subject: 'DJ using an AI stem-separation and mastering tool on a laptop in a studio' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern production studio integrating vinyl tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern production studio integrating vinyl tradition and AI' },
     ],
   },
 
@@ -1464,8 +1464,8 @@ const profissoes = [
       ai_application: 'AI-based crop health and yield prediction',
       ai_daily_tool: 'an AI drone-imaging analysis tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que andava no pé do milho. Aprendeu solo, praga, ciclo, virou agrônomo, salvou milhares de colheitas. Viu a caderneta virar app, a observaçêo virar satélite, o drone virar comum. Agora a IA prevê doença antes de aparecer. Você continua sendo o que lê a terra pelo olho. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a caderneta virar app, a observaçêo virar satélite, a colheita virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que andava no pé do milho. Aprendeu solo, praga, ciclo, virou agrônomo, salvou milhares de colheitas. Viu a caderneta virar app, a observaçêo virar satélite, o drone virar comum. Agora a IA prevê doença antes de aparecer. Você continua sendo o que lê a terra pelo olho. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a caderneta virar app, a observaçêo virar satélite, a colheita virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE LEU', 'A TERRA', 'COM OS OLHOS.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s brazilian farmer\'s almanac with hand-written crop notes' },
@@ -1476,7 +1476,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a drone hovering over a soybean field with a laptop nearby' },
       { era: 'FUT', subject: 'Modern tablet showing AI crop-health monitoring tool with satellite imagery overlay' },
       { era: 'FUT', subject: 'Agronomist using AI drone-imaging analysis on a tablet in a modern brazilian field' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern brazilian farm integrating field tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern brazilian farm integrating field tradition and AI' },
     ],
   },
 
@@ -1516,8 +1516,8 @@ const profissoes = [
       ai_application: 'AI-based biodiversity monitoring and species identification',
       ai_daily_tool: 'an AI camera-trap analysis tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que colecionava folha e inseto. Estudou cada ecossistema, virou bióloga, protegeu milhares de espécies. Viu o caderno virar GPS, a foto virar dado, o campo virar satélite. Agora a IA identifica espécie pelo som ou foto. Você continua sendo a que sabe o bioma pelo cheiro. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o caderno virar GPS, a foto virar dado, a biodiversidade virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que colecionava folha e inseto. Estudou cada ecossistema, virou bióloga, protegeu milhares de espécies. Viu o caderno virar GPS, a foto virar dado, o campo virar satélite. Agora a IA identifica espécie pelo som ou foto. Você continua sendo a que sabe o bioma pelo cheiro. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu o caderno virar GPS, a foto virar dado, a biodiversidade virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE PROTEGEU', 'O QUE ESTAVA', 'SUMINDO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s biologist\'s field notebook with hand-drawn species sketches' },
@@ -1528,7 +1528,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a camera-trap unit attached to a tree in the brazilian forest' },
       { era: 'FUT', subject: 'Modern tablet showing AI species-identification tool with analyzed sound waveforms' },
       { era: 'FUT', subject: 'Biologist using AI camera-trap analysis on a tablet in a modern field station' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern brazilian research station integrating field and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern brazilian research station integrating field and AI' },
     ],
   },
 
@@ -1568,8 +1568,8 @@ const profissoes = [
       ai_application: 'AI-assisted fishing zone and catch prediction',
       ai_daily_tool: 'an AI sonar fish-finder tool on a boat tablet',
     },
-    narr_criaprof: 'Você foi a criança que olhava o mar antes de andar. Aprendeu cada corrente, virou pescador, alimentou milhares de mesas. Viu o boia virar sonar, o mapa virar GPS, o mercado virar app. Agora a IA prevê cardume pelo satélite. Você continua sendo o que sente o mar no vento. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a boia virar sonar, o mapa virar GPS, o cardume virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que olhava o mar antes de andar. Aprendeu cada corrente, virou pescador, alimentou milhares de mesas. Viu o boia virar sonar, o mapa virar GPS, o mercado virar app. Agora a IA prevê cardume pelo satélite. Você continua sendo o que sente o mar no vento. Continue aprendendo no ARCKHÉ ponto CLUB.',
+    narr_gertran: 'Você viu a boia virar sonar, o mapa virar GPS, o cardume virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no ARCKHÉ ponto CLUB.',
     gertran_hook: ['VOCE LEU', 'O MAR NO', 'VENTO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s brazilian fishing nets being mended on a wooden dock at sunrise' },
@@ -1580,7 +1580,7 @@ const profissoes = [
       { era: 'MID', subject: 'Close-up of a simple sonar fish-finder on a modest fishing boat' },
       { era: 'FUT', subject: 'Modern boat tablet showing AI fish-population forecasting tool with satellite data' },
       { era: 'FUT', subject: 'Fisherman using an AI sonar fish-finder on a boat tablet at sunrise' },
-      { era: 'FUT', subject: 'Cinematic wide shot of a modern brazilian fishing village integrating tradition and AI' },
+      { era: 'FUT', subject: 'CARCKHÉtic wide shot of a modern brazilian fishing village integrating tradition and AI' },
     ],
   },
 ];

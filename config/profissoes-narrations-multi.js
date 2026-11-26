@@ -193,15 +193,15 @@ const CATEGORY = {
 function buildNarration(version, m) {
   switch (String(version)) {
     case '1':
-      return `Você lembra quando tudo era manual? Você ${m.action}, aprendeu ${m.items}. Cada onda você adaptou. Agora a IA chegou. E você? Continua sendo ${m.identity}. Inema ponto CLUB te espera.`;
+      return `Você lembra quando tudo era manual? Você ${m.action}, aprendeu ${m.items}. Cada onda você adaptou. Agora a IA chegou. E você? Continua sendo ${m.identity}. ARCKHÉ ponto CLUB te espera.`;
     case '2':
-      return `Lembra como tudo era diferente quando você começou? ${m.tool_journey} Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no Inema ponto CLUB.`;
+      return `Lembra como tudo era diferente quando você começou? ${m.tool_journey} Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no ARCKHÉ ponto CLUB.`;
     case '3':
-      return `Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? ${m.items.charAt(0).toUpperCase() + m.items.slice(1)}. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.`;
+      return `Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? ${m.items.charAt(0).toUpperCase() + m.items.slice(1)}. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no ARCKHÉ ponto CLUB.`;
     case '4':
-      return `Você consegue lembrar quantas vezes essa profissêo se reinventou? ${m.tool_journey} Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo ${m.identity}. Inema ponto CLUB.`;
+      return `Você consegue lembrar quantas vezes essa profissêo se reinventou? ${m.tool_journey} Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo ${m.identity}. ARCKHÉ ponto CLUB.`;
     case '5':
-      return `E se eu te disser que você já viveu isso antes? Você passou por tudo: ${m.tool_journey} Cada vez você adaptou. Agora a IA chegou. Você sabe. Continue aprendendo no Inema ponto CLUB.`;
+      return `E se eu te disser que você já viveu isso antes? Você passou por tudo: ${m.tool_journey} Cada vez você adaptou. Agora a IA chegou. Você sabe. Continue aprendendo no ARCKHÉ ponto CLUB.`;
     default:
       throw new Error(`Versêo inválida: ${version}. Use 1-5.`);
   }

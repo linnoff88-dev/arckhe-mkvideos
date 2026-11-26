@@ -12,7 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 const { profissoes } = require('./config/profissoes-30');
 const { criaProfScenes } = require('./gen-lib/scene-templates');
 const { getDiverseProfile } = require('./config/profissoes-diverse');
@@ -23,8 +23,8 @@ const RATIO = '1:1';
 const COMIC_A = 'newspaper comic strip illustration in the style of Bill Watterson Calvin and Hobbes, expressive ink linework with light watercolor wash, hand-drawn aesthetic, soft warm tones, no text, no captions, no logos';
 
 const STYLE_REPLACEMENTS = [
-  ['shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos', COMIC_A],
-  ['cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos', COMIC_A],
+  ['shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos', COMIC_A],
+  ['cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos', COMIC_A],
   ['neo-noir clinical lighting, soft glassmorphism, teal accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos', COMIC_A],
 ];
 

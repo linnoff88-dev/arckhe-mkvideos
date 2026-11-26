@@ -7,8 +7,8 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const IMG_DIR = path.join(__dirname, 'prj/inema/outputs/antes-do-futuro_2026-04-22/imgs');
-const OUT_DIR = path.join(__dirname, 'prj/inema/outputs/antes-do-futuro_2026-04-22/video');
+const IMG_DIR = path.join(__dirname, 'prj/ARCKHÉ/outputs/antes-do-futuro_2026-04-22/imgs');
+const OUT_DIR = path.join(__dirname, 'prj/ARCKHÉ/outputs/antes-do-futuro_2026-04-22/video');
 const MUSIC = '/tmp/musica_video/freesound_748406_Inspiring_Orchestral_Music_with_Majestic.mp3';
 const FPS = 30;
 const SIZE = 1080;

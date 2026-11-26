@@ -196,7 +196,7 @@ function renderVideo(timings) {
     if (!fs.existsSync(img)) { console.warn(`! falta img cena${t.n}, pulando`); continue; }
     const seg = path.join(tmpDir, `seg_${t.n}.mp4`);
     const frames = Math.round(t.duration * FPS);
-    // Zoom in lento (cinematic): zoom de 1.0 até ~1.10 ao longo da cena
+    // Zoom in lento (cARCKHÉtic): zoom de 1.0 até ~1.10 ao longo da cena
     const zoomMax = 1.10;
     const zoomStep = (zoomMax - 1) / frames;
     // scale 2x antes do zoompan pra suavizar

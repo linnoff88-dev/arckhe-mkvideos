@@ -1,14 +1,14 @@
 /**
- * inemaimg — local multi-model image server
+ * ARCKHÉimg — local multi-model image server
  *
  * Hits a FastAPI server we run on the same host (default http://localhost:8000)
  * which hot-swaps between Qwen-Image-Edit-2511, FLUX.2-klein, FLUX.2-dev and
- * ERNIE. See ~/projetos/inemaimg for the server and MODELOS.md for the
+ * ERNIE. See ~/projetos/ARCKHÉimg for the server and MODELOS.md for the
  * license matrix (FLUX.2 models are non-commercial — only use those when
  * you're okay with that constraint).
  *
  * Usage (CLI):
- *   node pipeline/generate-image-inemaimg.js <output.png> "<prompt>" [model] [aspect_ratio]
+ *   node pipeline/generate-image-ARCKHÉimg.js <output.png> "<prompt>" [model] [aspect_ratio]
  *
  * Models:
  *   flux2-klein     — step-distilled, 4 steps, fastest (non-commercial)
@@ -20,9 +20,9 @@
  *   1:1, 9:16, 16:9, 4:3, 3:4
  *
  * Environment:
- *   INEMAIMG_URL       — base URL of the server (default http://localhost:8000)
- *   INEMAIMG_MODEL     — default model id (default flux2-klein)
- *   INEMAIMG_TIMEOUT_S — HTTP timeout in seconds (default 1800 = 30 min,
+ *   ARCKHÉIMG_URL       — base URL of the server (default http://localhost:8000)
+ *   ARCKHÉIMG_MODEL     — default model id (default flux2-klein)
+ *   ARCKHÉIMG_TIMEOUT_S — HTTP timeout in seconds (default 1800 = 30 min,
  *                        big because cold starts download 35+ GB and the
  *                        server blocks until the pipe is warm)
  */
@@ -34,18 +34,18 @@ const path = require('path');
 const { URL } = require('url');
 const { getEnv } = require('../config/env');
 
-const BASE_URL = getEnv('INEMAIMG_URL', 'http://localhost:8000');
-const DEFAULT_MODEL = getEnv('INEMAIMG_MODEL', 'flux2-klein');
-const TIMEOUT_MS = parseInt(getEnv('INEMAIMG_TIMEOUT_S', '1800'), 10) * 1000;
+const BASE_URL = getEnv('ARCKHÉIMG_URL', 'http://localhost:8000');
+const DEFAULT_MODEL = getEnv('ARCKHÉIMG_MODEL', 'flux2-klein');
+const TIMEOUT_MS = parseInt(getEnv('ARCKHÉIMG_TIMEOUT_S', '1800'), 10) * 1000;
 
 // FAST MODE defaults — small resolution + low step counts so iteration is
-// cheap. Override via INEMAIMG_QUALITY=high (or tweak the body in
+// cheap. Override via ARCKHÉIMG_QUALITY=high (or tweak the body in
 // generateImage) when you want final-quality output.
 //
-// The inemaimg server works with multiples of 64. 512² runs in roughly
+// The ARCKHÉimg server works with multiples of 64. 512² runs in roughly
 // 1/4 the time of 1024² on the GB10 host; 768² is the usual sweet spot
 // when quality matters but you still want sub-minute iteration.
-const FAST = (getEnv('INEMAIMG_QUALITY', 'fast') || 'fast').toLowerCase() !== 'high';
+const FAST = (getEnv('ARCKHÉIMG_QUALITY', 'fast') || 'fast').toLowerCase() !== 'high';
 
 const ASPECT_RATIO_SIZES_FAST = {
   '1:1':  { width: 512, height: 512 },
@@ -114,12 +114,12 @@ function postJson(url, body) {
           resolve(parsed);
         } else {
           const detail = (parsed && parsed.detail) || text.slice(0, 400);
-          reject(new Error(`inemaimg HTTP ${res.statusCode}: ${detail}`));
+          reject(new Error(`ARCKHÉimg HTTP ${res.statusCode}: ${detail}`));
         }
       });
     });
     req.on('error', reject);
-    req.on('timeout', () => { req.destroy(new Error(`inemaimg timeout after ${TIMEOUT_MS / 1000}s`)); });
+    req.on('timeout', () => { req.destroy(new Error(`ARCKHÉimg timeout after ${TIMEOUT_MS / 1000}s`)); });
     req.write(payload);
     req.end();
   });
@@ -152,7 +152,7 @@ async function generateImage(outputPath, prompt, model = DEFAULT_MODEL, aspectRa
     if (fs.existsSync(abs)) {
       images.push(fs.readFileSync(abs).toString('base64'));
     } else {
-      console.log(`[inemaimg] warning: reference image not found: ${abs}`);
+      console.log(`[ARCKHÉimg] warning: reference image not found: ${abs}`);
     }
   }
 
@@ -167,22 +167,22 @@ async function generateImage(outputPath, prompt, model = DEFAULT_MODEL, aspectRa
   };
 
   const refLabel = images.length > 0 ? ` refs=${images.length}` : '';
-  console.log(`[inemaimg] model=${model} quality=${FAST ? 'fast' : 'high'} ratio=${aspectRatio} (${size.width}x${size.height}) steps=${body.steps}${refLabel}`);
-  console.log(`[inemaimg] prompt: ${prompt.slice(0, 120)}...`);
+  console.log(`[ARCKHÉimg] model=${model} quality=${FAST ? 'fast' : 'high'} ratio=${aspectRatio} (${size.width}x${size.height}) steps=${body.steps}${refLabel}`);
+  console.log(`[ARCKHÉimg] prompt: ${prompt.slice(0, 120)}...`);
 
   const t0 = Date.now();
   const result = await postJson(`${BASE_URL}/generate`, body);
   const wall = ((Date.now() - t0) / 1000).toFixed(1);
 
   if (!result.image) {
-    throw new Error(`inemaimg returned no image field: ${JSON.stringify(result).slice(0, 200)}`);
+    throw new Error(`ARCKHÉimg returned no image field: ${JSON.stringify(result).slice(0, 200)}`);
   }
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, Buffer.from(result.image, 'base64'));
 
   console.log(
-    `[inemaimg] ✅ saved: ${outputPath}  ` +
+    `[ARCKHÉimg] ✅ saved: ${outputPath}  ` +
     `(server=${result.generation_time_s}s wall=${wall}s vram=${result.gpu_memory_allocated_gb}GB)`
   );
   return outputPath;
@@ -192,7 +192,7 @@ async function generateImage(outputPath, prompt, model = DEFAULT_MODEL, aspectRa
 if (require.main === module) {
   const [, , outputArg, promptArg, modelArg, ratioArg = '1:1'] = process.argv;
   if (!outputArg || !promptArg) {
-    console.error('Usage: node pipeline/generate-image-inemaimg.js <output.png> "<prompt>" [model] [aspect_ratio]');
+    console.error('Usage: node pipeline/generate-image-ARCKHÉimg.js <output.png> "<prompt>" [model] [aspect_ratio]');
     console.error('\nAvailable models:');
     AVAILABLE_MODELS.forEach(m => console.error(`  ${m.id} — ${m.label}`));
     console.error(`\nDefault: ${DEFAULT_MODEL}`);
@@ -203,10 +203,10 @@ if (require.main === module) {
   (async () => {
     try {
       const h = await getHealth();
-      console.log(`[inemaimg] health: loaded=${h.loaded_model} prewarm=${h.prewarm_status} vram=${h.gpu_memory_allocated_gb}GB`);
+      console.log(`[ARCKHÉimg] health: loaded=${h.loaded_model} prewarm=${h.prewarm_status} vram=${h.gpu_memory_allocated_gb}GB`);
     } catch (e) {
-      console.error(`[inemaimg] health check failed: ${e.message}`);
-      console.error(`[inemaimg] is the server at ${BASE_URL} up?`);
+      console.error(`[ARCKHÉimg] health check failed: ${e.message}`);
+      console.error(`[ARCKHÉimg] is the server at ${BASE_URL} up?`);
       process.exit(2);
     }
     await generateImage(outputArg, promptArg, modelArg || DEFAULT_MODEL, ratioArg);

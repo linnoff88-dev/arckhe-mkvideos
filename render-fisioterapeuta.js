@@ -42,7 +42,7 @@ imgs.forEach((_, idx) => {
 });
 const concatInputs = imgs.map((_, i) => `[v${i}]`).join('');
 filters.push(`${concatInputs}concat=n=${imgs.length}:v=1:a=0[vconc]`);
-filters.push(`[vconc]drawtext=fontfile=${FONT}:text='INEMA.CLUB':fontcolor=white:fontsize=140:borderw=4:bordercolor=black@0.5:x=(w-tw)/2:y=(h-th)/2:alpha='if(lt(t\\,27.5)\\,(t-27)*2\\,if(gt(t\\,29.5)\\,(30-t)*2\\,1))':enable='between(t,27,30)'[vout]`);
+filters.push(`[vconc]drawtext=fontfile=${FONT}:text='ARCKHÉ AI':fontcolor=white:fontsize=140:borderw=4:bordercolor=black@0.5:x=(w-tw)/2:y=(h-th)/2:alpha='if(lt(t\\,27.5)\\,(t-27)*2\\,if(gt(t\\,29.5)\\,(30-t)*2\\,1))':enable='between(t,27,30)'[vout]`);
 const musicIdx = imgs.length; const narrIdx = imgs.length + 1;
 filters.push(`[${musicIdx}:a]atrim=0:${TOTAL_DUR},asetpts=PTS-STARTPTS,volume='if(between(t\\,0.5\\,27)\\,0.06\\,0.35)':eval=frame,afade=t=out:st=${TOTAL_DUR - 2}:d=2[music]`);
 filters.push(`[${narrIdx}:a]adelay=800|800,volume=1.9[narr]`);

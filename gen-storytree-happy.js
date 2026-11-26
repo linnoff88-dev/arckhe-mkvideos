@@ -4,7 +4,7 @@
  *
  * História completa "Uma Manhê, Um Cachorro, Uma Vida" — 60s, 9:16,
  * tema alegre/envolvente, gerada ponta-a-ponta com:
- *   - inemaimg (12 imgs novas)
+ *   - ARCKHÉimg (12 imgs novas)
  *   - storytree-classify (auto image_class do prompt)
  *   - storytree-shot-schema (plan factory)
  *   - storytree-qa (validaçêo)
@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 const { classifyBatch } = require('./lib/storytree-classify');
 const { PRESETS, buildShotVF } = require('./lib/storytree-presets');
 const { validateShotPlan, printReport } = require('./lib/storytree-qa');
@@ -51,51 +51,51 @@ const FORMAT = 'storytelling';
 const SCENES = [
   {
     id: 'i01',
-    prompt: 'cinematic vertical 9:16, soft warm morning light streaming through bedroom window, sun rays on white sheets, peaceful empty room, golden hour, photorealistic, shallow depth of field',
+    prompt: 'cARCKHÉtic vertical 9:16, soft warm morning light streaming through bedroom window, sun rays on white sheets, peaceful empty room, golden hour, photorealistic, shallow depth of field',
   },
   {
     id: 'i02',
-    prompt: 'cinematic close-up portrait of a young man in his 30s looking out a window with thoughtful hopeful expression, soft morning light on his face, gentle smile starting to form, photorealistic',
+    prompt: 'cARCKHÉtic close-up portrait of a young man in his 30s looking out a window with thoughtful hopeful expression, soft morning light on his face, gentle smile starting to form, photorealistic',
   },
   {
     id: 'i03',
-    prompt: 'cinematic wide shot of a quiet residential street at sunrise, trees lining sidewalks, morning mist, warm orange light, empty calm street, suburban neighborhood, photorealistic',
+    prompt: 'cARCKHÉtic wide shot of a quiet residential street at sunrise, trees lining sidewalks, morning mist, warm orange light, empty calm street, suburban neighborhood, photorealistic',
   },
   {
     id: 'i04',
-    prompt: 'cinematic wide shot of a small mixed-breed brown and white street dog sitting alone on a sidewalk, looking expectantly, morning sunlight, urban park background, soft focus, photorealistic',
+    prompt: 'cARCKHÉtic wide shot of a small mixed-breed brown and white street dog sitting alone on a sidewalk, looking expectantly, morning sunlight, urban park background, soft focus, photorealistic',
   },
   {
     id: 'i05',
-    prompt: 'cinematic close-up of a friendly mixed-breed dog face with soft brown eyes looking directly at camera, hopeful expression, warm morning light, photorealistic, shallow depth of field',
+    prompt: 'cARCKHÉtic close-up of a friendly mixed-breed dog face with soft brown eyes looking directly at camera, hopeful expression, warm morning light, photorealistic, shallow depth of field',
   },
   {
     id: 'i06',
-    prompt: 'cinematic shot of a young man crouched down petting a happy street dog on a sunny sidewalk, both smiling, warm morning light, joyful moment, photorealistic',
+    prompt: 'cARCKHÉtic shot of a young man crouched down petting a happy street dog on a sunny sidewalk, both smiling, warm morning light, joyful moment, photorealistic',
   },
   {
     id: 'i07',
-    prompt: 'cinematic wide shot of a man and a small brown dog walking together down a tree-lined sidewalk, morning shadows on pavement, warm golden light, photorealistic, vertical composition',
+    prompt: 'cARCKHÉtic wide shot of a man and a small brown dog walking together down a tree-lined sidewalk, morning shadows on pavement, warm golden light, photorealistic, vertical composition',
   },
   {
     id: 'i08',
-    prompt: 'cinematic wide shot of children laughing on swings in a sunlit park, summer morning, warm golden light through leaves, joyful playful atmosphere, photorealistic',
+    prompt: 'cARCKHÉtic wide shot of children laughing on swings in a sunlit park, summer morning, warm golden light through leaves, joyful playful atmosphere, photorealistic',
   },
   {
     id: 'i09',
-    prompt: 'cinematic close-up portrait of a young man laughing freely with eyes closed and pure joy, warm sunlight on his face, vibrant happy emotion, photorealistic',
+    prompt: 'cARCKHÉtic close-up portrait of a young man laughing freely with eyes closed and pure joy, warm sunlight on his face, vibrant happy emotion, photorealistic',
   },
   {
     id: 'i10',
-    prompt: 'cinematic wide shot of a small mixed-breed dog running joyfully across a green grass field in a sunlit park, motion blur, ears flying, pure happiness, photorealistic',
+    prompt: 'cARCKHÉtic wide shot of a small mixed-breed dog running joyfully across a green grass field in a sunlit park, motion blur, ears flying, pure happiness, photorealistic',
   },
   {
     id: 'i11',
-    prompt: 'cinematic wide shot silhouette of a man and a dog sitting together on a park bench at golden hour sunset, warm orange sky, peaceful moment, photorealistic, vertical 9:16',
+    prompt: 'cARCKHÉtic wide shot silhouette of a man and a dog sitting together on a park bench at golden hour sunset, warm orange sky, peaceful moment, photorealistic, vertical 9:16',
   },
   {
     id: 'i12',
-    prompt: 'cinematic interior shot of a cozy living room at evening, warm lamp light, a small dog sleeping peacefully on a soft rug, photorealistic, intimate atmosphere',
+    prompt: 'cARCKHÉtic interior shot of a cozy living room at evening, warm lamp light, a small dog sleeping peacefully on a soft rug, photorealistic, intimate atmosphere',
   },
 ];
 
@@ -111,12 +111,12 @@ for (const s of classified) {
 console.log();
 
 // ================================================================
-// STEP 2 — Gera imagens via inemaimg (sequencial — server single-GPU)
+// STEP 2 — Gera imagens via ARCKHÉimg (sequencial — server single-GPU)
 // ================================================================
 
 async function genImages() {
   const t0 = Date.now();
-  console.log('=== GENERATING 12 IMAGES (inemaimg flux2-klein, 9:16) ===');
+  console.log('=== GENERATING 12 IMAGES (ARCKHÉimg flux2-klein, 9:16) ===');
   for (const s of classified) {
     const out = path.join(IMGS, `${s.id}.png`);
     if (fs.existsSync(out)) {

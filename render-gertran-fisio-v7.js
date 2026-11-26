@@ -2,7 +2,7 @@
  * GERTRAN v7 — ajustes finais do piloto:
  *   - Layout v6a fixado (caption y=1520, logo abaixo do vídeo)
  *   - Nome da profissêo GIGANTE ocupando quase a largura
- *   - Rodapé: INEMA.CLUB maiúsculo em negrito (substitui @inema.club)
+ *   - Rodapé: ARCKHÉ AI maiúsculo em negrito (substitui @ARCKHÉ AI)
  */
 
 const fs = require('fs');
@@ -46,7 +46,7 @@ const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
   t0: c.t0 + NARR_OFFSET,
   t1: c.t1 + NARR_OFFSET,
-  text: c.text.replace(/inema\.?(cube|clube)/gi, 'INEMA.CLUB').replace(/ponto/gi, '.'),
+  text: c.text.replace(/ARCKHÉ\.?(cube|clube)/gi, 'ARCKHÉ AI').replace(/ponto/gi, '.'),
 }));
 
 const ascii = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -119,15 +119,15 @@ const captions = capChunks.map((b) => drawtext({
   color: '#FFEB3B', bord: 8, bordColor: 'black@0.95',
 }));
 
-// Watermark INEMA.CLUB no topo
+// Watermark ARCKHÉ AI no topo
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: T5, y: 48, size: 64,
+  text: 'ARCKHÉ AI', t0: 0, t1: T5, y: 48, size: 64,
   color: 'white@0.95', bord: 6, bordColor: 'black@0.7', x: '48',
 });
 
-// Rodapé: INEMA.CLUB GRANDE centralizado na faixa inferior (1500-1920)
+// Rodapé: ARCKHÉ AI GRANDE centralizado na faixa inferior (1500-1920)
 const rodape = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: T5, y: '1500+(420-th)/2', size: 80,
+  text: 'ARCKHÉ AI', t0: 0, t1: T5, y: '1500+(420-th)/2', size: 80,
   color: 'white', bord: 5, bordColor: 'black@0.7',
 });
 
@@ -135,7 +135,7 @@ const cta = [
   drawtext({ text: 'GERACAO DE',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 420,  size: 72,  bord: 5 }),
   drawtext({ text: 'TRANSFORMACAO',          t0: T5 + 0.2, t1: TOTAL_DUR, y: 520,  size: 72,  color: '#FFEB3B', bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM', t0: T5 + 0.2, t1: TOTAL_DUR, y: 780,  size: 50,  bord: 3 }),
-  drawtext({ text: 'INEMA.CLUB',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
+  drawtext({ text: 'ARCKHÉ AI',             t0: T5 + 0.2, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
   drawtext({ text: 'LINK NA BIO',            t0: T5 + 0.2, t1: TOTAL_DUR, y: 1200, size: 64,  bord: 4 }),
 ];
 
@@ -162,7 +162,7 @@ const args = [
   OUT_FILE,
 ];
 
-console.log(`[gertran v7] profissêo 150pt + rodapé INEMA.CLUB 80pt`);
+console.log(`[gertran v7] profissêo 150pt + rodapé ARCKHÉ AI 80pt`);
 const t0 = Date.now();
 const res = spawnSync('ffmpeg', args, { stdio: ['ignore', 'inherit', 'inherit'] });
 if (res.status !== 0) process.exit(res.status || 1);

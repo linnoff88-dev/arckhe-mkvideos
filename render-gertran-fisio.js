@@ -10,13 +10,13 @@
  *   7–14.5s  ATO 2 (Orgulho/Adaptaçêo): as transformações passadas — 6 imgs
  *   14.5–20.75s ATO 3 (Nova onda IA): o presente — 5 imgs
  *   20.75–27s  ATO 4 (Convite): callback emocional + hero — 5 imgs
- *   27–30s BLACK: CTA gigante INEMA.CLUB
+ *   27–30s BLACK: CTA gigante ARCKHÉ AI
  *
  * Técnica:
  *   - Ken Burns sutil (zoom rate 0.0015 — sem "tremer")
  *   - Crossfade 0.25s entre imagens (xfade chain)
  *   - Narraçêo com CTA embutido + música piano suave duckada
- *   - Watermark INEMA.CLUB 64pt constante (segmentos 1 e 2)
+ *   - Watermark ARCKHÉ AI 64pt constante (segmentos 1 e 2)
  */
 
 const fs = require('fs');
@@ -206,31 +206,31 @@ const capBlocks = [
   { t0: 15.0, t1: 17.5, text: 'E você sabe o que fazer' },
   { t0: 17.5, t1: 20.0, text: 'Você é da geraçêo' },
   { t0: 20.0, t1: 22.5, text: 'que TRANSFORMA' },
-  { t0: 22.5, t1: 26.5, text: 'Continue no INEMA.CLUB' },
+  { t0: 22.5, t1: 26.5, text: 'Continue no ARCKHÉ AI' },
 ];
 const captions = capBlocks.map((b) => drawtext({
   text: b.text, t0: b.t0, t1: b.t1, y: 1680, size: 58,
   color: '#FFEB3B', font: FONT_HOOK, bord: 7, bordColor: 'black@0.9',
 }));
 
-// Watermark INEMA.CLUB 64pt — constante nos segmentos 1 e 2 (0-27s)
+// Watermark ARCKHÉ AI 64pt — constante nos segmentos 1 e 2 (0-27s)
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: 27, y: 48, size: 64,
+  text: 'ARCKHÉ AI', t0: 0, t1: 27, y: 48, size: 64,
   color: 'white@0.95', font: FONT_HOOK, bord: 6, bordColor: 'black@0.7', x: '48',
 });
 
 // Handle rodapé segmentos 1 e 2
 const handle = drawtext({
-  text: '@inema.club', t0: 0.5, t1: 27, y: 1850, size: 40,
+  text: '@ARCKHÉ AI', t0: 0.5, t1: 27, y: 1850, size: 40,
   color: 'white@0.85', font: FONT_CAPS, bord: 3, bordColor: 'black@0.6',
 });
 
-// CTA final (27-30s) — tela preta com GERTRAN + INEMA.CLUB gigante
+// CTA final (27-30s) — tela preta com GERTRAN + ARCKHÉ AI gigante
 const cta = [
   drawtext({ text: 'GERAÇêO DE',                t0: 27.2, t1: 30, y: 420,  size: 72,  font: FONT_HOOK, bord: 5 }),
   drawtext({ text: 'TRANSFORMAÇêO',             t0: 27.2, t1: 30, y: 520,  size: 72,  color: '#FFEB3B', font: FONT_HOOK, bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM',    t0: 27.2, t1: 30, y: 780,  size: 50,  font: FONT_HOOK, bord: 3 }),
-  drawtext({ text: 'INEMA.CLUB',                t0: 27.2, t1: 30, y: 900,  size: 180, color: '#FFEB3B', font: FONT_HOOK, bord: 12 }),
+  drawtext({ text: 'ARCKHÉ AI',                t0: 27.2, t1: 30, y: 900,  size: 180, color: '#FFEB3B', font: FONT_HOOK, bord: 12 }),
   drawtext({ text: 'LINK NA BIO',               t0: 27.2, t1: 30, y: 1200, size: 64,  font: FONT_HOOK, bord: 4 }),
 ];
 

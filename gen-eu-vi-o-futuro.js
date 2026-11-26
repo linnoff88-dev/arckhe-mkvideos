@@ -9,17 +9,17 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
 
-const OUT_OLD = path.join(__dirname, 'prj/inema/outputs/antes-do-futuro_2026-04-22/imgs');
-const OUT_NEW = path.join(__dirname, 'prj/inema/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
+const OUT_OLD = path.join(__dirname, 'prj/ARCKHÉ/outputs/antes-do-futuro_2026-04-22/imgs');
+const OUT_NEW = path.join(__dirname, 'prj/ARCKHÉ/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
 
 const CHAR = 'blond German-descendant Brazilian, fair skin with light freckles, blue eyes, tousled light blond hair, thoughtful expression';
-const S_OLD = 'shot on 35mm film, cinematic grading, directional tungsten light, deep shadows, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, directional tungsten light, deep shadows, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir lighting, glassmorphism, teal and blue accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 // (A) regera 3 cenas da série anterior ----------------------------------------
@@ -114,11 +114,11 @@ const novo = [
 
   // 19 — Vibe CODE futurista
   { file: 'cena19-ini.png', prompt: `Futuristic clean workspace, glass desk, integrated holographic panels floating around, glassmorphism UI, teal ambient light, sense of power and calm, ${S_FUT}` },
-  { file: 'cena19-fim.png', prompt: `A ${CHAR} mature man about 42 years old standing at the center of a futuristic workspace, interacting with floating holographic systems with confident gestures, commanding presence, cinematic wide shot, ${S_FUT}` },
+  { file: 'cena19-fim.png', prompt: `A ${CHAR} mature man about 42 years old standing at the center of a futuristic workspace, interacting with floating holographic systems with confident gestures, commanding presence, cARCKHÉtic wide shot, ${S_FUT}` },
 
   // 20 — Tela limpa, hero loop
   { file: 'cena20-ini.png', prompt: `Vast minimalist futuristic space with a soft gradient of warm-to-cool light, subtle particles floating, empty composition with strong negative space for hero text, ${S_FUT}` },
-  { file: 'cena20-fim.png', prompt: `Heroic portrait of a ${CHAR} man about 42 years old, facing forward into a luminous horizon, confident look of builder and visionary, cool-warm gradient light, cinematic wide shot, ${S_FUT}` },
+  { file: 'cena20-fim.png', prompt: `Heroic portrait of a ${CHAR} man about 42 years old, facing forward into a luminous horizon, confident look of builder and visionary, cool-warm gradient light, cARCKHÉtic wide shot, ${S_FUT}` },
 ];
 
 (async () => {

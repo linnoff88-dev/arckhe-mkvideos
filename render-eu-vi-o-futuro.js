@@ -1,6 +1,6 @@
 /**
  * Monta o video "Eu Vi o Futuro Chegar" a partir das 40 imagens (20 cenas ini+fim)
- * com Ken Burns + crossfade, musica de fundo (inemavox/freesound) e fade out.
+ * com Ken Burns + crossfade, musica de fundo (ARCKHÉvox/freesound) e fade out.
  *
  * Target: 1080x1080, 60s total, 30fps.
  * 20 cenas x 3s = 60s; cada cena = ini(1.5s) + fim(1.5s) com zoompan.
@@ -10,8 +10,8 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const IMG_DIR = path.join(__dirname, 'prj/inema/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
-const OUT_DIR = path.join(__dirname, 'prj/inema/outputs/eu-vi-o-futuro-chegar_2026-04-22/video');
+const IMG_DIR = path.join(__dirname, 'prj/ARCKHÉ/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
+const OUT_DIR = path.join(__dirname, 'prj/ARCKHÉ/outputs/eu-vi-o-futuro-chegar_2026-04-22/video');
 const MUSIC = '/tmp/musica_video/freesound_748406_Inspiring_Orchestral_Music_with_Majestic.mp3';
 
 const N_SCENES = 30; // cena01..cena30 (ini + fim = 60 imgs)

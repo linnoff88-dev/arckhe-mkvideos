@@ -5,7 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 const { profissoes } = require('./config/profissoes-30');
 const {
   pairedChangesScenes,

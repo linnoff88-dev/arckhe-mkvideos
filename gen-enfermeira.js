@@ -3,15 +3,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
-const OUT = path.join(__dirname, 'prj/inema/outputs/enfermeira_2026-04-22/imgs');
+const OUT = path.join(__dirname, 'prj/ARCKHÉ/outputs/enfermeira_2026-04-22/imgs');
 
 const BASE = 'Brazilian woman with light-medium skin, long straight chestnut brown hair, kind attentive hazel eyes, gentle determined expression';
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir clinical lighting, soft glassmorphism, teal accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (age, extra = '') => `${BASE}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -60,7 +60,7 @@ const scenes = [
   { file: 'cena14-fim.png', prompt: `${char(44, 'mentor nurse, chestnut and silver hair tied elegantly, scrubs with a small pin')} teaching a diverse group of young nurses, warm guiding smile, ${S_MID}` },
 
   { file: 'cena15-ini.png', prompt: `Modern hospital corridor with soft warm-cool gradient light, shallow depth of field, sense of care and calm, no people, ${S_FUT}` },
-  { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 45 years old, chestnut hair with elegant silver streaks loosely down, clean scrubs and a stethoscope, quietly confident warm smile looking slightly upward, soft rim light, blurred hospital background, editorial quality, ${S_FUT}` },
+  { file: 'cena15-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of the same ${BASE}, about 45 years old, chestnut hair with elegant silver streaks loosely down, clean scrubs and a stethoscope, quietly confident warm smile looking slightly upward, soft rim light, blurred hospital background, editorial quality, ${S_FUT}` },
 ];
 
 (async () => {

@@ -2,7 +2,7 @@
  * Render CriaProf em formato 9:16 com estilo GERTRAN.
  *
  * Mesma narrativa (50 imgs × 0.9s zoompan, 45s total), mas canvas 1080×1920
- * com bandas pretas top/bottom, INEMA.CLUB watermark topo + rodapé, captions
+ * com bandas pretas top/bottom, ARCKHÉ AI watermark topo + rodapé, captions
  * y=1520 (na banda inferior, estilo GERTRAN).
  *
  * Output: output/videos/criaprof/videos/<slug>-criaprof.mp4 (sobrescreve 1:1).
@@ -60,7 +60,7 @@ const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
   t0: c.t0 + NARR_OFFSET,
   t1: c.t1 + NARR_OFFSET,
-  text: c.text.replace(/inema\.?(cube|clube)/gi, 'INEMA.CLUB').replace(/ponto/gi, '.'),
+  text: c.text.replace(/ARCKHÉ\.?(cube|clube)/gi, 'ARCKHÉ AI').replace(/ponto/gi, '.'),
 }));
 
 const ascii = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -114,22 +114,22 @@ const captions = capChunks.map((b) => drawtext({
 
 // Watermark topo
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: TOTAL_DUR - 3, y: 48, size: 64,
+  text: 'ARCKHÉ AI', t0: 0, t1: TOTAL_DUR - 3, y: 48, size: 64,
   color: 'white@0.95', bord: 6, bordColor: 'black@0.7', x: '48',
 });
 
 // Rodapé centralizado na banda inferior (1500-1920)
 const rodape = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: TOTAL_DUR - 3, y: '1500+(420-th)/2', size: 80,
+  text: 'ARCKHÉ AI', t0: 0, t1: TOTAL_DUR - 3, y: '1500+(420-th)/2', size: 80,
   color: 'white', bord: 5, bordColor: 'black@0.7',
 });
 
-// Outro 3s: INEMA.CLUB 180pt centralizado (estilo GERTRAN black outro, mas overlay)
+// Outro 3s: ARCKHÉ AI 180pt centralizado (estilo GERTRAN black outro, mas overlay)
 const outro = [
   drawtext({ text: 'GERACAO DE',             t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 420,  size: 72,  bord: 5 }),
   drawtext({ text: 'TRANSFORMACAO',          t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 520,  size: 72,  color: '#FFEB3B', bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM', t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 780,  size: 50,  bord: 3 }),
-  drawtext({ text: 'INEMA.CLUB',             t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
+  drawtext({ text: 'ARCKHÉ AI',             t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
   drawtext({ text: 'LINK NA BIO',            t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: 1200, size: 64,  bord: 4 }),
 ];
 

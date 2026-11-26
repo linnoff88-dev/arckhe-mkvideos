@@ -151,21 +151,21 @@ function getCtaConfig(slug, variant) {
 
 // === Música de fundo ===
 // Trilha por variante (v0/undefined = comportamento original):
-//   prof    → A (pad ambient)   |   generic → B (cinematic bgm)
+//   prof    → A (pad ambient)   |   generic → B (cARCKHÉtic bgm)
 // Trilha por versêo narrativa (A/B testing — v1-v5):
 //   v1 Nostálgica    → C (acoustic guitar fingerpicking — CC0)
 //   v2 Confidente    → D (lofi jazz warm — CC0)
-//   v3 Provocaçêo    → E (cinematic drum build — CC-BY Alastair_Pursloe)
+//   v3 Provocaçêo    → E (cARCKHÉtic drum build — CC-BY Alastair_Pursloe)
 //   v4 Intimista     → F (orchestral warm strings — CC-BY EvanBoyerman)
-//   v5 Revelaçêo     → B (bgm_v1 cinematic — já temos, mood match alto)
-const MUSIC_DIR = '/home/nmaldaner/projetos/mkvideos/prj/inema/assets/music/cta';
+//   v5 Revelaçêo     → B (bgm_v1 cARCKHÉtic — já temos, mood match alto)
+const MUSIC_DIR = '/home/nmaldaner/projetos/mkvideos/prj/ARCKHÉ/assets/music/cta';
 
 const MUSIC_TRACKS = {
-  A: '/home/nmaldaner/projetos/mkvideos/prj/inema/outputs/c0075-contadores_ia_automacao/audio/freesound_569920_Atmospheric_Ambient_Pad_128bpm_mp3.mp3',
+  A: '/home/nmaldaner/projetos/mkvideos/prj/ARCKHÉ/outputs/c0075-contadores_ia_automacao/audio/freesound_569920_Atmospheric_Ambient_Pad_128bpm_mp3.mp3',
   B: '/home/nmaldaner/projetos/mkvideos/remotion-ad/public/audio/bgm_v1.mp3',
   C: `${MUSIC_DIR}/freesound_523825_acoustic_guitar_nostalgic.mp3`,
   D: `${MUSIC_DIR}/freesound_629154_lofi_jazz_warm.mp3`,
-  E: `${MUSIC_DIR}/freesound_156867_cinematic_drum_build.mp3`,
+  E: `${MUSIC_DIR}/freesound_156867_cARCKHÉtic_drum_build.mp3`,
   F: `${MUSIC_DIR}/freesound_753968_warm_strings_build.mp3`,
 };
 

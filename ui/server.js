@@ -192,9 +192,9 @@ const VIDEO_TYPE_INFO = {
     codeFile: 'gen-criaprof.js',
     promptFile: 'gen-lib/scene-templates.js',
     gen: { script: 'gen-criaprof.js', usage: 'node gen-criaprof.js <slug>',
-      desc: 'Factory: lê config/profissoes-30.js + gen-lib/scene-templates.criaProfScenes(); gera 50 imgs (25 cenas × ini+fim) via inemaimg API.' },
+      desc: 'Factory: lê config/profissoes-30.js + gen-lib/scene-templates.criaProfScenes(); gera 50 imgs (25 cenas × ini+fim) via ARCKHÉimg API.' },
     render: { script: 'render-criaprof.js', usage: 'node render-criaprof.js <slug>',
-      desc: 'Monta vídeo 1080×1080 45s: Ken Burns + zoom 0.0022 nas 50 imgs, narraçêo+música, captions whisper-sync (y=940), watermark INEMA.CLUB final.' },
+      desc: 'Monta vídeo 1080×1080 45s: Ken Burns + zoom 0.0022 nas 50 imgs, narraçêo+música, captions whisper-sync (y=940), watermark ARCKHÉ AI final.' },
     extras: [
       { script: 'render-criaprof-916.js', desc: 'Variante 9:16 1080×1920 com bandas pretas top/bottom e captions estilo GERTRAN (y=1520).' },
     ],
@@ -207,7 +207,7 @@ const VIDEO_TYPE_INFO = {
     gen: { script: 'gen-gertran-nostalgia.js', usage: 'node gen-gertran-nostalgia.js <slug>',
       desc: 'Factory: gera 20 imgs era-específicas por profissêo (input do render).' },
     render: { script: 'render-gertran.js', usage: 'node render-gertran.js <slug>',
-      desc: '31s = 3s padding (bg sólido + PROFISSêO 150pt + hook 4 linhas + INEMA.CLUB topo/rodapé) + 25s main (20 imgs com scale Lanczos sem tremor, captions whisper-sync y=1520) + 3s black outro (CTA INEMA.CLUB 180pt).' },
+      desc: '31s = 3s padding (bg sólido + PROFISSêO 150pt + hook 4 linhas + ARCKHÉ AI topo/rodapé) + 25s main (20 imgs com scale Lanczos sem tremor, captions whisper-sync y=1520) + 3s black outro (CTA ARCKHÉ AI 180pt).' },
   },
   'paired': {
     title: 'Paired — Mudanças no tempo',
@@ -239,8 +239,8 @@ const VIDEO_TYPE_INFO = {
     render: { script: 'render-extra.js', usage: 'node render-extra.js <slug> artifacts',
       desc: 'Mesmo layout dos templates extras.' },
   },
-  'inema': {
-    title: 'INEMA — Vídeos institucionais autorais',
+  'ARCKHÉ': {
+    title: 'ARCKHÉ — Vídeos institucionais autorais',
     summary: 'Vídeos conceituais autorais 1080×1080 60s. Ken Burns + crossfade + música.',
     codeFile: 'render-eu-vi-o-futuro.js',
     promptFile: 'gen-eu-vi-o-futuro.js',
@@ -279,12 +279,12 @@ const VIDEO_TYPE_INFO = {
   },
   'darkstory': {
     title: 'DarkStory — Histórias para canal dark do YouTube',
-    summary: 'Gera vídeo longo a partir de um título/assunto. LLM cria roteiro + prompts visuais sombrios; inemaimg gera N imgs; ffmpeg + Chatterbox TTS + whisper ASS compõem o vídeo. Defaults: 60s · 12 imgs · voz josh · captions on · 9:16 · trilha dark.',
+    summary: 'Gera vídeo longo a partir de um título/assunto. LLM cria roteiro + prompts visuais sombrios; ARCKHÉimg gera N imgs; ffmpeg + Chatterbox TTS + whisper ASS compõem o vídeo. Defaults: 60s · 12 imgs · voz josh · captions on · 9:16 · trilha dark.',
     codeFile: 'gen-darkstory.js',
     promptFile: 'render-darkstory.js',
     gen: { script: 'gen-darkstory.js',
       usage: 'node gen-darkstory.js --titulo "<assunto>" [--duracao 60] [--n_imgs 12] [--voz josh] [--captions] [--formato 9:16] [--musica dark]',
-      desc: 'STATUS: SKELETON. Hoje só cria a pasta + meta.json. Falta: chamar Claude CLI pra gerar scene_plan.json (cenas com narraçêo + prompt visual) e loopar inemaimg pra gerar as N imgs. Padrêo: gen-criaprof-comic-A.js.' },
+      desc: 'STATUS: SKELETON. Hoje só cria a pasta + meta.json. Falta: chamar Claude CLI pra gerar scene_plan.json (cenas com narraçêo + prompt visual) e loopar ARCKHÉimg pra gerar as N imgs. Padrêo: gen-criaprof-comic-A.js.' },
     render: { script: 'render-darkstory.js',
       usage: 'node render-darkstory.js <slug>_<date>',
       desc: 'STATUS: SKELETON. Vai usar Chatterbox TTS (default voz josh) + whisper word-level captions + ffmpeg Ken Burns + música dark de fundo. Padrêo: render-criaprof.js (1080×1920 com Ken Burns + ASS captions y=1520).' },

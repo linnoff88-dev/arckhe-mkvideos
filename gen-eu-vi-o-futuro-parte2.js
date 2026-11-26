@@ -6,15 +6,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
-const OUT = path.join(__dirname, 'prj/inema/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
+const OUT = path.join(__dirname, 'prj/ARCKHÉ/outputs/eu-vi-o-futuro-chegar_2026-04-22/imgs');
 
 // Base do personagem e estilo
 const CHAR_BASE = 'blond German-descendant Brazilian man, fair skin with light freckles, blue eyes';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir lighting, glassmorphism, teal and blue accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 // Idades progressivas + estágios da aparência
@@ -51,7 +51,7 @@ const scenes = [
   { file: 'cena26-fim.png', prompt: `${AGE_58} in front of a dark terminal with code streaming, black-framed glasses catching the screen reflection, dark navy baseball cap, full gray beard, focused intensity, dark background, ${S_FUT}` },
 
   // 27 — Claude Code build
-  { file: 'cena27-ini.png', prompt: `Close-up of a terminal panel with code generating at high speed, file tree visible on the side, subtle AI presence, teal accents, cinematic dark monitor aesthetic, ${S_FUT}` },
+  { file: 'cena27-ini.png', prompt: `Close-up of a terminal panel with code generating at high speed, file tree visible on the side, subtle AI presence, teal accents, cARCKHÉtic dark monitor aesthetic, ${S_FUT}` },
   { file: 'cena27-fim.png', prompt: `${AGE_58} slight smile watching an AI coding assistant complete a task in seconds, relaxed posture, dark navy baseball cap, gray beard, glasses, dark t-shirt, dim cool-lit studio, ${S_FUT}` },
 
   // 28 — VIBE CODE intro (ambiente integrado)
@@ -59,12 +59,12 @@ const scenes = [
   { file: 'cena28-fim.png', prompt: `${AGE_62} standing at the center of a futuristic workspace with holographic panels around him, gesturing gently, cap, glasses, silver beard, confident commanding presence, ${S_FUT}` },
 
   // 29 — VIBE CODE flow
-  { file: 'cena29-ini.png', prompt: `Cinematic wide shot of holographic systems, videos, code panels and AI outputs flowing in a synchronized choreography through the air, soft particles, deep teal palette, sense of mastery, ${S_FUT}` },
+  { file: 'cena29-ini.png', prompt: `CARCKHÉtic wide shot of holographic systems, videos, code panels and AI outputs flowing in a synchronized choreography through the air, soft particles, deep teal palette, sense of mastery, ${S_FUT}` },
   { file: 'cena29-fim.png', prompt: `${AGE_62} in dark t-shirt and dark navy baseball cap, full gray beard, glasses, quiet confident smile as systems flow around him, cool ambient blue light, ${S_FUT}` },
 
   // 30 — Heroic close, igual à referência
-  { file: 'cena30-ini.png', prompt: `Cinematic dark environment with out-of-focus code panels glowing faintly in the deep blue background, moody atmospheric negative space on the left, ${S_FUT}` },
-  { file: 'cena30-fim.png', prompt: `Heroic cinematic close-up portrait of a ${CHAR_BASE}, about 62 years old, dark navy baseball cap worn low, black-framed rectangular glasses, full well-groomed silver-gray beard, dark navy t-shirt, serious intense contemplative expression looking into the camera, deep blue shadowy background with faint code panels out of focus, strong side rim light, professional editorial portrait, ${S_FUT}` },
+  { file: 'cena30-ini.png', prompt: `CARCKHÉtic dark environment with out-of-focus code panels glowing faintly in the deep blue background, moody atmospheric negative space on the left, ${S_FUT}` },
+  { file: 'cena30-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of a ${CHAR_BASE}, about 62 years old, dark navy baseball cap worn low, black-framed rectangular glasses, full well-groomed silver-gray beard, dark navy t-shirt, serious intense contemplative expression looking into the camera, deep blue shadowy background with faint code panels out of focus, strong side rim light, professional editorial portrait, ${S_FUT}` },
 ];
 
 (async () => {

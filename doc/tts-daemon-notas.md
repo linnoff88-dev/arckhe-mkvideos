@@ -63,11 +63,11 @@ Durante a integraçêo instalamos em `/home/nmaldaner/miniconda3/envs/chatterbox
 
 Nenhum desses altera o comportamento do Chatterbox em si. Mas se um dia rodar `pip list` ou `pip freeze` no env e estranhar, é esse o motivo.
 
-**Importante:** esse env é **compartilhado com o inemavox** (o projeto original que usa Chatterbox pra dublagem). Qualquer `pip install --upgrade` nesse env afeta os dois projetos. Tratar como infraestrutura — nêo mexer sem avisar.
+**Importante:** esse env é **compartilhado com o ARCKHÉvox** (o projeto original que usa Chatterbox pra dublagem). Qualquer `pip install --upgrade` nesse env afeta os dois projetos. Tratar como infraestrutura — nêo mexer sem avisar.
 
 ### 4. Nêo alteramos o código de gatilhos/pipeline
 
-Nenhum script em `prj/inema/`, `pipeline/`, `telegram/` foi modificado. A troca do default TTS acontece via `getBestProvider('tts')` em `media/providers.js:PREFERRED_TTS_ORDER`, que agora retorna `chatterbox-vc` automaticamente.
+Nenhum script em `prj/ARCKHÉ/`, `pipeline/`, `telegram/` foi modificado. A troca do default TTS acontece via `getBestProvider('tts')` em `media/providers.js:PREFERRED_TTS_ORDER`, que agora retorna `chatterbox-vc` automaticamente.
 
 **Consequência:** qualquer lugar do código que chama `generateSpeech(texto, saida)` **sem passar `provider` explicitamente** agora usa Chatterbox VC com voz Rachel. Se você quiser reverter globalmente, basta mudar a ordem em `PREFERRED_TTS_ORDER` (colocar `fish` antes).
 
@@ -87,7 +87,7 @@ Se o daemon nêo estiver rodando, o Node faz **2 tentativas com backoff** (ECONN
 ### 6. Modelo ocupa VRAM permanentemente enquanto o daemon está de pé
 
 ~1.5 GB de VRAM ficam alocados o tempo todo. A GPU tem folga (25+ GB livre), mas vale saber:
-- Se inemavox também estiver rodando com Chatterbox carregado, sêo ~3 GB no total
+- Se ARCKHÉvox também estiver rodando com Chatterbox carregado, sêo ~3 GB no total
 - Outros processos GPU (ex: rodar Llama local) competem pelo mesmo device
 
 **Nêo é problema hoje, mas é o gatilho para:** se a VRAM começar a apertar, vale transformar o daemon em "lazy-load" (descarregar modelo após N minutos inativos, recarregar sob demanda). Hoje o ganho nêo compensa a complexidade.

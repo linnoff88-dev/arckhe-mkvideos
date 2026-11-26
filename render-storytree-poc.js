@@ -10,7 +10,7 @@
  *   5. Cross-dissolves de duraçêo variável (hard cut, 0.5s, 0.8s, 1.5s)
  *   6. Money shot — freeze + flash branco no clímax (estilo melodysheep)
  *
- * Reusa imgs do papai-noel-cinematic-v2 (38 imgs em 512x896 vertical).
+ * Reusa imgs do papai-noel-cARCKHÉtic-v2 (38 imgs em 512x896 vertical).
  * Output: output/videos/darkstory/storytree-poc-v1_2026-05-06/video/storytree-poc.mp4
  */
 
@@ -19,7 +19,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const ROOT = '/home/nmaldaner/projetos/mkvideos';
-const SRC = path.join(ROOT, 'output/videos/darkstory/papai-noel-cinematic-v2_2026-05-06/imgs');
+const SRC = path.join(ROOT, 'output/videos/darkstory/papai-noel-cARCKHÉtic-v2_2026-05-06/imgs');
 const OUT = path.join(ROOT, 'output/videos/darkstory/storytree-poc-v1_2026-05-06');
 const VIDEO = path.join(OUT, 'video');
 const TMP = path.join(OUT, 'tmp');

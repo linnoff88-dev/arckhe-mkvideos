@@ -1,11 +1,11 @@
 ï»¿# mkvideos
 
-Factory standalone de vêÂ­deos com imagens estêÂ¡ticas + motion cinematogrêÂ¡fico.
+Factory standalone de vêÂ­deos com imagens estêÂ¡ticas + motion cARCKHÉtogrêÂ¡fico.
 
 Geradores (`gen-*.js`) e renderizadores (`render-*.js`) que produzem reels e vêÂ­deos
 narrativos a partir de imagens IA + ffmpeg `zoompan` + faixa de êÂ¡udio.
 
-Repo: https://github.com/inematds/mkvideos
+Repo: https://github.com/linnoff88-dev/mkvideos
 
 ## Templates incluêÂ­dos
 
@@ -17,8 +17,8 @@ Repo: https://github.com/inematds/mkvideos
 | **CriaProf Comic A** | `gen-criaprof-comic-A.js` | `render-criaprof-comic-A-cta-916.js` | estilo Calvin & Hobbes |
 | **GERTRAN** | `gen-gertran-nostalgia.js` | `render-gertran.js` | reels 31s pêÂºblico 35+ |
 | **Paired/Decades/Artifacts** | `gen-extra.js` | `render-extra.js` | reels 31s timeline |
-| **DarkStory** (V1/V2/V2.5) | `gen-darkstory.js` / `gen-darkstory-cinematic.js` | `render-darkstory*.js` | vêÂ­deo longo dark + Aronofsky montage |
-| **INEMA institucional** | `gen-eu-vi-o-futuro.js` / `gen-antes-do-futuro.js` | `render-eu-vi-o-futuro.js` / `render-antes-do-futuro.js` | 1:1 60s autoral |
+| **DarkStory** (V1/V2/V2.5) | `gen-darkstory.js` / `gen-darkstory-cARCKHÉtic.js` | `render-darkstory*.js` | vêÂ­deo longo dark + Aronofsky montage |
+| **ARCKHÉ institucional** | `gen-eu-vi-o-futuro.js` / `gen-antes-do-futuro.js` | `render-eu-vi-o-futuro.js` / `render-antes-do-futuro.js` | 1:1 60s autoral |
 
 ## DependêÂªncias externas (nêÂ£o vivem aqui)
 
@@ -26,27 +26,27 @@ Esse repo NêÆO empacota os daemons ê¢â¬â eles rodam como infra 
 
 | Daemon | Default URL | FunêÂ§êÂ£o | Repo |
 |---|---|---|---|
-| **inemaimg** | `http://localhost:8000` | API multi-modelo de geraêÂ§êÂ£o de imagem (FLUX.2, Qwen, ERNIE) | `~/projetos/inemaimg` |
+| **ARCKHÉimg** | `http://localhost:8000` | API multi-modelo de geraêÂ§êÂ£o de imagem (FLUX.2, Qwen, ERNIE) | `~/projetos/ARCKHÉimg` |
 | **Chatterbox TTS** | `http://127.0.0.1:7860` | TTS local (vozes rachel, bella) | externo |
-| **inemavox** | `http://192.168.2.99:8010` | Proxy Freesound + library local de mêÂºsica/SFX | externo |
+| **ARCKHÉvox** | `http://192.168.2.99:8010` | Proxy Freesound + library local de mêÂºsica/SFX | externo |
 
 ## VariêÂ¡veis de ambiente
 
 Crie `.env` com:
 
 ```bash
-# inemaimg (image generation)
-INEMAIMG_URL=http://localhost:8000
-INEMAIMG_MODEL=flux2-klein           # flux2-klein|qwen-edit-2511|ernie|flux2-dev
-INEMAIMG_QUALITY=fast                # fast|high
-INEMAIMG_TIMEOUT_S=1800
+# ARCKHÉimg (image generation)
+ARCKHÉIMG_URL=http://localhost:8000
+ARCKHÉIMG_MODEL=flux2-klein           # flux2-klein|qwen-edit-2511|ernie|flux2-dev
+ARCKHÉIMG_QUALITY=fast                # fast|high
+ARCKHÉIMG_TIMEOUT_S=1800
 
 # Chatterbox TTS
 CHATTERBOX_URL=http://127.0.0.1:7860
 CHATTERBOX_VOICE=rachel              # rachel|bella
 
-# inemavox (Freesound proxy)
-INEMAVOX_URL=http://192.168.2.99:8010
+# ARCKHÉvox (Freesound proxy)
+ARCKHÉVOX_URL=http://192.168.2.99:8010
 ```
 
 ## PrêÂ©-requisitos do sistema
@@ -80,8 +80,8 @@ node gen-storytree-happy.js
 
 ```
 mkvideos/
-ê¢âÅê¢ââ¬ê¢ââ¬ lib/                 # storytree-* (motion grammar) + camera-moves + inemavox-client
-ê¢âÅê¢ââ¬ê¢ââ¬ pipeline/            # generate-image-{inemaimg,kie,piramyd,pollinations}.js
+ê¢âÅê¢ââ¬ê¢ââ¬ lib/                 # storytree-* (motion grammar) + camera-moves + ARCKHÉvox-client
+ê¢âÅê¢ââ¬ê¢ââ¬ pipeline/            # generate-image-{ARCKHÉimg,kie,piramyd,pollinations}.js
 ê¢âÅê¢ââ¬ê¢ââ¬ gen-lib/             # scene-templates.js
 ê¢âÅê¢ââ¬ê¢ââ¬ config/              # env.js + profissoes-*.js
 ê¢âÅê¢ââ¬ê¢ââ¬ doc/                 # storytree-canais-referencia.md + outros

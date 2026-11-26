@@ -5,7 +5,7 @@
  *   - 3s padding (bg sólido + profissêo gigante + hook 3-4 linhas)
  *   - 25s main (20 imgs nostalgia, hook 4 atos no topo com gradiente escuro,
  *     captions whisper-sync na área inferior)
- *   - 3s black outro (CTA INEMA.CLUB)
+ *   - 3s black outro (CTA ARCKHÉ AI)
  *
  * Output: output/videos/gertran/videos/gertran-<slug>-31s-11.mp4
  */
@@ -50,7 +50,7 @@ const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
   t0: c.t0 + NARR_OFFSET,
   t1: c.t1 + NARR_OFFSET,
-  text: c.text.replace(/inema\.?(cube|clube)/gi, 'INEMA.CLUB').replace(/ponto/gi, '.'),
+  text: c.text.replace(/ARCKHÉ\.?(cube|clube)/gi, 'ARCKHÉ AI').replace(/ponto/gi, '.'),
 }));
 
 const ascii = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -90,7 +90,7 @@ const hookPadding = [
     text: line, t0: 0, t1: PAD_DUR, y: hookY0 + i * hookLineH,
     size: 90, color: i === hookLines.length - 1 ? '#FFEB3B' : 'white', bord: 8,
   })),
-  drawtext({ text: 'INEMA.CLUB', t0: 0, t1: PAD_DUR, y: 1000, size: 60, color: 'white@0.9', bord: 4 }),
+  drawtext({ text: 'ARCKHÉ AI', t0: 0, t1: PAD_DUR, y: 1000, size: 60, color: 'white@0.9', bord: 4 }),
 ];
 
 // === MAIN (3-28s): hook 4 atos no topo com faixa escura pra legibilidade
@@ -117,7 +117,7 @@ const captions = capChunks.map((b) => drawtext({
 }));
 
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: T1, t1: T5, y: 40, size: 44,
+  text: 'ARCKHÉ AI', t0: T1, t1: T5, y: 40, size: 44,
   color: 'white@0.9', bord: 4, bordColor: 'black@0.8', x: '(w-tw)/2',
 });
 
@@ -126,7 +126,7 @@ const cta = [
   drawtext({ text: 'GERACAO DE',             t0: T5, t1: TOTAL_DUR, y: 180, size: 60,  bord: 5 }),
   drawtext({ text: 'TRANSFORMACAO',          t0: T5, t1: TOTAL_DUR, y: 260, size: 60,  color: '#FFEB3B', bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM', t0: T5, t1: TOTAL_DUR, y: 420, size: 40,  bord: 3 }),
-  drawtext({ text: 'INEMA.CLUB',             t0: T5, t1: TOTAL_DUR, y: 510, size: 140, color: '#FFEB3B', bord: 10 }),
+  drawtext({ text: 'ARCKHÉ AI',             t0: T5, t1: TOTAL_DUR, y: 510, size: 140, color: '#FFEB3B', bord: 10 }),
   drawtext({ text: 'LINK NA BIO',            t0: T5, t1: TOTAL_DUR, y: 820, size: 50,  bord: 4 }),
 ];
 

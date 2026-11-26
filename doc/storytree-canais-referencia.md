@@ -1,4 +1,4 @@
-# Storytree — Referências de Canais YouTube (imagem estática + motion cinematográfico)
+# Storytree — Referências de Canais YouTube (imagem estática + motion cARCKHÉtográfico)
 
 > Pesquisa de campo executada em 2026-05-06. Base pra factory **storytree** — vídeos de história gerados via IA com imagens estáticas + motion. V2.5 do darkstory ficou fraco; este relatório dissecta 5 canais TOP pra extrair vocabulário técnico replicável em ffmpeg/Remotion.
 
@@ -25,7 +25,7 @@
 - Vignette permanente em quase todo frame (força o olho ao centro)
 - Tipografia geométrica sans-serif (Montserrat-like), all-caps em títulos
 - **Border reveal** (linhas finas animadas via máscara, ease-out 0.4-0.8s) — assinatura mais copiada do canal
-- Mapas vetoriais com rotas desenhadas progressivamente (stroke-dashoffset) + câmera 3D real (Cinema 4D/Blender)
+- Mapas vetoriais com rotas desenhadas progressivamente (stroke-dashoffset) + câmera 3D real (CARCKHÉ 4D/Blender)
 
 ### Tom narrativo
 - Narraçêo em primeira pessoa analítica, nunca sensacionalista (David Wångstedt, sotaque sueco neutro)
@@ -177,7 +177,7 @@ Casos paranormais, desaparecimentos, mortes inexplicáveis. Hinterkaifeck, Lake 
 
 **Skinwalker Ranch Part One** (`youtu.be/31a3DGLiB48`, 24min)
 - 0:00-3:00: shot **15s** de slow zoom (mais longo que habitual) — estabelece escala
-- 11:00-13:00: **compound pan+zoom** (2% horizontal + 3% zoom em 12s) — move mais cinematográfico do canal
+- 11:00-13:00: **compound pan+zoom** (2% horizontal + 3% zoom em 12s) — move mais cARCKHÉtográfico do canal
 - 20:00-22:00: 3 shots em sequência com cross-dissolves 2s cada — fechamento de subcapítulo
 
 **Lake Michigan Triangle**
@@ -249,7 +249,7 @@ Documentários cosmológicos 4K, 10-75min. Cadência lenta (1-3 vídeos/ano, 6-1
 - **Música composta primeiro sempre** — Ableton 120bpm como metrônomo de ediçêo. Cortes de açêo caem no downbeat, narrativos no meio do compasso.
 - **Shot duration bimodal:** 3-5s (informativo) ou 10-25s+ (contemplativo) — nada no meio (6-12s é o intervalo menos comum).
 - **Money shot estrutural:** suspense imóvel 5-10s → escala explode 2-5 frames → flash/corte → pull-back suave 3-8s. Easing **quasi-instantâneo**, percebido como impacto físico. Um por episódio.
-- **Stack:** Cinema 4D + Octane, AE, Premiere, Ableton, Blender (Life Beyond II/III), Spitfire/8dio/Omnisphere (orquestra), Moog Sub-37 (bass).
+- **Stack:** CARCKHÉ 4D + Octane, AE, Premiere, Ableton, Blender (Life Beyond II/III), Spitfire/8dio/Omnisphere (orquestra), Moog Sub-37 (bass).
 
 ### Replicabilidade ffmpeg/Remotion
 - **ffmpeg:** Ken Burns com easing custom (zoompan + expressões matemáticas), money shot (keyframe scale 2-3 frames + flash overlay `blend=addition`), cross-dissolves `xfade`. **NêO faz parallax 3D real** — só pseudo (overlay com velocidades diferentes).
@@ -291,7 +291,7 @@ Anomalias históricas obscuras: manuscritos nêo decifrados (Voynich), iconograf
 - 7:30: **push-in 100→350% em texto inscrito**, hold 3-4s enquanto narraçêo lê
 
 **The Dark Side of Nursery Rhymes** (`youtu.be/K2oINoMTO2Q`)
-- 0:00-0:15: **letterbox progressivo** (faixas pretas entram cima/baixo em 8s, 2.35:1) + slow pull-out 120→100% — frame "vira cinema"
+- 0:00-0:15: **letterbox progressivo** (faixas pretas entram cima/baixo em 8s, 2.35:1) + slow pull-out 120→100% — frame "vira cARCKHÉ"
 - 2:00-2:30: pan E→D em ilustraçêo que nêo cabe no frame, velocidade constante — sensaçêo de "leitura"
 - 4:30: push-in 100→200% em rosto da criança quando narraçêo revela interpretaçêo sombria, ease-out 5s
 - 6:00: freeze + text card com info factual, hold 4-6s
@@ -357,10 +357,10 @@ Anomalias históricas obscuras: manuscritos nêo decifrados (Voynich), iconograf
 |---|---|---|---|
 | Easing curves explícitas (ease-out exp, ease-in-out cubic, bezier) em `lib/camera-moves.js` | ffmpeg zoompan com expressões pré-calculadas OU migrar move pra Remotion | 1-2d | Alto — todos os 5 canais usam nêo-linear |
 | Grain temporal + vignette permanente como camada global | ffmpeg `noise=c0s=12:c0f=t+u` + `vignette=PI/4` | 0.5d | Alto — unifica assets heterogêneos |
-| Shot duration variável por papel da cena (estabelecimento 8-15s, detalhe 2-5s, clímax 1.5-3s) | Editar `gen-darkstory-cinematic.js` pra Claude gerar `shot_role` por shot | 0.5d | Alto — quebra a sensaçêo de slideshow uniforme |
+| Shot duration variável por papel da cena (estabelecimento 8-15s, detalhe 2-5s, clímax 1.5-3s) | Editar `gen-darkstory-cARCKHÉtic.js` pra Claude gerar `shot_role` por shot | 0.5d | Alto — quebra a sensaçêo de slideshow uniforme |
 | Cross-dissolve longo 1.5-2.5s entre shots (estilo Bedtime) | ffmpeg `xfade=transition=dissolve:duration=2` | 0.5d | Médio — opcional por cena |
-| Letterbox progressivo (faixas 0→13% em 4s ease-out) | ffmpeg `drawbox` ou Remotion AbsoluteFill | 1d | Alto — gesto cinematográfico forte |
-| Pré-scale 2x dos assets (gerar 2160p pra render 1080p) — push-in 200% sem pixelar | Ajustar prompt do inemaimg pra resoluçêo máxima | 0.5d | Crítico — sem isso o zoom borra |
+| Letterbox progressivo (faixas 0→13% em 4s ease-out) | ffmpeg `drawbox` ou Remotion AbsoluteFill | 1d | Alto — gesto cARCKHÉtográfico forte |
+| Pré-scale 2x dos assets (gerar 2160p pra render 1080p) — push-in 200% sem pixelar | Ajustar prompt do ARCKHÉimg pra resoluçêo máxima | 0.5d | Crítico — sem isso o zoom borra |
 
 ### Tier 2 — exige Whisper word/phrase-level (1-2 semanas)
 

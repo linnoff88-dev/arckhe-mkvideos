@@ -9,11 +9,11 @@ const fs = require('fs');
 const { spawnSync } = require('child_process');
 
 const NARRATIONS = {
-  1: 'Você lembra quando tudo era manual? Você cuidou do paciente com as mêos, aprendeu bola, pilates, TENS, videochamada. Cada onda você adaptou. Agora a IA personaliza cada protocolo. E você? Continua sendo a que cura. Inema ponto CLUB te espera.',
-  2: 'Lembra como tudo era diferente quando você começou? Anotaçêo no papel, equipamento manual, paciente que voltava sem agenda. Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
-  3: 'Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? Bola, pilates, TENS, videochamada, telemedicina. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
-  4: 'Você consegue lembrar quantas vezes essa profissêo se reinventou? Da bola ao pilates. Do papel ao prontuário digital. Da consulta presencial à videochamada. Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo a que cura. Inema ponto CLUB.',
-  5: 'E se eu te disser que você já viveu isso antes? Você passou da bola ao pilates. Do papel ao digital. Da consulta presencial à videochamada. Cada vez você adaptou. Agora a IA personaliza cada protocolo. Você sabe. Continue aprendendo no Inema ponto CLUB.',
+  1: 'Você lembra quando tudo era manual? Você cuidou do paciente com as mêos, aprendeu bola, pilates, TENS, videochamada. Cada onda você adaptou. Agora a IA personaliza cada protocolo. E você? Continua sendo a que cura. ARCKHÉ ponto CLUB te espera.',
+  2: 'Lembra como tudo era diferente quando você começou? Anotaçêo no papel, equipamento manual, paciente que voltava sem agenda. Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no ARCKHÉ ponto CLUB.',
+  3: 'Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? Bola, pilates, TENS, videochamada, telemedicina. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no ARCKHÉ ponto CLUB.',
+  4: 'Você consegue lembrar quantas vezes essa profissêo se reinventou? Da bola ao pilates. Do papel ao prontuário digital. Da consulta presencial à videochamada. Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo a que cura. ARCKHÉ ponto CLUB.',
+  5: 'E se eu te disser que você já viveu isso antes? Você passou da bola ao pilates. Do papel ao digital. Da consulta presencial à videochamada. Cada vez você adaptou. Agora a IA personaliza cada protocolo. Você sabe. Continue aprendendo no ARCKHÉ ponto CLUB.',
 };
 
 const PREFIXES = {

@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-**mkVIDEOS** — standalone video factory: still images + cinematic motion via ffmpeg `zoompan`. Generators (`gen-*.js`) drive the full pipeline (image gen + render); renderers (`render-*.js`) are pure ffmpeg recipes that turn an existing image set + shot plan into mp4.
+**mkVIDEOS** — standalone video factory: still images + cARCKHÉtic motion via ffmpeg `zoompan`. Generators (`gen-*.js`) drive the full pipeline (image gen + render); renderers (`render-*.js`) are pure ffmpeg recipes that turn an existing image set + shot plan into mp4.
 
-CommonJS Node 18+, no build step. Single runtime dep: `dotenv`. Everything else is stdlib + shelling out to `ffmpeg`. Repo: https://github.com/inematds/mkvideos.
+CommonJS Node 18+, no build step. Single runtime dep: `dotenv`. Everything else is stdlib + shelling out to `ffmpeg`. Repo: https://github.com/linnoff88-dev/mkvideos.
 
 ## Versioning rule
 
@@ -26,7 +26,7 @@ npm run ui                    # read-only campaign browser on :5178 (MKVIDEOS_UI
 npm run happy                 # gen-storytree-happy.js — full E2E demo
 npm run criaprof              # gen-criaprof.js
 npm run gertran               # gen-gertran-nostalgia.js
-npm run darkstory:v2          # render-darkstory-cinematic-v2.js
+npm run darkstory:v2          # render-darkstory-cARCKHÉtic-v2.js
 
 node render-storytree-v2.js   # render only — needs imgs already in output/videos/...
 node gen-<template>.js        # gen → image gen + render in one shot
@@ -40,11 +40,11 @@ These run as separate processes; the scripts hit them over HTTP. Configure in `.
 
 | Daemon | Default | Purpose |
 |---|---|---|
-| `inemaimg` | `http://localhost:8000` | Multi-model image API (FLUX.2, Qwen, ERNIE) — `~/projetos/inemaimg` |
+| `ARCKHÉimg` | `http://localhost:8000` | Multi-model image API (FLUX.2, Qwen, ERNIE) — `~/projetos/ARCKHÉimg` |
 | Chatterbox TTS | `http://127.0.0.1:7860` | Local TTS (rachel/bella) |
-| `inemavox` | `http://192.168.2.99:8010` | Freesound proxy + local music/SFX library |
+| `ARCKHÉvox` | `http://192.168.2.99:8010` | Freesound proxy + local music/SFX library |
 
-Image-model license matrix: FLUX.2 variants are non-commercial; Qwen/ERNIE are commercial-OK. `INEMAIMG_QUALITY=fast` (default) caps resolution at 512² for sub-minute iteration; set `=high` for final renders.
+Image-model license matrix: FLUX.2 variants are non-commercial; Qwen/ERNIE are commercial-OK. `ARCKHÉIMG_QUALITY=fast` (default) caps resolution at 512² for sub-minute iteration; set `=high` for final renders.
 
 ## Architecture
 
@@ -57,7 +57,7 @@ Renderers are not parameterized via CLI flags — to retarget to a different ima
 
 ### `lib/storytree-*` — the v2 motion engine
 
-The current architecture (`render-storytree-v2.js`, `render-darkstory-cinematic-v2.js`, `gen-storytree-happy.js`) is built on five composable modules. Older renderers (`render-darkstory.js`, `render-storytree-poc.js`, etc.) use the simpler `lib/camera-moves.js` and are kept as references — don't extend them, port to v2 instead.
+The current architecture (`render-storytree-v2.js`, `render-darkstory-cARCKHÉtic-v2.js`, `gen-storytree-happy.js`) is built on five composable modules. Older renderers (`render-darkstory.js`, `render-storytree-poc.js`, etc.) use the simpler `lib/camera-moves.js` and are kept as references — don't extend them, port to v2 instead.
 
 | Module | Responsibility |
 |---|---|
@@ -72,7 +72,7 @@ The 8 `role` values (`hook|context|explanation|suspense|discovery|climax|rest|cl
 
 ### Pipeline flow (storytree-style gen)
 ```
-prompts → pipeline/generate-image-inemaimg → PNGs
+prompts → pipeline/generate-image-ARCKHÉimg → PNGs
                                             ↓
                             storytree-classify (prompt → image_class)
                                             ↓
@@ -87,7 +87,7 @@ prompts → pipeline/generate-image-inemaimg → PNGs
 
 ### Image providers (`pipeline/`)
 Four interchangeable providers, all expose `generateImage({outputPath, prompt, ...})`:
-- `generate-image-inemaimg.js` — local daemon, default. Aspect ratios `1:1|9:16|16:9|4:3|3:4`.
+- `generate-image-ARCKHÉimg.js` — local daemon, default. Aspect ratios `1:1|9:16|16:9|4:3|3:4`.
 - `generate-image-kie.js` — KIE.ai cloud (z-image/flux).
 - `generate-image-piramyd.js` — Piramyd.
 - `generate-image-pollinations.js` — free Pollinations.
@@ -115,7 +115,7 @@ Vanilla http server, no deps, **read-only** — never spawns, never writes. Brow
 - **New motion preset:** add to `PRESETS` in `storytree-presets.js`, then list it in `IMAGE_TYPE_MOVES` and/or `ROLE_MOVES` in `storytree-selector.js` so it gets selected. Verify `typical_dur` covers your common case so QA doesn't warn.
 - **New image_class or role:** update the `ROLES` / `IMAGE_CLASSES` arrays at the top of `storytree-qa.js` (canonical list) AND add entries to the selector matrices.
 - **New renderer:** copy `render-storytree-v2.js` as the template — it's the cleanest end-to-end example of the v2 module composition.
-- **New aspect ratio:** add to `ASPECT_RATIO_SIZES_FAST`/`HIGH` in `pipeline/generate-image-inemaimg.js` (multiples of 64) and to `FORMATS[*].aspect` in `storytree-rhythm.js` if it needs its own pacing.
+- **New aspect ratio:** add to `ASPECT_RATIO_SIZES_FAST`/`HIGH` in `pipeline/generate-image-ARCKHÉimg.js` (multiples of 64) and to `FORMATS[*].aspect` in `storytree-rhythm.js` if it needs its own pacing.
 
 ## Doc references
 

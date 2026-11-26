@@ -54,10 +54,10 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 const NARR_OFFSET = PAD_DUR + 0.5; // narraçêo começa 0.5s após padding terminar (adelay no audio)
 const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => {
-  // Corrige transcrições erradas ("Inema.cube" -> "INEMA.CLUB")
+  // Corrige transcrições erradas ("ARCKHÉ.cube" -> "ARCKHÉ AI")
   let text = c.text
-    .replace(/inema\.?cube/gi, 'INEMA.CLUB')
-    .replace(/inema\.club/gi, 'INEMA.CLUB')
+    .replace(/ARCKHÉ\.?cube/gi, 'ARCKHÉ AI')
+    .replace(/ARCKHÉ\.club/gi, 'ARCKHÉ AI')
     .replace(/ponto/gi, '.');
   return {
     t0: c.t0 + NARR_OFFSET,
@@ -154,14 +154,14 @@ const captions = capChunks.map((b) => drawtext({
   color: '#FFEB3B', bord: 7, bordColor: 'black@0.9',
 }));
 
-// Watermark INEMA.CLUB
+// Watermark ARCKHÉ AI
 const watermark = drawtext({
-  text: 'INEMA.CLUB', t0: 0, t1: 27, y: 48, size: 64,
+  text: 'ARCKHÉ AI', t0: 0, t1: 27, y: 48, size: 64,
   color: 'white@0.95', bord: 6, bordColor: 'black@0.7', x: '48',
 });
 
 const handle = drawtext({
-  text: '@inema.club', t0: 0.5, t1: 27, y: 1850, size: 40,
+  text: '@ARCKHÉ AI', t0: 0.5, t1: 27, y: 1850, size: 40,
   color: 'white@0.85', font: FONT_CAPS, bord: 3, bordColor: 'black@0.6',
 });
 
@@ -170,7 +170,7 @@ const cta = [
   drawtext({ text: 'GERACAO DE',              t0: 27.2, t1: 30, y: 420,  size: 72,  bord: 5 }),
   drawtext({ text: 'TRANSFORMACAO',           t0: 27.2, t1: 30, y: 520,  size: 72,  color: '#FFEB3B', bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM',  t0: 27.2, t1: 30, y: 780,  size: 50,  bord: 3 }),
-  drawtext({ text: 'INEMA.CLUB',              t0: 27.2, t1: 30, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
+  drawtext({ text: 'ARCKHÉ AI',              t0: 27.2, t1: 30, y: 900,  size: 180, color: '#FFEB3B', bord: 12 }),
   drawtext({ text: 'LINK NA BIO',             t0: 27.2, t1: 30, y: 1200, size: 64,  bord: 4 }),
 ];
 

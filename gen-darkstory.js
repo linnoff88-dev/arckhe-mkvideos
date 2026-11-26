@@ -8,7 +8,7 @@
  *      - Build-up 15-50%
  *      - Darkest moment 60-70%
  *      - Resolution + CTA final
- *   2. inemaimg API gera 1 imagem por cena (prompt visual sombrio + cinematográfico)
+ *   2. ARCKHÉimg API gera 1 imagem por cena (prompt visual sombrio + cARCKHÉtográfico)
  *   3. Saída: output/videos/darkstory/<slug>_<date>/
  *               imgs/cena01.jpg ... cenaNN.jpg
  *               scene_plan.json
@@ -24,7 +24,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const DEFAULTS = {
   duracao: 60,
@@ -113,7 +113,7 @@ Para cada cena gere:
   "duracao_s": ${sceneSec.toFixed(1)} (pode variar +/- 1s),
   "narration": "texto da narraçêo nessa cena (PT-BR, ~${Math.round(sceneSec * 2.5)} palavras pra caber em ${sceneSec.toFixed(0)}s)",
   "caption": "frase curta da cena (~5-8 palavras, MAIÚSCULAS, impacto)",
-  "visual_prompt": "prompt em INGLÊS para gerador de imagem flux2-klein. Estilo: cinematic dark, low-key lighting, deep shadows, atmospheric, fog/mist when relevant, muted colors with single warm highlight (candle, fire, lantern). NêO inclua texto/captions/logos na imagem. Aspect ratio: ${RATIO}."
+  "visual_prompt": "prompt em INGLÊS para gerador de imagem flux2-klein. Estilo: cARCKHÉtic dark, low-key lighting, deep shadows, atmospheric, fog/mist when relevant, muted colors with single warm highlight (candle, fire, lantern). NêO inclua texto/captions/logos na imagem. Aspect ratio: ${RATIO}."
 }
 
 Saia APENAS o JSON do array de cenas. Sem markdown, sem explicaçêo. Comece com [ e termine com ].`;
@@ -163,7 +163,7 @@ Saia APENAS o JSON do array de cenas. Sem markdown, sem explicaçêo. Comece com
   return scenes;
 }
 
-// ── Step 2: gera 1 img por cena via inemaimg ───────────────────────────────
+// ── Step 2: gera 1 img por cena via ARCKHÉimg ───────────────────────────────
 async function generateImages(scenes) {
   console.log(`[darkstory:${slug}] gerando ${scenes.length} imagens (model=${MODEL}, ratio=${RATIO})...`);
   let ok = 0, fail = 0, skipped = 0;

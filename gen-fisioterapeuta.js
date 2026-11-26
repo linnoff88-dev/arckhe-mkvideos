@@ -4,15 +4,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
 const OUT = path.join(__dirname, 'output/videos/fisioterapeuta_2026-04-22/imgs');
 
 const BASE = 'Brazilian woman with warm tan skin, long straight dark brown hair usually pulled back into a practical ponytail, strong caring focused eyes, athletic build, warm practical presence';
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir clinical lighting, soft glassmorphism, teal accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (age, extra = '') => `${BASE}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -74,9 +74,9 @@ const scenes = [
   { file: 'cena14-ini.png', prompt: `Clean modern clinic display showing an AI-assisted personalized rehabilitation protocol with progress charts and exercise plan, soft teal UI accents, ${S_FUT}` },
   { file: 'cena14-fim.png', prompt: `${char(44, 'veteran physiotherapist, tanned skin, dark ponytail elegantly streaked with silver')} reviewing an AI-suggested rehabilitation protocol on a tablet, thoughtful experienced face, ${S_FUT}` },
 
-  // 15 — hero + fundo para INEMA.CLUB
+  // 15 — hero + fundo para ARCKHÉ AI
   { file: 'cena15-ini.png', prompt: `Bright modern physiotherapy clinic space with pilates equipment and a therapy ball in soft out-of-focus background, warm-cool gradient ambient light, no people, ${S_FUT}` },
-  { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 45 years old, dark brown hair with elegant silver streaks in a loose natural ponytail, modern clinic polo or professional top, quietly confident warm smile looking slightly upward, soft rim light, blurred clinic background, editorial quality, ${S_FUT}` },
+  { file: 'cena15-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of the same ${BASE}, about 45 years old, dark brown hair with elegant silver streaks in a loose natural ponytail, modern clinic polo or professional top, quietly confident warm smile looking slightly upward, soft rim light, blurred clinic background, editorial quality, ${S_FUT}` },
 ];
 
 (async () => {

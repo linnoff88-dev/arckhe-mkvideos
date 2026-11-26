@@ -5,15 +5,15 @@
  */
 
 const path = require('path');
-const { generateImage } = require('./pipeline/generate-image-inemaimg');
+const { generateImage } = require('./pipeline/generate-image-ARCKHÉimg');
 
 const MODEL = 'flux2-klein';
 const RATIO = '1:1';
-const OUT = path.join(__dirname, 'prj/inema/outputs/crianca-medica_2026-04-22/imgs');
+const OUT = path.join(__dirname, 'prj/ARCKHÉ/outputs/crianca-medica_2026-04-22/imgs');
 
 const BASE = 'Brazilian girl/woman of mixed descent, warm light brown skin, wavy brown hair, curious bright brown eyes, expressive warm face';
-const S_OLD = 'shot on 35mm film, cinematic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
-const S_MID = 'cinematic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
+const S_OLD = 'shot on 35mm film, cARCKHÉtic grading, warm tungsten light, film grain, slight vignette, no text, no captions, no logos';
+const S_MID = 'cARCKHÉtic, shallow depth of field, natural light, editorial photography, muted contemporary palette, no text, no captions, no logos';
 const S_FUT = 'neo-noir clinical lighting, glassmorphism, soft teal and cyan accents, volumetric light, soft bokeh, futuristic minimal, no text, no captions, no logos';
 
 const char = (age, extra = '') => `${BASE}, about ${age} years old${extra ? ', ' + extra : ''}`;
@@ -77,7 +77,7 @@ const scenes = [
 
   // 15 — presente (~45): hero final médica realizada
   { file: 'cena15-ini.png', prompt: `Clean modern hospital corridor with soft warm-cool gradient light, shallow depth of field, no people, sense of care and possibility, ${S_FUT}` },
-  { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 45 years old, wavy brown hair with elegant gray streaks loosely down, crisp white doctor coat with stethoscope, confident warm smile looking slightly upward, soft rim light, blurred medical background, editorial quality, ${S_FUT}` },
+  { file: 'cena15-fim.png', prompt: `Heroic cARCKHÉtic close-up portrait of the same ${BASE}, about 45 years old, wavy brown hair with elegant gray streaks loosely down, crisp white doctor coat with stethoscope, confident warm smile looking slightly upward, soft rim light, blurred medical background, editorial quality, ${S_FUT}` },
 ];
 
 (async () => {
