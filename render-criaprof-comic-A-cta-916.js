@@ -1,11 +1,11 @@
 /**
- * Render CriaProf-CTA-916 versão Comic Style A (Calvin & Hobbes).
+ * Render CriaProf-CTA-916 versêo Comic Style A (Calvin & Hobbes).
  *
  * Mesmo render que render-criaprof-cta-916.js mas lê imgs de
  * output/videos/criaprof-comic-A/<slug>_<date>/imgs/ e escreve em
  * output/videos/criaprof-comic-A-cta-916/<slug>_<date>/video/.
  *
- * Reutiliza TTS+Whisper já existentes (texto narração não muda).
+ * Reutiliza TTS+Whisper já existentes (texto narraçêo nêo muda).
  *
  * Uso: node render-criaprof-comic-A-cta-916.js <slug> <prof|generic>
  */
@@ -35,7 +35,7 @@ if (fs.existsSync(COMIC_BASE)) {
   IMG_DIR = candidates[0] || null;
 }
 if (!IMG_DIR) {
-  console.error(`imgs comic-A não encontradas para ${slug} em ${COMIC_BASE}`);
+  console.error(`imgs comic-A nêo encontradas para ${slug} em ${COMIC_BASE}`);
   console.error(`gere primeiro: node gen-criaprof-comic-A.js ${slug}`);
   process.exit(1);
 }
@@ -46,7 +46,7 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 const OUT_FILE = path.join(OUT_DIR, `${slug}-quadcA-cta-${variant}-37s.mp4`);
 
 const MUSIC = getMusicForVariant(variant);
-if (!MUSIC) console.warn(`! música não encontrada — renderizando sem música de fundo`);
+if (!MUSIC) console.warn(`! música nêo encontrada — renderizando sem música de fundo`);
 
 const NARR = `/tmp/narr/narr-criaprof-cta-${variant}-${slug}.mp3`;
 const WHISPER_JSON = `/tmp/narr/whisper-criaprof-cta-${variant}-${slug}.json`;

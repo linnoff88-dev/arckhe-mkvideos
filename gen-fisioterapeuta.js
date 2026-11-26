@@ -1,6 +1,6 @@
 /**
  * 30 imagens — jornada de criança (7) até fisioterapeuta experiente (~45)
- * que alivia dor com as mãos e com tecnologia.
+ * que alivia dor com as mêos e com tecnologia.
  */
 
 const path = require('path');
@@ -26,11 +26,11 @@ const scenes = [
   { file: 'cena02-ini.png', prompt: `Early 1990s Brazilian schoolyard with children playing volleyball or running, warm afternoon sun, casual school uniforms, ${S_OLD}` },
   { file: 'cena02-fim.png', prompt: `${char(10, 'child with tanned skin, dark ponytail, school uniform')} stretching her arms athletically before a game, bright confident expression, sunny daylight, ${S_OLD}` },
 
-  // 3 — 14 anos: aula de educação física, curiosa com anatomia
+  // 3 — 14 anos: aula de educaçêo física, curiosa com anatomia
   { file: 'cena03-ini.png', prompt: `Classroom poster of the human muscular system on a school wall, wooden desk in foreground, notebook open, afternoon light through a window, ${S_OLD}` },
   { file: 'cena03-fim.png', prompt: `${char(14, 'teenager with tanned skin, dark brown hair, school outfit')} studying a muscular anatomy poster with fascinated concentrated eyes, pointing at a muscle group, ${S_OLD}` },
 
-  // 4 — 17 anos: ajudando amiga com torção
+  // 4 — 17 anos: ajudando amiga com torçêo
   { file: 'cena04-ini.png', prompt: `Late 1990s park scene with a twisted ankle bag of ice on a bench, soft dusk natural light, no people in frame, ${S_MID}` },
   { file: 'cena04-fim.png', prompt: `${char(17, 'teenager with tanned skin, dark ponytail, sporty clothes')} gently showing a friend how to stretch her injured ankle, caring instructive smile, outdoor natural light, ${S_MID}` },
 

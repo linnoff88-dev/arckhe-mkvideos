@@ -45,7 +45,7 @@ const presets = [
 
 const inputs = [];
 clips.forEach((c) => {
-  // -framerate 1 -t 1 = exatamente 1 input frame; zoompan d=frames controla a duração de saída.
+  // -framerate 1 -t 1 = exatamente 1 input frame; zoompan d=frames controla a duraçêo de saída.
   inputs.push('-framerate', '1', '-loop', '1', '-t', '1', '-i', c.file);
 });
 inputs.push('-i', MUSIC);

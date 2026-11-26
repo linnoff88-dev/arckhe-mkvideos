@@ -58,8 +58,8 @@ const profissoes = [
       ai_application: 'personalized rehabilitation protocol',
       ai_daily_tool: 'an AI pose-analysis overlay on a tablet',
     },
-    narr_criaprof: 'Você era a criança que cuidava de quem tinha dor. Estudou o corpo humano, escolheu fisioterapia, cuidou com as mãos. Aprendeu bola, pilates, TENS, videochamada. Hoje a IA personaliza cada protocolo. Você continua sendo a que cura. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o manual virar TENS, a bola virar PILATES, a videochamada salvar sua profissão. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você era a criança que cuidava de quem tinha dor. Estudou o corpo humano, escolheu fisioterapia, cuidou com as mêos. Aprendeu bola, pilates, TENS, videochamada. Hoje a IA personaliza cada protocolo. Você continua sendo a que cura. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o manual virar TENS, a bola virar PILATES, a videochamada salvar sua profissêo. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE JA CUROU', 'DOR DE UM JEITO', 'QUE NINGUEM', 'ENSINA MAIS.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a hand-written physiotherapy patient card from the 1980s with ink annotations' },
@@ -126,7 +126,7 @@ const profissoes = [
       ai_daily_tool: 'an AI clinical decision support overlay on an electronic chart',
     },
     narr_criaprof: 'Você foi a criança do kit médico. Estudou o corpo inteiro, virou médica, examinou milhares. Viu o filme virar raio-X digital, a ficha virar prontuário, a distância virar telemedicina. Agora a IA sugere diagnósticos. Você continua sendo a que cura com presença. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o filme virar raio-X digital, a ficha virar prontuário, a distância virar telemedicina. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o filme virar raio-X digital, a ficha virar prontuário, a distância virar telemedicina. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE VIU', 'A MEDICINA', 'MUDAR 10 VEZES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s doctor\'s hand-written patient card with blue ink and carbon-copy paper' },
@@ -193,7 +193,7 @@ const profissoes = [
       ai_daily_tool: 'a wearable vital-signs monitor linked to an AI alert system',
     },
     narr_criaprof: 'Você cuidou antes de aprender. Cuidou da vó, cuidou da vizinha, virou enfermeira. Atendeu antes da internet, viu ficha virar prontuário, leito virar telemetria. Agora a IA prioriza o que é urgente. Você continua sendo a que está ao lado do paciente. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o papel virar prontuário digital, o leito virar telemetria, a triagem ficar inteligente. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o papel virar prontuário digital, o leito virar telemetria, a triagem ficar inteligente. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE ATENDEU', 'ANTES DA INTERNET', 'EXISTIR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s hand-written nursing notes in a paper chart clipped to a bed' },
@@ -260,7 +260,7 @@ const profissoes = [
       ai_daily_tool: 'an AI-driven mood trend highlighter on a therapy dashboard',
     },
     narr_criaprof: 'Você escutou desde pequena. Escutou a amiga chorar, escutou o silêncio do outro, virou psicóloga. Aprendeu escuta, diário, videochamada. Agora a IA ajuda a ver padrões que antes escapavam. Você continua sendo a que acolhe. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a escuta virar videochamada, o diário virar aplicativo, a consulta ficar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a escuta virar videochamada, o diário virar aplicativo, a consulta ficar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE ESCUTOU', 'QUEM NINGUEM', 'MAIS ESCUTAVA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a hand-written therapy session journal with blue ink annotations' },
@@ -327,7 +327,7 @@ const profissoes = [
       ai_daily_tool: 'an AI 3D dental-scan analysis running on a chairside monitor',
     },
     narr_criaprof: 'Você foi a criança que revisava as bonecas com o kit dental. Estudou cada dente, abriu seu consultório, restaurou milhares de sorrisos. Viu a radiografia virar digital, o molde virar escaneamento 3D. Agora a IA detecta cáries antes do olho humano. Você continua sendo a que sorri junto. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a radiografia virar digital, o molde virar escaneamento 3D, o drill virar silencioso. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a radiografia virar digital, o molde virar escaneamento 3D, o drill virar silencioso. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE VIU', 'O SORRISO', 'MUDAR DE FORMA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s dental chair with a classic metal lamp and tray of instruments' },
@@ -391,8 +391,8 @@ const profissoes = [
       ai_application: 'personalized medication plan with interaction alerts',
       ai_daily_tool: 'an AI interaction-alert overlay on a pharmacy computer',
     },
-    narr_criaprof: 'Você foi a criança que organizava o armário de remédios. Estudou química, conheceu moléculas, virou farmacêutica. Atendeu no balcão, viu a prescrição virar digital, o atendimento virar remoto. Agora a IA alerta interações em tempo real. Você continua sendo a que cuida do paciente depois da consulta. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a receita virar digital, o estoque virar sistema, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que organizava o armário de remédios. Estudou química, conheceu moléculas, virou farmacêutica. Atendeu no balcêo, viu a prescriçêo virar digital, o atendimento virar remoto. Agora a IA alerta interações em tempo real. Você continua sendo a que cuida do paciente depois da consulta. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a receita virar digital, o estoque virar sistema, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE LEU', 'CADA BULA', 'ANTES DO ALGORITMO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s hand-written pharmacy prescription on carbon paper' },
@@ -446,8 +446,8 @@ const profissoes = [
       ai_application: 'custom meal plan with macro targets',
       ai_daily_tool: 'an AI meal-plan assistant running on a tablet during consultation',
     },
-    narr_criaprof: 'Você foi a criança que lia rótulos no mercado. Aprendeu cada nutriente, virou nutricionista. Calculou calorias à mão, viu o papel virar planilha, a planilha virar app. Agora a IA monta planos personalizados. Você continua sendo a que escuta a relação da pessoa com a comida. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o papel virar planilha, a planilha virar app, a dieta virar personalizada por dados. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que lia rótulos no mercado. Aprendeu cada nutriente, virou nutricionista. Calculou calorias à mêo, viu o papel virar planilha, a planilha virar app. Agora a IA monta planos personalizados. Você continua sendo a que escuta a relaçêo da pessoa com a comida. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o papel virar planilha, a planilha virar app, a dieta virar personalizada por dados. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE CONTOU', 'CADA CALORIA', 'NA MAO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s handwritten diet plan on lined paper with calorie counts' },
@@ -501,7 +501,7 @@ const profissoes = [
       ai_daily_tool: 'an AI pronunciation-feedback tool on a tablet during session',
     },
     narr_criaprof: 'Você foi a criança que ensinava a bonequinha a falar. Virou fonoaudióloga, treinou cada fonema. Viu o gravador analógico virar digital, o consultório virar videochamada. Agora a IA analisa cada pronúncia. Você continua sendo a que tem a paciência infinita. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o cartão virar tablet, a gravação virar análise, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o cartêo virar tablet, a gravaçêo virar análise, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE DEU VOZ', 'A QUEM NAO', 'CONSEGUIA FALAR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s picture flashcards spread on a wooden table for speech therapy' },
@@ -553,8 +553,8 @@ const profissoes = [
       ai_application: 'personalized occupational rehabilitation plan',
       ai_daily_tool: 'an AI motion-analysis overlay for fine-motor tracking',
     },
-    narr_criaprof: 'Você foi a criança que adaptava tudo pros vovôs. Estudou ocupação humana, virou TO, devolveu autonomia pra milhares. Viu a massinha virar jogo digital, o atendimento virar remoto. Agora a IA mede cada ganho de movimento. Você continua sendo a que devolve o "eu consigo". Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a adaptação manual virar impressão 3D, a prancheta virar tablet, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que adaptava tudo pros vovôs. Estudou ocupaçêo humana, virou TO, devolveu autonomia pra milhares. Viu a massinha virar jogo digital, o atendimento virar remoto. Agora a IA mede cada ganho de movimento. Você continua sendo a que devolve o "eu consigo". Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a adaptaçêo manual virar impressêo 3D, a prancheta virar tablet, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE DEVOLVEU', 'O "EU CONSIGO"', 'PRA QUEM DESISTIU.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s handmade adaptive utensils with foam grips on a wooden table' },
@@ -607,7 +607,7 @@ const profissoes = [
       ai_daily_tool: 'an AI cell-classification overlay on a digital microscope image',
     },
     narr_criaprof: 'Você foi a criança do microscópio de brinquedo. Estudou célula por célula, virou biomédica, descobriu o invisível. Viu a lâmina virar imagem digital, o gráfico virar tempo real. Agora a IA detecta anomalias antes do olho humano. Você continua sendo a que dá o diagnóstico de verdade. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a lâmina virar imagem digital, o laudo virar dashboard, a célula virar pixel analisado. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a lâmina virar imagem digital, o laudo virar dashboard, a célula virar pixel analisado. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE VIU', 'O INVISIVEL', 'VIRAR DADO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s glass microscope slides with handwritten labels on a lab bench' },
@@ -624,7 +624,7 @@ const profissoes = [
   },
 
   // ============================================================
-  // EDUCAÇÃO (5)
+  // EDUCAÇêO (5)
   // ============================================================
   {
     slug: 'professora-fundamental', label: 'PROFESSORA', pronoun: 'she', hair_style: 'a natural wavy medium length',
@@ -663,7 +663,7 @@ const profissoes = [
       ai_daily_tool: 'an AI writing-feedback tool on a tablet during class',
     },
     narr_criaprof: 'Você foi a criança que ensinava as bonecas a ler. Deu aula no quintal, escolheu pedagogia, alfabetizou milhares. Viu o caderno virar tablet, a sala virar online durante a pandemia. Agora a IA personaliza o aprendizado de cada aluno. Você continua sendo a que enxerga cada criança. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o giz virar caneta digital, o caderno virar tablet, a sala virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o giz virar caneta digital, o caderno virar tablet, a sala virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE ENSINOU', 'MILHARES A LER', 'ANTES DO TABLET.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s green chalkboard with cursive handwriting and chalk dust' },
@@ -716,7 +716,7 @@ const profissoes = [
       ai_daily_tool: 'an AI lesson-plan generator on a laptop',
     },
     narr_criaprof: 'Você foi a criança que amava a disciplina difícil. Escolheu licenciatura, abriu mentes adolescentes. Viu o quadro verde virar branco, virar digital, virar remoto. Agora a IA corrige redações. Você continua sendo a que faz a aula acontecer. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o giz virar caneta, a prova virar digital, a aula virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o giz virar caneta, a prova virar digital, a aula virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE ABRIU', 'CABEÇAS QUE', 'NINGUEM ABRIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s hand-written high-school lesson plans on ruled notebook paper' },
@@ -768,7 +768,7 @@ const profissoes = [
       ai_daily_tool: 'an AI engagement-analysis tool on a tablet',
     },
     narr_criaprof: 'Você foi a criança que organizava aulinhas no quintal. Estudou Paulo Freire, virou pedagoga, enxergou cada aluno que ninguém via. Viu a ficha virar sistema, o diagnóstico virar dado. Agora a IA identifica padrões de aprendizagem. Você continua sendo a que defende quem ninguém defende. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o plano virar sistema, a observação virar dashboard, o diagnóstico virar IA. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o plano virar sistema, a observaçêo virar dashboard, o diagnóstico virar IA. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE ENXERGOU', 'QUEM NINGUEM', 'ENXERGAVA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s student observation notebook with handwritten behavior notes' },
@@ -820,7 +820,7 @@ const profissoes = [
       ai_daily_tool: 'an AI photo-tagging activity journal for parents',
     },
     narr_criaprof: 'Você foi a criança que cuidava dos menores no recreio. Cantou, contou histórias, virou educadora infantil. Viu a foto polaroid virar celular, o recadinho virar mensagem. Agora a IA ajuda a detectar marcos do desenvolvimento. Você continua sendo o colo. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a foto virar celular, o bilhete virar app, o recreio virar dado. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a foto virar celular, o bilhete virar app, o recreio virar dado. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE FOI', 'O PRIMEIRO COLO', 'DE MILHARES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s handmade felt puppets on a nursery floor with colorful blocks' },
@@ -872,7 +872,7 @@ const profissoes = [
       ai_daily_tool: 'an AI behavior-pattern analysis tool on a tablet',
     },
     narr_criaprof: 'Você foi a criança que inventava joguinhos pra ensinar. Viu cada aluno que ninguém entendia, virou psicopedagoga. Viu o teste virar digital, o diagnóstico virar preciso. Agora a IA identifica padrões sutis de aprendizagem. Você continua sendo a que descobre o potencial escondido. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o teste virar digital, a intervenção virar personalizada, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o teste virar digital, a intervençêo virar personalizada, o atendimento virar remoto. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE VIU', 'O QUE ESTAVA', 'ESCONDIDO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s handmade educational flashcards on a warm-lit wooden table' },
@@ -925,8 +925,8 @@ const profissoes = [
       ai_application: 'automated tax-return generation',
       ai_daily_tool: 'an AI invoice-analysis tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que contava o troco direitinho. Estudou números, abriu escritório, apurou milhares de impostos. Viu a planilha de papel virar Excel, a declaração virar digital. Agora a IA processa mil notas em segundos. Você continua sendo o que traz confiança ao cliente. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o livro razão virar Excel, o papel virar XML, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que contava o troco direitinho. Estudou números, abriu escritório, apurou milhares de impostos. Viu a planilha de papel virar Excel, a declaraçêo virar digital. Agora a IA processa mil notas em segundos. Você continua sendo o que traz confiança ao cliente. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o livro razêo virar Excel, o papel virar XML, a consulta virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE CALCULOU', 'CADA NUMERO', 'NO PAPEL.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s paper accounting ledger with blue and red ink columns' },
@@ -977,8 +977,8 @@ const profissoes = [
       ai_application: 'AI-assisted legal research with cited cases',
       ai_daily_tool: 'an AI contract-review tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que queria justiça até em briga de bolinha de gude. Estudou a constituição, abriu escritório, defendeu milhares. Viu o papel carimbado virar processo eletrônico, a audiência virar vídeo. Agora a IA pesquisa jurisprudência em segundos. Você continua sendo a que argumenta. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o carimbo virar token digital, o código virar buscável, a audiência virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que queria justiça até em briga de bolinha de gude. Estudou a constituiçêo, abriu escritório, defendeu milhares. Viu o papel carimbado virar processo eletrônico, a audiência virar vídeo. Agora a IA pesquisa jurisprudência em segundos. Você continua sendo a que argumenta. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o carimbo virar token digital, o código virar buscável, a audiência virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'JUSTIÇA COM', 'CODIGO DE PAPEL.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s heavy brazilian civil code book with colored bookmarks' },
@@ -1029,8 +1029,8 @@ const profissoes = [
       ai_application: 'automated meeting scheduling with conflict resolution',
       ai_daily_tool: 'an AI meeting-notes auto-summarizer on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que organizava a mochila dos irmãos. Virou a secretária que segurava o escritório inteiro. Viu a máquina de escrever virar Word, a agenda de papel virar digital. Agora a IA agenda reuniões, resume atas. Você continua sendo a que faz o escritório acontecer. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a máquina virar Word, a agenda virar nuvem, a reunião virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que organizava a mochila dos irmêos. Virou a secretária que segurava o escritório inteiro. Viu a máquina de escrever virar Word, a agenda de papel virar digital. Agora a IA agenda reuniões, resume atas. Você continua sendo a que faz o escritório acontecer. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a máquina virar Word, a agenda virar nuvem, a reuniêo virar remota. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE SEGUROU', 'O ESCRITORIO', 'INTEIRO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s typewriter with a half-typed business letter in carriage' },
@@ -1081,8 +1081,8 @@ const profissoes = [
       ai_application: 'AI-driven forecasting and strategy recommendations',
       ai_daily_tool: 'an AI strategic-insight generator on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que ajudava a gerenciar a loja da família. Estudou administração, virou gestor, liderou times. Viu a planilha de papel virar Excel, o relatório virar dashboard. Agora a IA faz forecast em segundos. Você continua sendo o que lê gente e decide o caminho. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a planilha virar Excel, o relatório virar BI, a reunião virar híbrida. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que ajudava a gerenciar a loja da família. Estudou administraçêo, virou gestor, liderou times. Viu a planilha de papel virar Excel, o relatório virar dashboard. Agora a IA faz forecast em segundos. Você continua sendo o que lê gente e decide o caminho. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a planilha virar Excel, o relatório virar BI, a reuniêo virar híbrida. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE DECIDIU', 'COM PLANILHA', 'DE PAPEL.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s hand-drawn business spreadsheet in green-lined ledger paper' },
@@ -1133,7 +1133,7 @@ const profissoes = [
       ai_daily_tool: 'an AI sentiment-analysis tool for internal surveys on a laptop',
     },
     narr_criaprof: 'Você foi a criança que já entendia de gente. Estudou comportamento, virou RH, contratou milhares. Viu o currículo de papel virar LinkedIn, a entrevista virar vídeo. Agora a IA filtra candidatos em segundos. Você continua sendo a que enxerga o humano por trás do CV. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o currículo virar LinkedIn, a entrevista virar vídeo, a cultura virar pesquisa. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o currículo virar LinkedIn, a entrevista virar vídeo, a cultura virar pesquisa. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE LEU', 'GENTE ANTES DO', 'ALGORITMO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s paper CVs stacked on a desk with handwritten evaluation notes' },
@@ -1187,7 +1187,7 @@ const profissoes = [
       ai_daily_tool: 'an AI thermal-imaging overlay on a smartphone for fault detection',
     },
     narr_criaprof: 'Você foi a criança que desmontava rádios pra entender. Aprendeu circuito, virou eletricista, iluminou milhares de casas. Viu o disjuntor virar inteligente, a lâmpada virar IoT. Agora a IA diagnostica falhas pela câmera. Você continua sendo o que resolve no silêncio do breaker. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a lâmpada virar LED, o disjuntor virar smart, o circuito virar IoT. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a lâmpada virar LED, o disjuntor virar smart, o circuito virar IoT. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE RESOLVEU', 'NO ESCURO, NO', 'SILENCIO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s analog multimeter on a wooden workbench with colored wires' },
@@ -1239,7 +1239,7 @@ const profissoes = [
       ai_daily_tool: 'an AI pipe-diagnostic tool on a smartphone using acoustics',
     },
     narr_criaprof: 'Você foi a criança que seguia o pai nas obras. Aprendeu cano, porca, rosca, virou encanador, salvou milhares de casas. Viu o serviço virar app, o cano virar smart, a câmera virar ferramenta. Agora a IA detecta vazamento pelo som. Você continua sendo o que aparece e resolve. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o cano virar PEX, a torneira virar smart, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o cano virar PEX, a torneira virar smart, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE SALVOU', 'CASAS QUE', 'ESTAVAM AFUNDANDO.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s plumber\'s wrench and pipe wrench on a wooden workshop shelf' },
@@ -1290,8 +1290,8 @@ const profissoes = [
       ai_application: 'AI-based engine fault diagnosis',
       ai_daily_tool: 'an AI acoustic engine-analysis tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que desmontava tudo pra saber como funcionava. Aprendeu cada motor, virou mecânico, colocou milhares de volta na estrada. Viu o carburador virar injeção, o manual virar scanner, o código virar Bluetooth. Agora a IA diagnostica pelo som do motor. Você continua sendo o que conhece pelo barulho. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o carburador virar injeção, o scanner virar OBD, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que desmontava tudo pra saber como funcionava. Aprendeu cada motor, virou mecânico, colocou milhares de volta na estrada. Viu o carburador virar injeçêo, o manual virar scanner, o código virar Bluetooth. Agora a IA diagnostica pelo som do motor. Você continua sendo o que conhece pelo barulho. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o carburador virar injeçêo, o scanner virar OBD, o diagnóstico virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE DIAGNOSTICOU', 'PELO BARULHO', 'DO MOTOR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s greasy car repair manual open on a wooden workbench' },
@@ -1342,8 +1342,8 @@ const profissoes = [
       ai_application: 'AI-generated custom furniture designs',
       ai_daily_tool: 'an AI 3D furniture visualization on a tablet for client review',
     },
-    narr_criaprof: 'Você foi a criança que construía casinha com sobras de madeira. Aprendeu encaixe, serra, formão, virou marceneiro. Viu o papel milimetrado virar CAD, a prancheta virar tablet, o projeto virar 3D. Agora a IA gera design em segundos. Você continua sendo o que sabe a madeira no tato. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a prancheta virar CAD, o desenho virar 3D, o design virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que construía casinha com sobras de madeira. Aprendeu encaixe, serra, formêo, virou marceneiro. Viu o papel milimetrado virar CAD, a prancheta virar tablet, o projeto virar 3D. Agora a IA gera design em segundos. Você continua sendo o que sabe a madeira no tato. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a prancheta virar CAD, o desenho virar 3D, o design virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'MOVEL DURAR', 'TRES GERAÇÕES.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s carpentry hand tools — chisels, wooden plane, and hand saw on a workbench' },
@@ -1395,7 +1395,7 @@ const profissoes = [
       ai_daily_tool: 'an AI body-measurement tool from smartphone photos',
     },
     narr_criaprof: 'Você foi a criança que costurava vestido pra boneca. Aprendeu cada ponto, cada molde, virou costureira, fez milhares de peças únicas. Viu o molde de papel virar CAD, a cliente virar online, o atendimento virar vídeo. Agora a IA gera molde a partir de foto. Você continua sendo a que sente a fazenda no dedo. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o molde virar CAD, a máquina virar eletrônica, o atendimento virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o molde virar CAD, a máquina virar eletrônica, o atendimento virar online. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE COSTUROU', 'O VESTIDO QUE', 'MARCOU O DIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s Singer pedal sewing machine with colorful fabric being fed through' },
@@ -1450,7 +1450,7 @@ const profissoes = [
       ai_daily_tool: 'an AI virtual try-on tool on a salon tablet',
     },
     narr_criaprof: 'Você foi a criança que mudava o cabelo da boneca todo dia. Aprendeu cada tesoura, cada cor, virou cabeleireira. Viu a revista virar Instagram, o corte virar tutorial. Agora a IA simula a cor antes de pintar. Você continua sendo a que escuta o que a cliente realmente quer. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o catálogo virar Instagram, a cor virar simulada, a cliente virar seguidora. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o catálogo virar Instagram, a cor virar simulada, a cliente virar seguidora. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'O DIA DELAS', 'COMEÇAR FELIZ.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s brazilian beauty salon with pink hair rollers and bubble hair dryer chair' },
@@ -1501,8 +1501,8 @@ const profissoes = [
       ai_application: 'AI-generated seasonal menu suggestions',
       ai_daily_tool: 'an AI recipe-scaling and inventory-planning tool on a tablet',
     },
-    narr_criaprof: 'Você foi a criança que lambia a colher da vó. Aprendeu tempero, técnica, virou chef. Viu o caderno de receita virar app, o salão virar delivery, a aula virar online. Agora a IA sugere menu sazonal. Você continua sendo o que coloca alma no prato. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o caderno virar app, o salão virar delivery, a receita virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que lambia a colher da vó. Aprendeu tempero, técnica, virou chef. Viu o caderno de receita virar app, o salêo virar delivery, a aula virar online. Agora a IA sugere menu sazonal. Você continua sendo o que coloca alma no prato. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o caderno virar app, o salêo virar delivery, a receita virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE PROVOU', 'CADA TEMPERO', 'NA COLHER.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s family recipe notebook with stained pages and handwritten notes' },
@@ -1553,8 +1553,8 @@ const profissoes = [
       ai_application: 'AI-driven photo selection and retouching',
       ai_daily_tool: 'an AI smart-crop and subject-extraction tool on a laptop',
     },
-    narr_criaprof: 'Você foi a criança que tirava 36 fotos e torcia pra dar certo. Aprendeu luz, sombra, composição, virou fotógrafo. Viu o filme virar digital, o álbum virar Instagram, a entrega virar app. Agora a IA edita em segundos. Você continua sendo o que enxerga o momento antes de clicar. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o filme virar digital, o álbum virar Instagram, a edição virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_criaprof: 'Você foi a criança que tirava 36 fotos e torcia pra dar certo. Aprendeu luz, sombra, composiçêo, virou fotógrafo. Viu o filme virar digital, o álbum virar Instagram, a entrega virar app. Agora a IA edita em segundos. Você continua sendo o que enxerga o momento antes de clicar. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o filme virar digital, o álbum virar Instagram, a ediçêo virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE CONGELOU', 'O TEMPO EM', 'FRAGMENTOS.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s film camera on a wooden table with rolls of 35mm film' },
@@ -1606,7 +1606,7 @@ const profissoes = [
       ai_daily_tool: 'an AI transcription and summarization tool for interviews',
     },
     narr_criaprof: 'Você foi a criança que fazia jornalzinho do bairro. Aprendeu a escutar, a apurar, virou jornalista. Viu o fax virar e-mail, o jornal virar portal, a entrevista virar podcast. Agora a IA checa fato em segundos. Você continua sendo a que faz a pergunta que ninguém faz. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu o fax virar email, o jornal virar portal, a reportagem virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu o fax virar email, o jornal virar portal, a reportagem virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE FEZ', 'A PERGUNTA QUE', 'NINGUEM FAZIA.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of a 1980s typewriter with a half-typed news story in the carriage' },
@@ -1658,7 +1658,7 @@ const profissoes = [
       ai_daily_tool: 'an AI rendering tool on a laptop during client meetings',
     },
     narr_criaprof: 'Você foi a criança que construía cidades com blocos. Aprendeu cada linha, cada planta, virou arquiteta. Viu a prancheta virar AutoCAD, a maquete virar render, a obra virar BIM. Agora a IA gera planta em segundos. Você continua sendo a que lê o jeito que a família vive a casa. Continue aprendendo no Inema ponto CLUB.',
-    narr_gertran: 'Você viu a prancheta virar AutoCAD, a maquete virar 3D, o projeto virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geração que transforma. Continue aprendendo no Inema ponto CLUB.',
+    narr_gertran: 'Você viu a prancheta virar AutoCAD, a maquete virar 3D, o projeto virar AI. Você se adaptou sempre. Agora chegou a inteligência artificial. E você sabe o que fazer. Você é da geraçêo que transforma. Continue aprendendo no Inema ponto CLUB.',
     gertran_hook: ['VOCE DESENHOU', 'A CASA QUE', 'SERIA LAR.'],
     gertran_nostalgia: [
       { era: 'OLD', subject: 'Close-up of 1980s drafting table with blueprints, T-square and drafting pencils' },
@@ -1678,12 +1678,12 @@ const profissoes = [
 try {
   const { profissoes: extras } = require('./profissoes-extras');
   profissoes.push(...extras);
-} catch (_) { /* profissoes-extras ainda não existe, ignora */ }
+} catch (_) { /* profissoes-extras ainda nêo existe, ignora */ }
 
 // Merge com fase 3 (profissões 61–90)
 try {
   const { profissoes: extras3 } = require('./profissoes-extras-3');
   profissoes.push(...extras3);
-} catch (_) { /* profissoes-extras-3 ainda não existe, ignora */ }
+} catch (_) { /* profissoes-extras-3 ainda nêo existe, ignora */ }
 
 module.exports = { profissoes };

@@ -70,7 +70,7 @@ for (let i = 1; i <= N_SCENES; i += 1) {
 }
 for (const p of imgs) if (!fs.existsSync(p)) { console.error(`faltando: ${p}`); process.exit(1); }
 
-// --- carrega whisper JSON com offset +0.8s (adelay da narração) ---
+// --- carrega whisper JSON com offset +0.8s (adelay da narraçêo) ---
 const NARR_OFFSET = 0.8;
 const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => ({
@@ -134,7 +134,7 @@ const captions = capChunks.map((b) => drawtext({
   color: '#FFEB3B', font: FONT_CAPS, bord: 7, bordColor: 'black@0.92',
 }));
 
-// Mantém o INEMA.CLUB textão do original (últimos 3s)
+// Mantém o INEMA.CLUB textêo do original (últimos 3s)
 const outro = drawtext({
   text: 'INEMA.CLUB',
   t0: TOTAL_DUR - 3, t1: TOTAL_DUR, y: '(h-th)/2', size: 140,

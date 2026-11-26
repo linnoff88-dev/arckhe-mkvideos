@@ -4,7 +4,7 @@
  *
  * Pipeline:
  *   1. Lê beat_plan.json
- *   2. Gera narração POR BEAT via Chatterbox TTS
+ *   2. Gera narraçêo POR BEAT via Chatterbox TTS
  *   3. Concat narrações + gaps → narration.mp3
  *   4. Cada SHOT vira um seg.mp4 com motion conforme tipo de plano
  *   5. HARD CUTS entre shots dentro do mesmo beat (cinema)
@@ -70,9 +70,9 @@ async function generateNarrations() {
     const b = beats[i];
     const out = path.join(AUDIO_DIR, `beat${String(b.beat).padStart(2, '0')}.mp3`);
     if (fs.existsSync(out) && fs.statSync(out).size > 1000) {
-      console.log(`── ${i + 1}/${beats.length} narração beat${b.beat} (cached)`);
+      console.log(`── ${i + 1}/${beats.length} narraçêo beat${b.beat} (cached)`);
     } else {
-      process.stdout.write(`── ${i + 1}/${beats.length} narração beat${b.beat} ... `);
+      process.stdout.write(`── ${i + 1}/${beats.length} narraçêo beat${b.beat} ... `);
       try { await ttsBeat(b.narration, out); console.log('✓'); }
       catch (e) { console.log(`✗ ${e.message}`); audios.push({ beat: b, audio: null, dur: 0 }); continue; }
     }
@@ -96,12 +96,12 @@ function concatNarrations(audios) {
   spawnSync('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', NARRATION], { stdio: 'ignore' });
 }
 
-// ── Beat timing: ajusta duração do beat = max(narration + 0.3, beat.duration_s) ──
+// ── Beat timing: ajusta duraçêo do beat = max(narration + 0.3, beat.duration_s) ──
 function planBeatTiming(audios) {
   let cursor = 0;
   return audios.map((a) => {
     const audDur = a.dur || 0;
-    // Respeita a duração planejada do beat se a narração couber; senão usa narração + 0.3
+    // Respeita a duraçêo planejada do beat se a narraçêo couber; senêo usa narraçêo + 0.3
     const beatDur = Math.max(a.beat.duration_s, audDur + 0.3);
     const start = cursor;
     cursor += beatDur;
@@ -162,7 +162,7 @@ function motionForShot(shot) {
     case 'hook': grade = 'eq=contrast=1.25:saturation=1.15:gamma=0.92'; break;
     case 'darkest': grade = 'colorbalance=rs=0.35:gs=-0.15:bs=-0.35,eq=saturation=0.55:contrast=1.25:gamma=0.88:brightness=-0.04'; break;
     case 'mid': grade = 'eq=contrast=1.15:saturation=1.05'; break;
-    case 'resolution': grade = 'hue=s=0.35,eq=contrast=1.10:gamma=0.96'; break; // dessat parcial (não BW puro)
+    case 'resolution': grade = 'hue=s=0.35,eq=contrast=1.10:gamma=0.96'; break; // dessat parcial (nêo BW puro)
     case 'cta': grade = 'colorbalance=rs=0.18:gs=0.05:bs=-0.18,eq=saturation=1.10'; break;
     default: grade = '';
   }
@@ -170,14 +170,14 @@ function motionForShot(shot) {
   // Vinheta por papel
   const vAng = shot.role === 'darkest' ? 'PI/3' : (shot.role === 'cta' ? 'PI/4' : 'PI/4.8');
 
-  // Fade per shot — só fade out muito leve dentro do shot pra não competir com hard cut
+  // Fade per shot — só fade out muito leve dentro do shot pra nêo competir com hard cut
   const parts = [SCALE, motion, `vignette=angle=${vAng}`, grade].filter(Boolean);
   return parts.join(',');
 }
 
 // ── Pre-render cada shot ───────────────────────────────────────────────────
 function findShotImg(shot) {
-  // Padrão de filename: beat02_shot03_close.jpg
+  // Padrêo de filename: beat02_shot03_close.jpg
   const beatN = String(shot.beat.beat).padStart(2, '0');
   const shotN = String(shot.n).padStart(2, '0');
   const f = path.join(IMGS_DIR, `beat${beatN}_shot${shotN}_${shot.type}.jpg`);
@@ -227,7 +227,7 @@ function concatCinematic(segs) {
     beatVideos.push({ beat: list[0].shot.beat, file: out });
   }
 
-  // 2) Xfade entre beats (transição por papel)
+  // 2) Xfade entre beats (transiçêo por papel)
   let acc = beatVideos[0].file;
   let accDur = ffprobeDur(acc);
   for (let i = 1; i < beatVideos.length; i += 1) {
@@ -258,7 +258,7 @@ function buildAssCaptions(beatTiming) {
   const tc = (t) => { const h = Math.floor(t / 3600); const m = Math.floor((t % 3600) / 60); const s = (t % 60).toFixed(2).padStart(5, '0'); return `${h}:${String(m).padStart(2, '0')}:${s}`; };
 
   // Calcula offsets reais considerando os xfades aplicados no concat
-  // Aproximação: cada beat começa onde o anterior terminou - xfade
+  // Aproximaçêo: cada beat começa onde o anterior terminou - xfade
   let realStart = 0;
   const events = [];
   for (let i = 0; i < beatTiming.length; i += 1) {

@@ -2,15 +2,15 @@
  * Batch runner para CriaProf-CTA-916 (template 9:16 com hook + CTA pesado).
  *
  * Para cada slug, executa pipeline:
- *   1. TTS prof + generic (Chatterbox VC bella) — narração com prefix "A {profissao} mudou. E agora? <narr_criaprof>"
- *   2. Whisper word-level em cada narração
+ *   1. TTS prof + generic (Chatterbox VC bella) — narraçêo com prefix "A {profissao} mudou. E agora? <narr_criaprof>"
+ *   2. Whisper word-level em cada narraçêo
  *   3. Render prof + generic (render-criaprof-cta-916.js)
  *
  * Reutiliza as 50 imgs CriaProf já existentes em output/videos/criaprof/<slug>_2026-04-23/imgs/.
  *
  * Uso: node batch-criaprof-cta.js <slugs_csv | all | new>
  *   all      = todas 90 profissões cadastradas
- *   new      = só as que ainda não foram renderizadas (ambas variantes)
+ *   new      = só as que ainda nêo foram renderizadas (ambas variantes)
  *   <csv>    = lista separada por vírgula
  */
 

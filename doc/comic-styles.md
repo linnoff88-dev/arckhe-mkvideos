@@ -8,7 +8,7 @@ Amostras geradas em `/tmp/comic-samples/` (cena: criança fisioterapeuta brincan
 
 ## A — Classic Newspaper Strip (Calvin & Hobbes)
 
-**Vibe:** linha à mão, aquarela suave, expressivo, cotidiano, universal. Funciona pra mostrar criança/adulto/idoso da mesma profissão sem perder identidade.
+**Vibe:** linha à mêo, aquarela suave, expressivo, cotidiano, universal. Funciona pra mostrar criança/adulto/idoso da mesma profissêo sem perder identidade.
 
 **Referências:** Bill Watterson (Calvin and Hobbes), Charles Schulz (Peanuts), Jim Davis (Garfield).
 
@@ -61,7 +61,7 @@ Sample: `/tmp/comic-samples/C_pop_art_lichtenstein.png`
 
 ## D — Modern Indie Adventure Time
 
-**Vibe:** traço simples, cores chapadas, formas bean-shaped, expressões cute e bobas. Apelo geração Z / millennial.
+**Vibe:** traço simples, cores chapadas, formas bean-shaped, expressões cute e bobas. Apelo geraçêo Z / millennial.
 
 **Referências:** Pendleton Ward (Adventure Time), Rebecca Sugar (Steven Universe).
 
@@ -95,14 +95,14 @@ Sample: `/tmp/comic-samples/E_sunday_strip_bloom_county.png`
 
 ---
 
-## Notas de implementação
+## Notas de implementaçêo
 
 - Todos os 5 estilos rodam em `flux2-klein` fast 512² — ~2s/img
 - Para batch all (90 profissões × 50 imgs = 4500 imgs): ~2.5h por estilo
 - Captions Bebas Neue amarelo continuam funcionando bem sobre todos os 5
-- Estrutura render (37s, hook, CTA) idêntica à versão photo
+- Estrutura render (37s, hook, CTA) idêntica à versêo photo
 
-## Como criar versão de outro estilo
+## Como criar versêo de outro estilo
 
 1. Clonar `gen-lib/scene-templates.js` → `scene-templates-comic-X.js`, trocar `S_OLD/S_MID/S_FUT` pelo prompt suffix do estilo
 2. Clonar `gen-criaprof.js` → `gen-criaprof-comic-X.js` apontando pro novo template + nova pasta de saída

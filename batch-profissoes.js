@@ -3,12 +3,12 @@
  *   1. gen-criaprof.js (50 imgs) — skip se já existe completo
  *   2. gen-gertran-nostalgia.js (20 imgs) — skip se já existe completo
  *   3. TTS narr_criaprof + narr_gertran (chatterbox-vc bella)
- *   4. Whisper word-level em cada narração
+ *   4. Whisper word-level em cada narraçêo
  *   5. render-criaprof.js + render-gertran.js
  *
  * Uso: node batch-profissoes.js <slugs_csv | all | new>
  *   all  = todas 30
- *   new  = 26 que ainda não foram renderizadas
+ *   new  = 26 que ainda nêo foram renderizadas
  *   csv  = lista separada por vírgula
  */
 

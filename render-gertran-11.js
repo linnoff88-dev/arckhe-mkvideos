@@ -1,8 +1,8 @@
 /**
- * GERTRAN 1:1 — adaptação do render-gertran.js para canvas quadrado 1080×1080.
+ * GERTRAN 1:1 — adaptaçêo do render-gertran.js para canvas quadrado 1080×1080.
  *
  * Layout:
- *   - 3s padding (bg sólido + profissão gigante + hook 3-4 linhas)
+ *   - 3s padding (bg sólido + profissêo gigante + hook 3-4 linhas)
  *   - 25s main (20 imgs nostalgia, hook 4 atos no topo com gradiente escuro,
  *     captions whisper-sync na área inferior)
  *   - 3s black outro (CTA INEMA.CLUB)
@@ -19,7 +19,7 @@ const profession = process.argv[2];
 if (!profession) { console.error('Usage: node render-gertran-11.js <slug>'); process.exit(1); }
 
 const profile = profissoes.find((p) => p.slug === profession);
-if (!profile) { console.error(`slug não encontrado: ${profession}`); process.exit(1); }
+if (!profile) { console.error(`slug nêo encontrado: ${profession}`); process.exit(1); }
 
 const IMG_DIR = path.join(__dirname, `output/videos/gertran-nostalgia/${profession}_2026-04-23/imgs`);
 if (!fs.existsSync(IMG_DIR)) { console.error(`imgs: ${IMG_DIR}`); process.exit(1); }
@@ -81,7 +81,7 @@ filters.push(`${imgs.map((_, i) => `[c${i}]`).join('')}concat=n=${N}:v=1:a=0[vma
 filters.push(`color=c=0x050510:s=${W}x${H}:d=${BLACK_DUR}:r=${FPS},format=yuv420p,setsar=1[vblack]`);
 filters.push(`[vpad][vmain][vblack]concat=n=3:v=1:a=0[vconcat]`);
 
-// === PADDING (0-3s): profissão gigante + hook 3-4 linhas
+// === PADDING (0-3s): profissêo gigante + hook 3-4 linhas
 const hookLines = profile.gertran_hook;
 const hookY0 = 430, hookLineH = 120;
 const hookPadding = [

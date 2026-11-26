@@ -1,8 +1,8 @@
 /**
- * Mapping de profissão → noun (visual hook) e prefix de narração.
+ * Mapping de profissêo → noun (visual hook) e prefix de narraçêo.
  *
  * Usado por render-criaprof-cta-916.js e batch-criaprof-cta.js.
- * NÃO modifica config/profissoes-30.js — apenas adiciona overlay visual + narração.
+ * NêO modifica config/profissoes-30.js — apenas adiciona overlay visual + narraçêo.
  *
  * - hookVisual: 2 linhas para o cabeçalho 0-3s (linha 1 = noun caps, linha 2 fixa "MUDOU. E AGORA?")
  * - narrPrefix: frase prepended à narr_criaprof original ("A fisioterapia mudou. E agora? <resto>")
@@ -16,23 +16,23 @@ const NOUNS = {
   'psicologa':              { noun: 'PSICOLOGIA',           prefix: 'A psicologia' },
   'dentista':               { noun: 'ODONTOLOGIA',          prefix: 'A odontologia' },
   'farmaceutica':           { noun: 'FARMÁCIA',             prefix: 'A farmácia' },
-  'nutricionista':          { noun: 'NUTRIÇÃO',             prefix: 'A nutrição' },
+  'nutricionista':          { noun: 'NUTRIÇêO',             prefix: 'A nutriçêo' },
   'fonoaudiologa':          { noun: 'FONOAUDIOLOGIA',       prefix: 'A fonoaudiologia' },
   'terapeuta-ocupacional':  { noun: 'TERAPIA OCUPACIONAL',  prefix: 'A terapia ocupacional' },
   'biomedica':              { noun: 'BIOMEDICINA',          prefix: 'A biomedicina' },
 
-  // Educação
+  // Educaçêo
   'professora-fundamental': { noun: 'EDUCAR',               prefix: 'Educar' },
   'professora-medio':       { noun: 'ENSINAR',              prefix: 'Ensinar' },
   'pedagoga':               { noun: 'PEDAGOGIA',            prefix: 'A pedagogia' },
-  'educacao-infantil':      { noun: 'EDUCAÇÃO INFANTIL',    prefix: 'A educação infantil' },
+  'educacao-infantil':      { noun: 'EDUCAÇêO INFANTIL',    prefix: 'A educaçêo infantil' },
   'psicopedagoga':          { noun: 'PSICOPEDAGOGIA',       prefix: 'A psicopedagogia' },
 
   // Escritório
   'contador':               { noun: 'CONTABILIDADE',        prefix: 'A contabilidade' },
   'advogada':               { noun: 'ADVOCACIA',            prefix: 'A advocacia' },
   'secretaria':             { noun: 'SECRETARIADO',         prefix: 'O secretariado' },
-  'administrador':          { noun: 'ADMINISTRAÇÃO',        prefix: 'A administração' },
+  'administrador':          { noun: 'ADMINISTRAÇêO',        prefix: 'A administraçêo' },
   'analista-rh':            { noun: 'RH',                   prefix: 'O RH' },
 
   // Ofícios
@@ -57,36 +57,36 @@ const NOUNS = {
   'massoterapeuta':         { noun: 'MASSOTERAPIA',         prefix: 'A massoterapia' },
   'parteira':               { noun: 'OBSTETRÍCIA',          prefix: 'A obstetrícia' },
 
-  // Educação superior
+  // Educaçêo superior
   'professor-universitario':{ noun: 'DOCÊNCIA',             prefix: 'A docência' },
   'professor-matematica':   { noun: 'MATEMÁTICA',           prefix: 'Ensinar matemática' },
-  'educador-fisico':        { noun: 'EDUCAÇÃO FÍSICA',      prefix: 'A educação física' },
+  'educador-fisico':        { noun: 'EDUCAÇêO FÍSICA',      prefix: 'A educaçêo física' },
   'bibliotecaria':          { noun: 'BIBLIOTECONOMIA',      prefix: 'A biblioteconomia' },
-  'coordenador-escolar':    { noun: 'GESTÃO ESCOLAR',       prefix: 'A gestão escolar' },
+  'coordenador-escolar':    { noun: 'GESTêO ESCOLAR',       prefix: 'A gestêo escolar' },
 
   // Direito/Finanças
   'juiza':                  { noun: 'MAGISTRATURA',         prefix: 'A magistratura' },
-  'delegada':               { noun: 'INVESTIGAÇÃO',         prefix: 'A investigação' },
+  'delegada':               { noun: 'INVESTIGAÇêO',         prefix: 'A investigaçêo' },
   'auditor-fiscal':         { noun: 'AUDITORIA',            prefix: 'A auditoria' },
   'consultor-financeiro':   { noun: 'FINANÇAS',             prefix: 'A consultoria financeira' },
 
   // Ofícios 2
   'soldador':               { noun: 'SOLDAGEM',             prefix: 'A soldagem' },
   'pintor':                 { noun: 'PINTURA',              prefix: 'A pintura' },
-  'pedreiro':               { noun: 'CONSTRUÇÃO',           prefix: 'Ser pedreiro' },
+  'pedreiro':               { noun: 'CONSTRUÇêO',           prefix: 'Ser pedreiro' },
   'sapateiro':              { noun: 'SAPATARIA',            prefix: 'Ser sapateiro' },
   'relojoeiro':             { noun: 'RELOJOARIA',           prefix: 'Ser relojoeiro' },
 
   // Transporte
   'caminhoneiro':           { noun: 'A ESTRADA',            prefix: 'A estrada' },
-  'piloto':                 { noun: 'AVIAÇÃO',              prefix: 'A aviação' },
+  'piloto':                 { noun: 'AVIAÇêO',              prefix: 'A aviaçêo' },
   'controlador-aereo':      { noun: 'CONTROLE AÉREO',       prefix: 'O controle aéreo' },
 
   // Beleza/Criativo 2
   'maquiadora':             { noun: 'MAQUIAGEM',            prefix: 'A maquiagem' },
   'florista':               { noun: 'FLORICULTURA',         prefix: 'A floricultura' },
   'confeiteiro':            { noun: 'CONFEITARIA',          prefix: 'A confeitaria' },
-  'dj-produtor':            { noun: 'PRODUÇÃO MUSICAL',     prefix: 'A produção musical' },
+  'dj-produtor':            { noun: 'PRODUÇêO MUSICAL',     prefix: 'A produçêo musical' },
 
   // Rural
   'agronomo':               { noun: 'AGRONOMIA',            prefix: 'A agronomia' },
@@ -101,10 +101,10 @@ const NOUNS = {
   'personal-trainer':       { noun: 'PERSONAL TRAINING',    prefix: 'Ser personal trainer' },
 
   // Tech
-  'programador':            { noun: 'PROGRAMAÇÃO',          prefix: 'A programação' },
+  'programador':            { noun: 'PROGRAMAÇêO',          prefix: 'A programaçêo' },
   'analista-sistemas':      { noun: 'ANÁLISE DE SISTEMAS',  prefix: 'A análise de sistemas' },
   'designer-ux':            { noun: 'UX DESIGN',            prefix: 'O UX design' },
-  'gerente-projeto':        { noun: 'GESTÃO DE PROJETOS',   prefix: 'A gestão de projetos' },
+  'gerente-projeto':        { noun: 'GESTêO DE PROJETOS',   prefix: 'A gestêo de projetos' },
   'especialista-cybersec':  { noun: 'CYBERSEGURANÇA',       prefix: 'A cibersegurança' },
 
   // Finanças 2
@@ -115,10 +115,10 @@ const NOUNS = {
 
   // Artes
   'musico':                 { noun: 'MÚSICA',               prefix: 'A música' },
-  'ator':                   { noun: 'ATUAÇÃO',              prefix: 'A atuação' },
+  'ator':                   { noun: 'ATUAÇêO',              prefix: 'A atuaçêo' },
   'professor-danca':        { noun: 'DANÇA',                prefix: 'A dança' },
   'escritor':               { noun: 'ESCRITA',              prefix: 'A escrita' },
-  'animador':               { noun: 'ANIMAÇÃO',             prefix: 'A animação' },
+  'animador':               { noun: 'ANIMAÇêO',             prefix: 'A animaçêo' },
 
   // Ofícios 3
   'serralheiro':            { noun: 'SERRALHERIA',          prefix: 'A serralheria' },
@@ -134,11 +134,11 @@ const NOUNS = {
 
   // Rural 2
   'apicultor':              { noun: 'APICULTURA',           prefix: 'A apicultura' },
-  'produtor-rural':         { noun: 'PRODUÇÃO RURAL',       prefix: 'A produção rural' },
-  'guarda-florestal':       { noun: 'CONSERVAÇÃO',          prefix: 'A conservação ambiental' },
+  'produtor-rural':         { noun: 'PRODUÇêO RURAL',       prefix: 'A produçêo rural' },
+  'guarda-florestal':       { noun: 'CONSERVAÇêO',          prefix: 'A conservaçêo ambiental' },
 };
 
-const GENERIC = { noun: 'SUA PROFISSÃO', prefix: 'A sua profissão' };
+const GENERIC = { noun: 'SUA PROFISSêO', prefix: 'A sua profissêo' };
 
 function getCtaConfig(slug, variant) {
   const cfg = (variant === 'generic') ? GENERIC : (NOUNS[slug] || GENERIC);
@@ -152,12 +152,12 @@ function getCtaConfig(slug, variant) {
 // === Música de fundo ===
 // Trilha por variante (v0/undefined = comportamento original):
 //   prof    → A (pad ambient)   |   generic → B (cinematic bgm)
-// Trilha por versão narrativa (A/B testing — v1-v5):
+// Trilha por versêo narrativa (A/B testing — v1-v5):
 //   v1 Nostálgica    → C (acoustic guitar fingerpicking — CC0)
 //   v2 Confidente    → D (lofi jazz warm — CC0)
-//   v3 Provocação    → E (cinematic drum build — CC-BY Alastair_Pursloe)
+//   v3 Provocaçêo    → E (cinematic drum build — CC-BY Alastair_Pursloe)
 //   v4 Intimista     → F (orchestral warm strings — CC-BY EvanBoyerman)
-//   v5 Revelação     → B (bgm_v1 cinematic — já temos, mood match alto)
+//   v5 Revelaçêo     → B (bgm_v1 cinematic — já temos, mood match alto)
 const MUSIC_DIR = '/home/nmaldaner/projetos/mkvideos/prj/inema/assets/music/cta';
 
 const MUSIC_TRACKS = {
@@ -169,7 +169,7 @@ const MUSIC_TRACKS = {
   F: `${MUSIC_DIR}/freesound_753968_warm_strings_build.mp3`,
 };
 
-// Trilha por versão narrativa — versão tem prioridade sobre variante quando definida
+// Trilha por versêo narrativa — versêo tem prioridade sobre variante quando definida
 const VERSION_MUSIC = { '1': 'C', '2': 'D', '3': 'E', '4': 'F', '5': 'B' };
 
 function getMusicForVariant(variant) {

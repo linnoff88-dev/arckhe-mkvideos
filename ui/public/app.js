@@ -2,7 +2,7 @@
 
 const STORE_KEY = 'mkvideos-ui-state';
 
-// Versão exibida no formato v<major>.<features>.<bugs> com features/bugs zero-padded em 2 dígitos.
+// Versêo exibida no formato v<major>.<features>.<bugs> com features/bugs zero-padded em 2 dígitos.
 // Ambos contadores só resetam quando major sobe (v1 → v2).
 function formatVersion(v) {
   const m = String(v || '').match(/^(\d+)\.(\d+)\.(\d+)/);
@@ -17,7 +17,7 @@ const stored = (() => {
 const state = {
   campaigns: [],
   videoGroups: [],
-  activeVideoKind: stored.activeVideoKind || null,  // null = tela geral; senão kind ativo
+  activeVideoKind: stored.activeVideoKind || null,  // null = tela geral; senêo kind ativo
   projects: [],
   config: null,
   filter: { search: '', project: stored.project || '' },
@@ -128,7 +128,7 @@ function chip(label, value, kind = 'val') {
   return `<span class="pchip pchip-${kind}"><span class="pchip-k">${escapeHtml(label)}</span><span class="pchip-v">${escapeHtml(String(value))}</span></span>`;
 }
 function chipBool(label, on) {
-  return `<span class="pchip pchip-${on ? 'on' : 'off'}"><span class="pchip-k">${escapeHtml(label)}</span><span class="pchip-v">${on ? 'sim' : 'não'}</span></span>`;
+  return `<span class="pchip pchip-${on ? 'on' : 'off'}"><span class="pchip-k">${escapeHtml(label)}</span><span class="pchip-v">${on ? 'sim' : 'nêo'}</span></span>`;
 }
 
 function renderParams(c) {
@@ -164,16 +164,16 @@ function renderParams(c) {
   const platChips = [];
   if (p.platform_targets?.length) platChips.push(...p.platform_targets.map((t) => chip('plat', t, 'accent')));
   if (p.language) platChips.push(chip('idioma', p.language));
-  if (platChips.length) sections.push({ label: 'distribuição', chips: platChips });
+  if (platChips.length) sections.push({ label: 'distribuiçêo', chips: platChips });
 
-  // ── APROVAÇÃO ──
+  // ── APROVAÇêO ──
   if (p.approval_modes && typeof p.approval_modes === 'object') {
     const stages = Object.entries(p.approval_modes);
     const allSame = stages.every(([, v]) => v === stages[0][1]);
     const apvChips = allSame
       ? [chip('todas etapas', stages[0][1], stages[0][1] === 'auto' ? 'on' : stages[0][1] === 'humano' ? 'warn' : 'val')]
       : stages.map(([k, v]) => chip(k, v, v === 'auto' ? 'on' : v === 'humano' ? 'warn' : 'val'));
-    sections.push({ label: 'aprovação', chips: apvChips });
+    sections.push({ label: 'aprovaçêo', chips: apvChips });
   }
 
   // ── SKIP ──
@@ -306,7 +306,7 @@ function renderConfig() {
       <h3>projeto</h3>
       <dl class="kv">
         <dt>nome</dt><dd>${escapeHtml(c.displayName || c.name)}</dd>
-        <dt>versão</dt><dd>${escapeHtml(formatVersion(c.version))}</dd>
+        <dt>versêo</dt><dd>${escapeHtml(formatVersion(c.version))}</dd>
         <dt>node</dt><dd>${escapeHtml(c.nodeVersion)}</dd>
         <dt>root</dt><dd><code>${escapeHtml(c.rootPath)}</code></dd>
       </dl>
@@ -358,7 +358,7 @@ function lbStep(delta) {
 }
 function closeLightbox() { $('#lightbox').hidden = true; $('#lbImg').src = ''; }
 
-// Helper: gera <img> com data-* pra integração com o handler de cliques.
+// Helper: gera <img> com data-* pra integraçêo com o handler de cliques.
 function lbThumbHTML(items, idx, classes = '') {
   const it = items[idx];
   return `<img loading="lazy" src="${it.url}" alt="${escapeHtml(it.name)}" title="${escapeHtml(it.name)}"
@@ -683,7 +683,7 @@ function workerInfoCard(label, info) {
     </div>`;
 }
 
-// Estado da paginação por kind (mantém durante a sessão).
+// Estado da paginaçêo por kind (mantém durante a sessêo).
 const vdPageState = {};
 function getVdPage(key) {
   if (!vdPageState[key]) {
@@ -746,7 +746,7 @@ function renderVideoDetail() {
   const detail = $('#videoDetail');
   detail.hidden = false;
   if (!g) {
-    detail.innerHTML = `<div class="empty-state">tipo "${escapeHtml(key)}" não encontrado</div>`;
+    detail.innerHTML = `<div class="empty-state">tipo "${escapeHtml(key)}" nêo encontrado</div>`;
     return;
   }
 
@@ -926,7 +926,7 @@ function renderVideoDetail() {
                    <div class="v-thumb-play">▶</div>
                    <small>${escapeHtml(v.name)}</small>
                  </div>`
-              ).join('') : '<div class="empty-state" style="padding:8px;font-size:11px;">vídeo ainda não foi gerado</div>'}
+              ).join('') : '<div class="empty-state" style="padding:8px;font-size:11px;">vídeo ainda nêo foi gerado</div>'}
             </div>
             <div class="vd-row-imgs">
               ${s.imgs.length ? (() => {

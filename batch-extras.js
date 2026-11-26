@@ -1,9 +1,9 @@
 /**
  * Batch 3 templates × 90 profissões (270 unidades).
- * Por profissão: para cada template {paired, artifacts, decades}:
+ * Por profissêo: para cada template {paired, artifacts, decades}:
  *   1. gen 50 imgs (skip se já existe)
  *   2. render 31s 9:16
- * Reusa narração gertran existente.
+ * Reusa narraçêo gertran existente.
  */
 
 const fs = require('fs');

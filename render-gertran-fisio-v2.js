@@ -1,7 +1,7 @@
 /**
  * GERTRAN piloto v2 — Fisioterapeuta.
  * Correções vs v1:
- *   - SEM xfade (tremedeira vinha do overlap de 2 imagens durante transição)
+ *   - SEM xfade (tremedeira vinha do overlap de 2 imagens durante transiçêo)
  *   - Zoom Ken Burns imperceptível (0.0008) — quase estático
  *   - Cortes limpos entre imagens com micro fade-in (0.08s)
  *   - Legendas sincronizadas via Whisper (word-level timestamps)
@@ -13,7 +13,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 // --- paths ---
-const IMG_DIR = path.join(__dirname, 'output/videos/criaprof/fisioterapeuta_2026-04-22/imgs'); // reuso do criaprof enquanto não há imgs gertran próprias
+const IMG_DIR = path.join(__dirname, 'output/videos/criaprof/fisioterapeuta_2026-04-22/imgs'); // reuso do criaprof enquanto nêo há imgs gertran próprias
 const OUT_DIR = path.join(__dirname, 'output/videos/gertran/fisioterapeuta_2026-04-23/video');
 const OUT_FILE = path.join(OUT_DIR, 'gertran-fisioterapeuta-30s.mp4');
 const MUSIC = '/tmp/musica_video/mulheres/freesound_719036_Melancholy_Background_Piano__-_bpm_112_l.mp3';
@@ -51,7 +51,7 @@ const PAD_FRAMES = Math.round(PAD_DUR * FPS);
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
 // --- carrega legendas sincronizadas do whisper (offset = PAD_DUR + 0.5s) ---
-const NARR_OFFSET = PAD_DUR + 0.5; // narração começa 0.5s após padding terminar (adelay no audio)
+const NARR_OFFSET = PAD_DUR + 0.5; // narraçêo começa 0.5s após padding terminar (adelay no audio)
 const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks.map((c) => {
   // Corrige transcrições erradas ("Inema.cube" -> "INEMA.CLUB")

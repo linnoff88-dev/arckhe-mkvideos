@@ -1,7 +1,7 @@
 /**
  * GERTRAN v7 — ajustes finais do piloto:
  *   - Layout v6a fixado (caption y=1520, logo abaixo do vídeo)
- *   - Nome da profissão GIGANTE ocupando quase a largura
+ *   - Nome da profissêo GIGANTE ocupando quase a largura
  *   - Rodapé: INEMA.CLUB maiúsculo em negrito (substitui @inema.club)
  */
 
@@ -90,7 +90,7 @@ filters.push(`[vpad][vmain][vblack]concat=n=3:v=1:a=0[vconcat]`);
 // === OVERLAYS ===
 
 // PADDING hook (0-3s)
-// Tag profissão GIGANTE — quase ocupando a largura
+// Tag profissêo GIGANTE — quase ocupando a largura
 // Com Bebas Neue (condensed), fontsize 150 dá ~960px de largura pra "FISIOTERAPEUTA" (14 chars)
 const hookPadding = [
   drawtext({ text: PROFESSION,         t0: 0, t1: PAD_DUR, y: 230,  size: 150, color: '#FFEB3B', bord: 8 }),
@@ -162,7 +162,7 @@ const args = [
   OUT_FILE,
 ];
 
-console.log(`[gertran v7] profissão 150pt + rodapé INEMA.CLUB 80pt`);
+console.log(`[gertran v7] profissêo 150pt + rodapé INEMA.CLUB 80pt`);
 const t0 = Date.now();
 const res = spawnSync('ffmpeg', args, { stdio: ['ignore', 'inherit', 'inherit'] });
 if (res.status !== 0) process.exit(res.status || 1);

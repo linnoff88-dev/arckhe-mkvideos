@@ -5,9 +5,9 @@
  * Servidor http vanilla, sem dependências, sem escrita.
  * Mostra:
  *   - lista de campanhas (prj/<proj>/outputs/<task>) com payload + contagens + previews
- *   - config do projeto (versão, CLAUDE.md head, skills, knowledge files)
+ *   - config do projeto (versêo, CLAUDE.md head, skills, knowledge files)
  *
- * Não chama spawn, não escreve arquivos, não toca em fila.
+ * Nêo chama spawn, nêo escreve arquivos, nêo toca em fila.
  * Mata-se com ctrl-c. Roda em http://localhost:5178 (MKVIDEOS_UI_PORT).
  *
  * Uso: node ui/server.js
@@ -183,7 +183,7 @@ function listCampaigns() {
   return { projects, campaigns: all };
 }
 
-// Mapa estático: descrição de cada tipo de vídeo + worker que gera.
+// Mapa estático: descriçêo de cada tipo de vídeo + worker que gera.
 // Usado pela UI pra explicar o que cada tipo faz.
 const VIDEO_TYPE_INFO = {
   'criaprof': {
@@ -194,24 +194,24 @@ const VIDEO_TYPE_INFO = {
     gen: { script: 'gen-criaprof.js', usage: 'node gen-criaprof.js <slug>',
       desc: 'Factory: lê config/profissoes-30.js + gen-lib/scene-templates.criaProfScenes(); gera 50 imgs (25 cenas × ini+fim) via inemaimg API.' },
     render: { script: 'render-criaprof.js', usage: 'node render-criaprof.js <slug>',
-      desc: 'Monta vídeo 1080×1080 45s: Ken Burns + zoom 0.0022 nas 50 imgs, narração+música, captions whisper-sync (y=940), watermark INEMA.CLUB final.' },
+      desc: 'Monta vídeo 1080×1080 45s: Ken Burns + zoom 0.0022 nas 50 imgs, narraçêo+música, captions whisper-sync (y=940), watermark INEMA.CLUB final.' },
     extras: [
       { script: 'render-criaprof-916.js', desc: 'Variante 9:16 1080×1920 com bandas pretas top/bottom e captions estilo GERTRAN (y=1520).' },
     ],
   },
   'gertran': {
-    title: 'GERTRAN — Geração da Transformação',
+    title: 'GERTRAN — Geraçêo da Transformaçêo',
     summary: 'Reels 9:16 31s para público 35+: "Você sempre se adaptou. Faça de novo com IA."',
     codeFile: 'render-gertran.js',
     promptFile: 'gen-gertran-nostalgia.js',
     gen: { script: 'gen-gertran-nostalgia.js', usage: 'node gen-gertran-nostalgia.js <slug>',
-      desc: 'Factory: gera 20 imgs era-específicas por profissão (input do render).' },
+      desc: 'Factory: gera 20 imgs era-específicas por profissêo (input do render).' },
     render: { script: 'render-gertran.js', usage: 'node render-gertran.js <slug>',
-      desc: '31s = 3s padding (bg sólido + PROFISSÃO 150pt + hook 4 linhas + INEMA.CLUB topo/rodapé) + 25s main (20 imgs com scale Lanczos sem tremor, captions whisper-sync y=1520) + 3s black outro (CTA INEMA.CLUB 180pt).' },
+      desc: '31s = 3s padding (bg sólido + PROFISSêO 150pt + hook 4 linhas + INEMA.CLUB topo/rodapé) + 25s main (20 imgs com scale Lanczos sem tremor, captions whisper-sync y=1520) + 3s black outro (CTA INEMA.CLUB 180pt).' },
   },
   'paired': {
     title: 'Paired — Mudanças no tempo',
-    summary: 'Reels 9:16 31s: 50 imgs em pares antes/depois (par01a/par01b...) mostrando como cada profissão evoluiu.',
+    summary: 'Reels 9:16 31s: 50 imgs em pares antes/depois (par01a/par01b...) mostrando como cada profissêo evoluiu.',
     codeFile: 'gen-extra.js',
     promptFile: 'gen-lib/scene-templates.js',
     gen: { script: 'gen-extra.js', usage: 'node gen-extra.js <slug> paired',
@@ -221,7 +221,7 @@ const VIDEO_TYPE_INFO = {
   },
   'decades': {
     title: 'Decades — Linha do tempo por décadas',
-    summary: 'Reels 9:16 31s mostrando a evolução da profissão por décadas (50 imgs dec01..dec50).',
+    summary: 'Reels 9:16 31s mostrando a evoluçêo da profissêo por décadas (50 imgs dec01..dec50).',
     codeFile: 'gen-extra.js',
     promptFile: 'gen-lib/scene-templates.js',
     gen: { script: 'gen-extra.js', usage: 'node gen-extra.js <slug> decades',
@@ -231,7 +231,7 @@ const VIDEO_TYPE_INFO = {
   },
   'artifacts': {
     title: 'Artifacts — Linha do tempo dos objetos',
-    summary: 'Reels 9:16 31s mostrando os objetos/ferramentas que marcaram a profissão (50 imgs art01..art50).',
+    summary: 'Reels 9:16 31s mostrando os objetos/ferramentas que marcaram a profissêo (50 imgs art01..art50).',
     codeFile: 'gen-extra.js',
     promptFile: 'gen-lib/scene-templates.js',
     gen: { script: 'gen-extra.js', usage: 'node gen-extra.js <slug> artifacts',
@@ -245,7 +245,7 @@ const VIDEO_TYPE_INFO = {
     codeFile: 'render-eu-vi-o-futuro.js',
     promptFile: 'gen-eu-vi-o-futuro.js',
     gen: { script: 'gen-eu-vi-o-futuro.js / gen-antes-do-futuro.js',
-      desc: 'Scripts dedicados (não factory) — geram imgs específicas pra cada conceito.' },
+      desc: 'Scripts dedicados (nêo factory) — geram imgs específicas pra cada conceito.' },
     render: { script: 'render-eu-vi-o-futuro.js / render-antes-do-futuro.js',
       desc: '20 cenas × 3s = 60s. Cada cena = ini(1.5s) + fim(1.5s) com zoompan, fade out final.' },
   },
@@ -255,7 +255,7 @@ const VIDEO_TYPE_INFO = {
     codeFile: 'render-criaprof-cta-916.js',
     promptFile: 'batch-criaprof-cta.js',
     gen: { script: '— (reusa imgs do CriaProf)',
-      desc: 'Não regera imgs. Reaproveita output/videos/criaprof/<slug>_<date>/imgs/. batch-criaprof-cta.js gera a narração nova com hook prepend.' },
+      desc: 'Nêo regera imgs. Reaproveita output/videos/criaprof/<slug>_<date>/imgs/. batch-criaprof-cta.js gera a narraçêo nova com hook prepend.' },
     render: { script: 'render-criaprof-cta-916.js', usage: 'node render-criaprof-cta-916.js <slug> <prof|generic>',
       desc: 'Mesmo zoompan do CriaProf, mas formato 9:16 + faixas top/bottom + CTA final pesado.' },
   },
@@ -271,11 +271,11 @@ const VIDEO_TYPE_INFO = {
   },
   'gertran-nostalgia': {
     title: 'GERTRAN nostalgia — pasta de assets',
-    summary: 'Pasta de assets (imgs era-específicas) consumida pelo render-gertran.js. Não tem vídeos próprios.',
+    summary: 'Pasta de assets (imgs era-específicas) consumida pelo render-gertran.js. Nêo tem vídeos próprios.',
     codeFile: 'gen-gertran-nostalgia.js',
     promptFile: 'gen-gertran-nostalgia.js',
     gen: { script: 'gen-gertran-nostalgia.js', usage: 'node gen-gertran-nostalgia.js <slug>',
-      desc: 'Gera 20 imgs era-específicas por profissão.' },
+      desc: 'Gera 20 imgs era-específicas por profissêo.' },
   },
   'darkstory': {
     title: 'DarkStory — Histórias para canal dark do YouTube',
@@ -284,16 +284,16 @@ const VIDEO_TYPE_INFO = {
     promptFile: 'render-darkstory.js',
     gen: { script: 'gen-darkstory.js',
       usage: 'node gen-darkstory.js --titulo "<assunto>" [--duracao 60] [--n_imgs 12] [--voz josh] [--captions] [--formato 9:16] [--musica dark]',
-      desc: 'STATUS: SKELETON. Hoje só cria a pasta + meta.json. Falta: chamar Claude CLI pra gerar scene_plan.json (cenas com narração + prompt visual) e loopar inemaimg pra gerar as N imgs. Padrão: gen-criaprof-comic-A.js.' },
+      desc: 'STATUS: SKELETON. Hoje só cria a pasta + meta.json. Falta: chamar Claude CLI pra gerar scene_plan.json (cenas com narraçêo + prompt visual) e loopar inemaimg pra gerar as N imgs. Padrêo: gen-criaprof-comic-A.js.' },
     render: { script: 'render-darkstory.js',
       usage: 'node render-darkstory.js <slug>_<date>',
-      desc: 'STATUS: SKELETON. Vai usar Chatterbox TTS (default voz josh) + whisper word-level captions + ffmpeg Ken Burns + música dark de fundo. Padrão: render-criaprof.js (1080×1920 com Ken Burns + ASS captions y=1520).' },
+      desc: 'STATUS: SKELETON. Vai usar Chatterbox TTS (default voz josh) + whisper word-level captions + ffmpeg Ken Burns + música dark de fundo. Padrêo: render-criaprof.js (1080×1920 com Ken Burns + ASS captions y=1520).' },
   },
 };
 
 // Lista vídeos standalone (factory CLI) em prj/<proj>/videos/<kind>/...
 // Cada subpasta direta dentro de videos/<kind>/ é tratada como subgrupo (slug+data).
-// Subpastas com nome "videos" ou "video" são tratadas como pool comum de mp4s renderizados.
+// Subpastas com nome "videos" ou "video" sêo tratadas como pool comum de mp4s renderizados.
 function listVideoTypes() {
   const groups = [];
   const isVid = (f) => VID_EXT.has(path.extname(f).toLowerCase());
@@ -314,7 +314,7 @@ function listVideoTypes() {
       url: fileUrl(p),
     }));
 
-    // Subdirs por slug (ignora pastas "videos"/"video" que são pool comum).
+    // Subdirs por slug (ignora pastas "videos"/"video" que sêo pool comum).
     const slugs = [];
     for (const sub of tryReadDir(kindDir)) {
       if (!sub.isDirectory()) continue;

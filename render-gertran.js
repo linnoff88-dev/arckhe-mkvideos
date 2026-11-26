@@ -1,10 +1,10 @@
 /**
- * GERTRAN — Geração da Transformação.
+ * GERTRAN — Geraçêo da Transformaçêo.
  * Render genérico: node render-gertran.js <profession>
  *
  * Layout fixado (v7):
  *   - 31s (padding 3 + main 25 + black 3)
- *   - Padding: fundo sólido, PROFISSÃO gigante (150pt), hook 4 linhas, INEMA.CLUB no topo + rodapé
+ *   - Padding: fundo sólido, PROFISSêO gigante (150pt), hook 4 linhas, INEMA.CLUB no topo + rodapé
  *   - Main: 20 imgs estáticas com scale lanczos (sem tremor), captions whisper-sync y=1520
  *   - Black final: CTA INEMA.CLUB 180pt
  */
@@ -15,7 +15,7 @@ const { spawnSync } = require('child_process');
 
 const profession = process.argv[2];
 
-// CONFIGS legado vazio — todas as 30 profissões são resolvidas via config/profissoes-30.js
+// CONFIGS legado vazio — todas as 30 profissões sêo resolvidas via config/profissoes-30.js
 // (ver fallback abaixo).
 const CONFIGS = {};
 

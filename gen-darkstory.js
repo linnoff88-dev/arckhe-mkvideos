@@ -3,7 +3,7 @@
  * Factory DarkStory — gera roteiro + N imagens para vídeos do canal dark.
  *
  * Pipeline:
- *   1. Claude CLI gera scene_plan.json com estrutura narrativa otimizada para retenção:
+ *   1. Claude CLI gera scene_plan.json com estrutura narrativa otimizada para retençêo:
  *      - Hook 0-15s (pergunta/stat chocante)
  *      - Build-up 15-50%
  *      - Darkest moment 60-70%
@@ -29,7 +29,7 @@ const { generateImage } = require('./pipeline/generate-image-inemaimg');
 const DEFAULTS = {
   duracao: 60,
   n_imgs: 12,
-  voz: 'rachel', // chatterbox daemon só tem rachel/bella; outras dão fallback no render
+  voz: 'rachel', // chatterbox daemon só tem rachel/bella; outras dêo fallback no render
   captions: true,
   formato: '9:16',
   musica: 'dark',
@@ -93,30 +93,30 @@ function generateScenePlan() {
 TEMA: "${args.titulo}"
 
 Especificações:
-- Duração total: ${args.duracao}s
+- Duraçêo total: ${args.duracao}s
 - ${args.n_imgs} cenas (~${sceneSec.toFixed(1)}s cada)
 - Idioma: PT-BR
 - Tom: sombrio, intrigante, baseado em fatos reais ou folclore quando possível, sem exagero comédico
 
-Estrutura narrativa OBRIGATÓRIA (otimizada pra retenção):
-- Cena 1 (HOOK 0-${sceneSec.toFixed(0)}s): pergunta provocativa OU dado chocante OU afirmação contraintuitiva. Para a rolagem.
+Estrutura narrativa OBRIGATÓRIA (otimizada pra retençêo):
+- Cena 1 (HOOK 0-${sceneSec.toFixed(0)}s): pergunta provocativa OU dado chocante OU afirmaçêo contraintuitiva. Para a rolagem.
 - Cenas 2-${midIdx}: BUILD-UP — apresenta o contexto, o "lado sombrio", cria curiosidade.
-- Cena ${midIdx + 1} (MID-RETENTION): pattern interrupt — pergunta direta ao espectador OU revelação parcial.
+- Cena ${midIdx + 1} (MID-RETENTION): pattern interrupt — pergunta direta ao espectador OU revelaçêo parcial.
 - Cena ${darkestIdx + 1} (DARKEST MOMENT — ~65% do runtime): a parte mais sombria, perturbadora, climática.
-- Cenas ${darkestIdx + 2}-${args.n_imgs - 1}: RESOLUÇÃO — explica, contextualiza, conecta com o presente.
-- Cena ${args.n_imgs} (CTA): chamada pra inscrição/próximo vídeo. Algo como "se inscreva pra mais histórias do lado obscuro" mas sutil.
+- Cenas ${darkestIdx + 2}-${args.n_imgs - 1}: RESOLUÇêO — explica, contextualiza, conecta com o presente.
+- Cena ${args.n_imgs} (CTA): chamada pra inscriçêo/próximo vídeo. Algo como "se inscreva pra mais histórias do lado obscuro" mas sutil.
 
 Para cada cena gere:
 {
   "n": 1..${args.n_imgs},
   "role": "hook" | "buildup" | "mid" | "darkest" | "resolution" | "cta",
   "duracao_s": ${sceneSec.toFixed(1)} (pode variar +/- 1s),
-  "narration": "texto da narração nessa cena (PT-BR, ~${Math.round(sceneSec * 2.5)} palavras pra caber em ${sceneSec.toFixed(0)}s)",
+  "narration": "texto da narraçêo nessa cena (PT-BR, ~${Math.round(sceneSec * 2.5)} palavras pra caber em ${sceneSec.toFixed(0)}s)",
   "caption": "frase curta da cena (~5-8 palavras, MAIÚSCULAS, impacto)",
-  "visual_prompt": "prompt em INGLÊS para gerador de imagem flux2-klein. Estilo: cinematic dark, low-key lighting, deep shadows, atmospheric, fog/mist when relevant, muted colors with single warm highlight (candle, fire, lantern). NÃO inclua texto/captions/logos na imagem. Aspect ratio: ${RATIO}."
+  "visual_prompt": "prompt em INGLÊS para gerador de imagem flux2-klein. Estilo: cinematic dark, low-key lighting, deep shadows, atmospheric, fog/mist when relevant, muted colors with single warm highlight (candle, fire, lantern). NêO inclua texto/captions/logos na imagem. Aspect ratio: ${RATIO}."
 }
 
-Saia APENAS o JSON do array de cenas. Sem markdown, sem explicação. Comece com [ e termine com ].`;
+Saia APENAS o JSON do array de cenas. Sem markdown, sem explicaçêo. Comece com [ e termine com ].`;
 
   console.log(`[darkstory:${slug}] chamando Claude CLI...`);
   const t0 = Date.now();
@@ -152,7 +152,7 @@ Saia APENAS o JSON do array de cenas. Sem markdown, sem explicação. Comece com
   }
 
   if (!Array.isArray(scenes) || scenes.length === 0) {
-    console.error('Scene plan inválido (não é array):', scenes);
+    console.error('Scene plan inválido (nêo é array):', scenes);
     process.exit(1);
   }
 

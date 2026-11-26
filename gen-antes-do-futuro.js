@@ -76,7 +76,7 @@ const scenes = [
     prompt: `Intimate scene of an older mentor leaning over to guide a younger student in front of a laptop, pointing at the screen, both smiling softly, warm ambient light, sense of knowledge being passed forward, ${BASE_STYLE_MODERN}`,
   },
 
-  // Cena 7 — Transição para IA e interfaces futuristas
+  // Cena 7 — Transiçêo para IA e interfaces futuristas
   {
     file: 'cena07-ini.png',
     prompt: `Close-up of human hands interacting with a translucent holographic AI interface floating above a glass desk, soft teal and blue glow, data points and geometric UI elements hovering, shallow depth of field, ${BASE_STYLE_FUTURE}`,

@@ -4,14 +4,14 @@
  *
  * Uso: const { getNarration } = require('./profissoes-narrations-multi');
  *      getNarration('fisioterapeuta', 3)
- *      → 'Pensa rápido: quantas vezes essa profissão mudou...'
+ *      → 'Pensa rápido: quantas vezes essa profissêo mudou...'
  */
 
 // === Milestones por categoria ===
 // tool_journey: "do X ao Y. Do A ao B." — usado em v2, v4, v5
 // items:        lista separada por vírgula — usada em v1, v3
 // identity:     "a/o que X" — usado em v1, v4
-// action:       verbo de ação no passado — usado em v1
+// action:       verbo de açêo no passado — usado em v1
 
 const MILESTONES = {
   saude: {
@@ -21,10 +21,10 @@ const MILESTONES = {
     action: 'cuidou e adaptou protocolos',
   },
   saude_manual: {
-    tool_journey: 'Do manual ao digital. Da técnica presencial à orientação remota.',
+    tool_journey: 'Do manual ao digital. Da técnica presencial à orientaçêo remota.',
     items: 'técnica manual, equipamento analógico, prontuário em papel, atendimento remoto',
     identity: 'a que cuida e transforma',
-    action: 'cuidou com as mãos e se reinventou',
+    action: 'cuidou com as mêos e se reinventou',
   },
   educacao: {
     tool_journey: 'Do quadro negro ao digital. Da sala presencial ao EAD.',
@@ -33,8 +33,8 @@ const MILESTONES = {
     action: 'ensinou e adaptou metodologias',
   },
   juridico: {
-    tool_journey: 'Do processo físico ao digital. Da petição em papel ao sistema eletrônico.',
-    items: 'processo físico, pesquisa em livros, petição em papel, sistema eletrônico',
+    tool_journey: 'Do processo físico ao digital. Da petiçêo em papel ao sistema eletrônico.',
+    items: 'processo físico, pesquisa em livros, petiçêo em papel, sistema eletrônico',
     identity: 'a que defende',
     action: 'lutou e estudou cada mudança',
   },
@@ -52,7 +52,7 @@ const MILESTONES = {
   },
   criativo: {
     tool_journey: 'Do analógico ao digital. Do trabalho presencial ao colaborativo online.',
-    items: 'ferramentas analógicas, trabalho presencial, software básico, colaboração online',
+    items: 'ferramentas analógicas, trabalho presencial, software básico, colaboraçêo online',
     identity: 'o que cria',
     action: 'criou e se reinventou a cada era',
   },
@@ -64,7 +64,7 @@ const MILESTONES = {
   },
   servicos: {
     tool_journey: 'Do caderno de pedidos ao app. Do atendimento pessoal ao digital.',
-    items: 'caderno de pedidos, telefone fixo, máquina de cartão, app de delivery',
+    items: 'caderno de pedidos, telefone fixo, máquina de cartêo, app de delivery',
     identity: 'o que serve com excelência',
     action: 'atendeu e se adaptou a cada mudança',
   },
@@ -82,7 +82,7 @@ const MILESTONES = {
   },
 };
 
-// === Categoria por profissão ===
+// === Categoria por profissêo ===
 const CATEGORY = {
   // Saúde — atendimento clínico direto
   'fisioterapeuta':          'saude_manual',
@@ -106,7 +106,7 @@ const CATEGORY = {
   'psiquiatra':              'saude',
   'dermatologista':          'saude',
   'personal-trainer':        'saude_manual',
-  // Educação
+  // Educaçêo
   'professora-fundamental':  'educacao',
   'professora-medio':        'educacao',
   'pedagoga':                'educacao',
@@ -139,7 +139,7 @@ const CATEGORY = {
   'analista-sistemas':       'tech',
   'designer-ux':             'tech',
   'especialista-cybersec':   'tech',
-  // Criativo / Comunicação
+  // Criativo / Comunicaçêo
   'fotografo':               'criativo',
   'jornalista':              'criativo',
   'arquiteta':               'criativo',
@@ -155,7 +155,7 @@ const CATEGORY = {
   'confeiteiro':             'servicos',
   'chef':                    'servicos',
   'barbeiro':                'servicos',
-  // Ofícios / Construção
+  // Ofícios / Construçêo
   'eletricista':             'oficios',
   'encanador':               'oficios',
   'mecanico':                'oficios',
@@ -188,7 +188,7 @@ const CATEGORY = {
 };
 
 // === Templates dos 5 estilos ===
-// {tool_journey}, {items}, {identity}, {action} são substituídos pelos milestones da categoria
+// {tool_journey}, {items}, {identity}, {action} sêo substituídos pelos milestones da categoria
 
 function buildNarration(version, m) {
   switch (String(version)) {
@@ -197,31 +197,31 @@ function buildNarration(version, m) {
     case '2':
       return `Lembra como tudo era diferente quando você começou? ${m.tool_journey} Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no Inema ponto CLUB.`;
     case '3':
-      return `Pensa rápido: quantas vezes essa profissão mudou desde que você começou? ${m.items.charAt(0).toUpperCase() + m.items.slice(1)}. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.`;
+      return `Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? ${m.items.charAt(0).toUpperCase() + m.items.slice(1)}. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.`;
     case '4':
-      return `Você consegue lembrar quantas vezes essa profissão se reinventou? ${m.tool_journey} Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo ${m.identity}. Inema ponto CLUB.`;
+      return `Você consegue lembrar quantas vezes essa profissêo se reinventou? ${m.tool_journey} Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo ${m.identity}. Inema ponto CLUB.`;
     case '5':
       return `E se eu te disser que você já viveu isso antes? Você passou por tudo: ${m.tool_journey} Cada vez você adaptou. Agora a IA chegou. Você sabe. Continue aprendendo no Inema ponto CLUB.`;
     default:
-      throw new Error(`Versão inválida: ${version}. Use 1-5.`);
+      throw new Error(`Versêo inválida: ${version}. Use 1-5.`);
   }
 }
 
 /**
- * Retorna a narração para um slug e versão.
+ * Retorna a narraçêo para um slug e versêo.
  * @param {string} slug - ex: 'fisioterapeuta'
  * @param {number|string} version - 1 a 5
- * @returns {string} texto da narração (sem prefixo — prefixo é adicionado pelo render)
+ * @returns {string} texto da narraçêo (sem prefixo — prefixo é adicionado pelo render)
  */
 function getNarration(slug, version) {
   const cat = CATEGORY[slug] || 'servicos';
   const m = MILESTONES[cat];
-  if (!m) throw new Error(`Categoria não encontrada para slug: ${slug}`);
+  if (!m) throw new Error(`Categoria nêo encontrada para slug: ${slug}`);
   return buildNarration(version, m);
 }
 
 /**
- * Retorna narração completa com prefixo de hook incluso.
+ * Retorna narraçêo completa com prefixo de hook incluso.
  * @param {string} slug
  * @param {string} variant - 'prof' | 'generic'
  * @param {number|string} version - 1 a 5

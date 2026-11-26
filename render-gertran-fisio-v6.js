@@ -1,5 +1,5 @@
 /**
- * GERTRAN v6 — Hook 3s (era 2s) + teste de posição de legenda abaixo do vídeo.
+ * GERTRAN v6 — Hook 3s (era 2s) + teste de posiçêo de legenda abaixo do vídeo.
  *
  * Gera 2 versões em um só rodar:
  *   -v6a: legenda logo abaixo do vídeo (y=1520, colada na borda)

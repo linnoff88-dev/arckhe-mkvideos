@@ -3,7 +3,7 @@
  *
  * Estrutura:
  *   0–2s   : Padding (hero frame com zoom + hook bomba pra segurar scroll)
- *   2–27s  : Main (25s, 30 imagens ken-burns + narração com CTA embutido)
+ *   2–27s  : Main (25s, 30 imagens ken-burns + narraçêo com CTA embutido)
  *   27–30s : Tela preta + INEMA.CLUB enorme + "APRENDA COM ELA"
  */
 
@@ -45,7 +45,7 @@ for (const p of imgs) if (!fs.existsSync(p)) { console.error(`faltando: ${p}`); 
 
 const PAD_IMG = path.join(IMG_DIR, 'cena15-fim.png'); // hero shot pro padding
 
-// --- UTF-8 safe helper (ffmpeg drawtext 6.1.1 corta chars após ã/ê/í) ---
+// --- UTF-8 safe helper (ffmpeg drawtext 6.1.1 corta chars após ê/ê/í) ---
 const ascii = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 // Escrever textos em arquivo evita inferno de escape
@@ -143,8 +143,8 @@ const hookMain = [
   drawtext({ text: '40 ANOS DE PRATICA',       t0: 18.0, t1: 27.0, y: 220, size: 88, color: '#FFEB3B', font: FONT_HOOK, bord: 8 }),
 ];
 
-// Captions (sincronizadas à narração que começa em ~2.3s, fim ~21.2s)
-// Narração: "Desde criança, ela entendia o corpo pelas mãos. Massageava a avó, ajudava amigos, aprendeu anatomia. Formou-se fisioterapeuta, aliviou dor após dor. Hoje mistura mãos experientes, sensores e inteligência artificial para tratar o que outros desistiram. Aprenda com ela no INEMA ponto CLUB."
+// Captions (sincronizadas à narraçêo que começa em ~2.3s, fim ~21.2s)
+// Narraçêo: "Desde criança, ela entendia o corpo pelas mêos. Massageava a avó, ajudava amigos, aprendeu anatomia. Formou-se fisioterapeuta, aliviou dor após dor. Hoje mistura mêos experientes, sensores e inteligência artificial para tratar o que outros desistiram. Aprenda com ela no INEMA ponto CLUB."
 const capBlocks = [
   { t0: 2.3,  t1: 4.2,  text: 'Desde crianca' },
   { t0: 4.2,  t1: 6.2,  text: 'ela entendia o corpo' },
@@ -164,7 +164,7 @@ const captions = capBlocks.map((b) => drawtext({
   color: '#FFEB3B', font: FONT_HOOK, bord: 7, bordColor: 'black@0.9',
 }));
 
-// Watermark INEMA.CLUB maior durante padding e main (não no black end porque CTA toma a tela)
+// Watermark INEMA.CLUB maior durante padding e main (nêo no black end porque CTA toma a tela)
 const watermark = drawtext({
   text: 'INEMA.CLUB', t0: 0, t1: 27, y: 48, size: 64,
   color: 'white@0.92', font: FONT_HOOK, bord: 5, bordColor: 'black@0.7', x: '48',
@@ -196,8 +196,8 @@ const allOverlays = [
 filters.push(`[vconcat]${allOverlays}[vout]`);
 
 // ===== AUDIO =====
-// Música: volume 0.32 até narração começar, 0.05 durante narração (2.3–21.5), 0.32 depois, fade out nos últimos 2s
-// Narração: delay 2300ms, volume 1.95
+// Música: volume 0.32 até narraçêo começar, 0.05 durante narraçêo (2.3–21.5), 0.32 depois, fade out nos últimos 2s
+// Narraçêo: delay 2300ms, volume 1.95
 filters.push(
   `[${musicIdx}:a]atrim=0:${TOTAL_DUR},asetpts=PTS-STARTPTS,` +
   `volume='if(between(t\\,2.0\\,21.5)\\,0.05\\,0.32)':eval=frame,` +

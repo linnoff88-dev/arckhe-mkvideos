@@ -1,6 +1,6 @@
 /**
  * Render CriaProf 1:1 (original design) no flat dir criaprof/videos/<slug>-criaprof-11.mp4.
- * Mesmas features do render-criaprof.js original (zoompan, captions y=940, textão outro).
+ * Mesmas features do render-criaprof.js original (zoompan, captions y=940, textêo outro).
  */
 
 const fs = require('fs');

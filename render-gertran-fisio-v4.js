@@ -1,6 +1,6 @@
 /**
  * GERTRAN v4 — ZERO zoom em lugar nenhum.
- * Tremor vinha do zoompan fazendo interpolação pixel-by-pixel em images 512→1080.
+ * Tremor vinha do zoompan fazendo interpolaçêo pixel-by-pixel em images 512→1080.
  * Agora: scale lanczos direto, imagem estática, micro fade-in entre cenas.
  */
 

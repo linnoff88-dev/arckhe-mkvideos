@@ -1,5 +1,5 @@
 /**
- * GERTRAN — Geração da Transformação (piloto: Fisioterapeuta)
+ * GERTRAN — Geraçêo da Transformaçêo (piloto: Fisioterapeuta)
  *
  * Template para apelo emocional a profissionais 35+ que viveram múltiplas
  * ondas de tecnologia na carreira. Mensagem: "você sempre se adaptou. Faça de novo."
@@ -7,7 +7,7 @@
  * Estrutura 30s:
  *   0–2s   PADDING: hero shot + hook bomba universal
  *   2–7s   ATO 1 (Reconhecimento): onde tudo começou — 4 imgs
- *   7–14.5s  ATO 2 (Orgulho/Adaptação): as transformações passadas — 6 imgs
+ *   7–14.5s  ATO 2 (Orgulho/Adaptaçêo): as transformações passadas — 6 imgs
  *   14.5–20.75s ATO 3 (Nova onda IA): o presente — 5 imgs
  *   20.75–27s  ATO 4 (Convite): callback emocional + hero — 5 imgs
  *   27–30s BLACK: CTA gigante INEMA.CLUB
@@ -15,7 +15,7 @@
  * Técnica:
  *   - Ken Burns sutil (zoom rate 0.0015 — sem "tremer")
  *   - Crossfade 0.25s entre imagens (xfade chain)
- *   - Narração com CTA embutido + música piano suave duckada
+ *   - Narraçêo com CTA embutido + música piano suave duckada
  *   - Watermark INEMA.CLUB 64pt constante (segmentos 1 e 2)
  */
 
@@ -42,12 +42,12 @@ const TOTAL_DUR = PAD_DUR + MAIN_DUR + BLACK_DUR; // 30
 
 // --- imagens selecionadas por narrativa (20 imagens) ---
 const imgList = [
-  // Ato 1: Recognição (origem)
+  // Ato 1: Recogniçêo (origem)
   'cena01-fim.png', // criança + avó
   'cena02-fim.png', // criança esporte
   'cena03-ini.png', // livro anatomia
   'cena04-fim.png', // adolescente estudando
-  // Ato 2: Orgulho/Adaptação
+  // Ato 2: Orgulho/Adaptaçêo
   'cena05-fim.png', // entrou faculdade
   'cena06-fim.png', // estudante lab
   'cena07-fim.png', // primeiro paciente
@@ -73,7 +73,7 @@ for (const p of imgs) if (!fs.existsSync(p)) { console.error(`faltando: ${p}`); 
 const PAD_IMG = path.join(IMG_DIR, 'cena15-fim.png'); // hero shot no padding
 
 const N = imgs.length; // 20
-const CLIP_DUR = 1.5;                          // duração de cada clipe
+const CLIP_DUR = 1.5;                          // duraçêo de cada clipe
 const XFADE = 0.25;                            // overlap de crossfade
 const STEP = CLIP_DUR - XFADE;                 // 1.25s efetivo por clipe no output
 // Total natural = CLIP_DUR + (N-1)*STEP = 1.5 + 19*1.25 = 25.25s -> corta p/ 25
@@ -183,28 +183,28 @@ const hookMain = [
   // Ato 1: 2-7s — Reconhecimento
   drawtext({ text: 'VOCE VIU',                    t0: 2.0,  t1: 7.0,  y: 100, size: 108, font: FONT_HOOK, bord: 8 }),
   drawtext({ text: 'TUDO COMEÇAR',                t0: 2.0,  t1: 7.0,  y: 230, size: 108, color: '#FFEB3B', font: FONT_HOOK, bord: 8 }),
-  // Ato 2: 7-14.5s — Adaptação
+  // Ato 2: 7-14.5s — Adaptaçêo
   drawtext({ text: 'SE ADAPTOU.',                 t0: 7.0,  t1: 14.5, y: 100, size: 112, font: FONT_HOOK, bord: 8 }),
   drawtext({ text: 'SEMPRE.',                     t0: 7.0,  t1: 14.5, y: 230, size: 112, color: '#FFEB3B', font: FONT_HOOK, bord: 8 }),
   // Ato 3: 14.5-20.75s — Nova onda IA
   drawtext({ text: 'AGORA CHEGOU',                t0: 14.5, t1: 20.75, y: 100, size: 102, font: FONT_HOOK, bord: 8 }),
   drawtext({ text: 'A IA.',                       t0: 14.5, t1: 20.75, y: 230, size: 140, color: '#FFEB3B', font: FONT_HOOK, bord: 10 }),
   // Ato 4: 20.75-27s — Convite
-  drawtext({ text: 'GERAÇÃO DE',                  t0: 20.75, t1: 27,  y: 100, size: 108, font: FONT_HOOK, bord: 8 }),
-  drawtext({ text: 'TRANSFORMAÇÃO.',              t0: 20.75, t1: 27,  y: 230, size: 108, color: '#FFEB3B', font: FONT_HOOK, bord: 8 }),
+  drawtext({ text: 'GERAÇêO DE',                  t0: 20.75, t1: 27,  y: 100, size: 108, font: FONT_HOOK, bord: 8 }),
+  drawtext({ text: 'TRANSFORMAÇêO.',              t0: 20.75, t1: 27,  y: 230, size: 108, color: '#FFEB3B', font: FONT_HOOK, bord: 8 }),
 ];
 
-// Captions sincronizadas com narração (0.5s delay após padding = começa 2.5s; narração 17.3s)
+// Captions sincronizadas com narraçêo (0.5s delay após padding = começa 2.5s; narraçêo 17.3s)
 const capBlocks = [
   { t0: 2.5,  t1: 4.2,  text: 'Você viu o manual' },
   { t0: 4.2,  t1: 5.6,  text: 'virar TENS' },
   { t0: 5.6,  t1: 7.0,  text: 'A bola virar pilates' },
   { t0: 7.0,  t1: 9.0,  text: 'A videochamada' },
-  { t0: 9.0,  t1: 11.0, text: 'salvou sua profissão' },
+  { t0: 9.0,  t1: 11.0, text: 'salvou sua profissêo' },
   { t0: 11.0, t1: 13.0, text: 'Você se adaptou sempre' },
   { t0: 13.0, t1: 15.0, text: 'Agora chegou a IA' },
   { t0: 15.0, t1: 17.5, text: 'E você sabe o que fazer' },
-  { t0: 17.5, t1: 20.0, text: 'Você é da geração' },
+  { t0: 17.5, t1: 20.0, text: 'Você é da geraçêo' },
   { t0: 20.0, t1: 22.5, text: 'que TRANSFORMA' },
   { t0: 22.5, t1: 26.5, text: 'Continue no INEMA.CLUB' },
 ];
@@ -227,8 +227,8 @@ const handle = drawtext({
 
 // CTA final (27-30s) — tela preta com GERTRAN + INEMA.CLUB gigante
 const cta = [
-  drawtext({ text: 'GERAÇÃO DE',                t0: 27.2, t1: 30, y: 420,  size: 72,  font: FONT_HOOK, bord: 5 }),
-  drawtext({ text: 'TRANSFORMAÇÃO',             t0: 27.2, t1: 30, y: 520,  size: 72,  color: '#FFEB3B', font: FONT_HOOK, bord: 5 }),
+  drawtext({ text: 'GERAÇêO DE',                t0: 27.2, t1: 30, y: 420,  size: 72,  font: FONT_HOOK, bord: 5 }),
+  drawtext({ text: 'TRANSFORMAÇêO',             t0: 27.2, t1: 30, y: 520,  size: 72,  color: '#FFEB3B', font: FONT_HOOK, bord: 5 }),
   drawtext({ text: 'CONTINUE APRENDENDO EM',    t0: 27.2, t1: 30, y: 780,  size: 50,  font: FONT_HOOK, bord: 3 }),
   drawtext({ text: 'INEMA.CLUB',                t0: 27.2, t1: 30, y: 900,  size: 180, color: '#FFEB3B', font: FONT_HOOK, bord: 12 }),
   drawtext({ text: 'LINK NA BIO',               t0: 27.2, t1: 30, y: 1200, size: 64,  font: FONT_HOOK, bord: 4 }),
@@ -246,8 +246,8 @@ const allOverlays = [
 filters.push(`[vconcat]${allOverlays}[vout]`);
 
 // ===== AUDIO =====
-// Música: 0.32 fora da narração, 0.05 durante (2.5-20.5), fade out 2s
-// Narração: delay 2500ms, volume 1.95
+// Música: 0.32 fora da narraçêo, 0.05 durante (2.5-20.5), fade out 2s
+// Narraçêo: delay 2500ms, volume 1.95
 filters.push(
   `[${musicIdx}:a]atrim=0:${TOTAL_DUR},asetpts=PTS-STARTPTS,` +
   `volume='if(between(t\\,2.3\\,20.5)\\,0.05\\,0.32)':eval=frame,` +

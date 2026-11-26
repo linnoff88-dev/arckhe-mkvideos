@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>mkVIDEOS — factory de reels e vídeos narrativos com motion cinematográfico</title>
-<meta name="description" content="mkVIDEOS: factory standalone de vídeos a partir de imagens IA + ffmpeg zoompan (storytree motion grammar), com TTS e geração de imagem via daemons externos. Node 18+, sem build.">
+<meta name="description" content="mkVIDEOS: factory standalone de vídeos a partir de imagens IA + ffmpeg zoompan (storytree motion grammar), com TTS e geraçêo de imagem via daemons externos. Node 18+, sem build.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -133,30 +133,30 @@
         <a class="btn ghost" href="https://github.com/inematds/mkvideos" target="_blank" rel="noopener">Ver no GitHub</a>
       </div>
     </div>
-    <figure><img src="assets/hero.png" alt="Ilustração da factory de vídeos mkVIDEOS — imagens estáticas com motion cinematográfico"></figure>
+    <figure><img src="assets/hero.png" alt="Ilustraçêo da factory de vídeos mkVIDEOS — imagens estáticas com motion cinematográfico"></figure>
   </div>
 </header>
 
 <section id="oque"><div class="wrap">
   <span class="chip">O que é</span>
   <h2>Factory standalone: imagem + motion + áudio → mp4</h2>
-  <p class="sub">Um conjunto de scripts Node (CommonJS, sem build) que orquestra geração de imagem, uma "gramática de movimento" de câmera em cima de ffmpeg, e mixagem de áudio para produzir reels 9:16 e vídeos narrativos mais longos, prontos pra publicar.</p>
+  <p class="sub">Um conjunto de scripts Node (CommonJS, sem build) que orquestra geraçêo de imagem, uma "gramática de movimento" de câmera em cima de ffmpeg, e mixagem de áudio para produzir reels 9:16 e vídeos narrativos mais longos, prontos pra publicar.</p>
   <div class="grid g3">
-    <div class="card"><h3>🎞️ Motion grammar (v2)</h3><p>16 movimentos de câmera (push-in, whip-pan, flash-cut...) selecionados automaticamente por classe de imagem (rosto, paisagem, dark...) e por papel narrativo (hook, clímax, closing) — sem manipular ffmpeg na mão.</p></div>
+    <div class="card"><h3>🎞️ Motion grammar (v2)</h3><p>16 movimentos de câmera (push-in, whip-pan, flash-cut...) selecionados automaticamente por classe de imagem (rosto, paisagem, dark...) e por papel narrativo (hook, clímax, closing) — sem manipular ffmpeg na mêo.</p></div>
     <div class="card"><h3>🧩 Gen + Render separados</h3><p><code>gen-*.js</code> orquestra ponta a ponta (prompt → imagem → shot plan → render). <code>render-*.js</code> é a receita ffmpeg pura, pra reprocessar um vídeo sem gerar imagens de novo.</p></div>
-    <div class="card"><h3>🔌 Daemons externos plugáveis</h3><p>Geração de imagem (inemaimg ou provedores em nuvem), TTS (Chatterbox) e biblioteca de música/SFX (inemavox) rodam fora do repo e são acessados via HTTP, configuráveis por <code>.env</code>.</p></div>
+    <div class="card"><h3>🔌 Daemons externos plugáveis</h3><p>Geraçêo de imagem (inemaimg ou provedores em nuvem), TTS (Chatterbox) e biblioteca de música/SFX (inemavox) rodam fora do repo e sêo acessados via HTTP, configuráveis por <code>.env</code>.</p></div>
   </div>
 </div></section>
 
 <section id="fluxo"><div class="wrap">
   <span class="chip">Como funciona</span>
   <h2>Do prompt ao mp4 final</h2>
-  <p class="sub">O pipeline de um template "gen" típico (ex.: Storytree), da geração das imagens até o vídeo com áudio mixado.</p>
+  <p class="sub">O pipeline de um template "gen" típico (ex.: Storytree), da geraçêo das imagens até o vídeo com áudio mixado.</p>
   <div class="flow">
     <span>prompts</span><span class="arr">→</span>
     <span>gera imagens (inemaimg)</span><span class="arr">→</span>
     <span>classifica imagem (face/paisagem/dark...)</span><span class="arr">→</span>
-    <span>monta shot plan (papel + duração)</span><span class="arr">→</span>
+    <span>monta shot plan (papel + duraçêo)</span><span class="arr">→</span>
     <span>valida (QA)</span><span class="arr">→</span>
     <span>zoompan por shot (ffmpeg)</span><span class="arr">→</span>
     <span>concat + mux de áudio</span><span class="arr">→</span>
@@ -172,14 +172,14 @@
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos</span>
   <h2>O que precisa estar no ar</h2>
-  <p class="sub">mkVIDEOS não empacota os daemons de geração de imagem, voz e áudio — eles rodam como infraestrutura separada, acessados por HTTP.</p>
+  <p class="sub">mkVIDEOS nêo empacota os daemons de geraçêo de imagem, voz e áudio — eles rodam como infraestrutura separada, acessados por HTTP.</p>
   <div class="grid g3">
     <div class="card"><h3>Node 18+ e ffmpeg 6.1+</h3><p>Única dependência de runtime é <code>dotenv</code>; o resto é stdlib + shell out pro ffmpeg.</p><pre><span class="c"># checar versões</span>
 node -v
 ffmpeg -version</pre></div>
-    <div class="card"><h3>inemaimg (geração de imagem)</h3><p>API multi-modelo (FLUX.2, Qwen, ERNIE) local, default <code>localhost:8000</code>.</p><pre><span class="c"># checar se está no ar</span>
+    <div class="card"><h3>inemaimg (geraçêo de imagem)</h3><p>API multi-modelo (FLUX.2, Qwen, ERNIE) local, default <code>localhost:8000</code>.</p><pre><span class="c"># checar se está no ar</span>
 curl -s localhost:8000</pre></div>
-    <div class="card"><h3>Chatterbox TTS + inemavox</h3><p>TTS local (vozes rachel/bella) em <code>127.0.0.1:7860</code> e proxy Freesound + biblioteca de música/SFX em <code>inemavox</code> — só necessários pra templates que mixam narração/áudio.</p><pre><span class="c"># .env do projeto</span>
+    <div class="card"><h3>Chatterbox TTS + inemavox</h3><p>TTS local (vozes rachel/bella) em <code>127.0.0.1:7860</code> e proxy Freesound + biblioteca de música/SFX em <code>inemavox</code> — só necessários pra templates que mixam narraçêo/áudio.</p><pre><span class="c"># .env do projeto</span>
 CHATTERBOX_URL=http://127.0.0.1:7860
 INEMAVOX_URL=http://192.168.2.99:8010</pre></div>
   </div>
@@ -192,15 +192,15 @@ INEMAVOX_URL=http://192.168.2.99:8010</pre></div>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Clone e instale</h3>
-    <p>Dependência única é o <code>dotenv</code>; não há passo de build.</p>
+    <p>Dependência única é o <code>dotenv</code>; nêo há passo de build.</p>
 <pre><span class="k">git clone https://github.com/inematds/mkvideos.git && cd mkvideos</span>  <span class="c"># clona</span>
 <span class="k">npm install</span>  <span class="c"># instala dotenv</span></pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
     <h3>Configure o <code>.env</code></h3>
-    <p>Aponta pros 3 daemons externos e escolhe modelo/voz padrão.</p>
-<pre><span class="c"># inemaimg (geração de imagem)</span>
+    <p>Aponta pros 3 daemons externos e escolhe modelo/voz padrêo.</p>
+<pre><span class="c"># inemaimg (geraçêo de imagem)</span>
 INEMAIMG_URL=http://localhost:8000
 INEMAIMG_MODEL=flux2-klein
 INEMAIMG_QUALITY=fast
@@ -215,7 +215,7 @@ INEMAVOX_URL=http://192.168.2.99:8010</pre>
 
   <div class="step"><div class="b">3</div><div>
     <h3>Rode o smoke check</h3>
-    <p>Confere sintaxe de todos os scripts antes de gerar qualquer coisa (não há test runner — a validação real acontece em <code>lib/storytree-qa.js</code> no momento do render).</p>
+    <p>Confere sintaxe de todos os scripts antes de gerar qualquer coisa (nêo há test runner — a validaçêo real acontece em <code>lib/storytree-qa.js</code> no momento do render).</p>
 <pre><span class="k">npm run check:syntax</span>  <span class="c"># node --check em todo *.js até depth 3</span></pre>
   </div></div>
 
@@ -229,7 +229,7 @@ INEMAVOX_URL=http://192.168.2.99:8010</pre>
 
   <div class="step"><div class="b">5</div><div>
     <h3>Ou só renderize (render), reusando imagens já existentes</h3>
-    <p>Os <code>render-*.js</code> são receitas ffmpeg puras — não pedem imagem nova, só um shot plan + imagens já em <code>output/videos/...</code>. Pra retargetar pra outro conjunto de imagens, edita as constantes <code>SRC</code>/<code>OUT</code> no topo do arquivo (os renderers não são parametrizados por flags, são scripts de uso único).</p>
+    <p>Os <code>render-*.js</code> sêo receitas ffmpeg puras — nêo pedem imagem nova, só um shot plan + imagens já em <code>output/videos/...</code>. Pra retargetar pra outro conjunto de imagens, edita as constantes <code>SRC</code>/<code>OUT</code> no topo do arquivo (os renderers nêo sêo parametrizados por flags, sêo scripts de uso único).</p>
 <pre><span class="k">node render-storytree-v2.js</span>  <span class="c"># motion engine v2 (o mais atual)</span>
 <span class="k">node render-darkstory-cinematic-v2.js</span>  <span class="c"># montagem estilo Aronofsky</span></pre>
   </div></div>
@@ -267,9 +267,9 @@ INEMAVOX_URL=http://192.168.2.99:8010</pre>
   <span class="chip">Roadmap</span>
   <h2>Onde o projeto está</h2>
   <p class="sub">Sem changelog público no repo — leitura do estado atual a partir do código e do versionamento (<code>v&lt;major&gt;.&lt;features&gt;.&lt;bugs&gt;</code>, hoje em <code>v1.02.00</code>).</p>
-  <div class="phase"><div class="tag">v1</div><div class="d"><strong>Motion engine v2 (atual)</strong><span>storytree-presets/classify/selector/rhythm/qa — os renderizadores mais novos (storytree-v2, darkstory-cinematic-v2) usam essa composição de 5 módulos; os mais antigos (camera-moves.js) ficam como referência e não são mais estendidos.</span></div></div>
+  <div class="phase"><div class="tag">v1</div><div class="d"><strong>Motion engine v2 (atual)</strong><span>storytree-presets/classify/selector/rhythm/qa — os renderizadores mais novos (storytree-v2, darkstory-cinematic-v2) usam essa composiçêo de 5 módulos; os mais antigos (camera-moves.js) ficam como referência e nêo sêo mais estendidos.</span></div></div>
   <div class="phase"><div class="tag">templates</div><div class="d"><strong>~15 templates de reels/vídeo</strong><span>Storytree, CriaProf (+ variações CTA/comic), GERTRAN, DarkStory, institucional INEMA — cada um com seu gen/render dedicado.</span></div></div>
-  <div class="phase"><div class="tag">infra</div><div class="d"><strong>4 provedores de imagem plugáveis</strong><span>inemaimg (padrão, local), KIE.ai, Piramyd, Pollinations (gratuito) — todos atrás da mesma interface <code>generateImage()</code>.</span></div></div>
+  <div class="phase"><div class="tag">infra</div><div class="d"><strong>4 provedores de imagem plugáveis</strong><span>inemaimg (padrêo, local), KIE.ai, Piramyd, Pollinations (gratuito) — todos atrás da mesma interface <code>generateImage()</code>.</span></div></div>
 </div></section>
 
 <footer>

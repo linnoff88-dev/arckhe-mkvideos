@@ -246,9 +246,9 @@ function renderBlack(dur) {
   //    [shots beat 1 (HOOK)] → cardSetup → [shots beats 2-5] → cardRitual → [shots beat 6 (MID)] →
   //    blackBeforeDarkest → [shots beat 7 (DARKEST) AntiBefore montage no meio] → blackBeforeCta →
   //    cardIgreja → [shots beats 8-10] → [shot beat 11 CTA]
-  console.log(`\n=== Compor edição cinematográfica ===`);
+  console.log(`\n=== Compor ediçêo cinematográfica ===`);
   const sequence = [];
-  // Função de agrupamento por beat
+  // Funçêo de agrupamento por beat
   const byBeat = new Map();
   for (const s of shotSegs) { if (!byBeat.has(s.shot.beat.beat)) byBeat.set(s.shot.beat.beat, []); byBeat.get(s.shot.beat.beat).push(s.file); }
 
@@ -311,7 +311,7 @@ function renderBlack(dur) {
   const finalDur = ffprobeDur(finalVideo);
   console.log(`vídeo composto: ${finalDur.toFixed(1)}s`);
 
-  // 6) Audio: narração + música -16dB ducked + SFX
+  // 6) Audio: narraçêo + música -16dB ducked + SFX
   // Calcula offsets aproximados (sequência hard-cut, sem xfades)
   // TODO: SFX timing preciso por beat — pra v2 vou colocar:
   //   - música atmospheric loopando todo o vídeo
@@ -319,10 +319,10 @@ function renderBlack(dur) {
   //   - chains+wind durante darkest
   //   - bell no CTA
   // Mix audio:
-  //   [0] narração (oficial)
+  //   [0] narraçêo (oficial)
   //   [1] música -22dB (fundo)
   //   [2-N] SFX em offsets calculados
-  // Pra simplificar: monto a base (narração + música ducked) e overlay os SFX em pontos chave usando timestamps brutos.
+  // Pra simplificar: monto a base (narraçêo + música ducked) e overlay os SFX em pontos chave usando timestamps brutos.
 
   const SFX_TIMING = []; // {file, start_s}
   // Posições aproximadas:

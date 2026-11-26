@@ -1,6 +1,6 @@
 /**
  * Render genérico pros 3 templates extras em 9:16, 31s, estilo GERTRAN.
- * Reusa narração gertran + whisper da profissão (já existentes).
+ * Reusa narraçêo gertran + whisper da profissêo (já existentes).
  *
  * Layout: 3s padding (bg sólido + label + hook) + 25s main (50 imgs × 0.5s)
  *         + 3s black outro (CTA INEMA.CLUB).
@@ -28,7 +28,7 @@ if (!slug || !TEMPLATES[templ]) {
 }
 
 const profile = profissoes.find((p) => p.slug === slug);
-if (!profile) { console.error(`slug não encontrado: ${slug}`); process.exit(1); }
+if (!profile) { console.error(`slug nêo encontrado: ${slug}`); process.exit(1); }
 
 const IMG_DIR = path.join(__dirname, `output/videos/extras/${TEMPLATES[templ].dir}/${slug}_2026-04-23/imgs`);
 if (!fs.existsSync(IMG_DIR)) { console.error(`imgs: ${IMG_DIR}`); process.exit(1); }

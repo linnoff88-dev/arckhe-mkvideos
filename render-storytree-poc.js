@@ -3,11 +3,11 @@
  * render-storytree-poc.js
  *
  * POC aplicando Tier 1 do relatório doc/storytree-canais-referencia.md:
- *   1. Easing curves não-lineares (ease-out exp, ease-in-out cubic, ease-in fast)
+ *   1. Easing curves nêo-lineares (ease-out exp, ease-in-out cubic, ease-in fast)
  *   2. Grain temporal + vignette permanentes (camada global)
  *   3. Shot duration variável por papel (estabelecimento 7-8s vs detalhe 1.5-2.5s)
  *   4. Letterbox progressivo nos primeiros 4s + fixo depois
- *   5. Cross-dissolves de duração variável (hard cut, 0.5s, 0.8s, 1.5s)
+ *   5. Cross-dissolves de duraçêo variável (hard cut, 0.5s, 0.8s, 1.5s)
  *   6. Money shot — freeze + flash branco no clímax (estilo melodysheep)
  *
  * Reusa imgs do papai-noel-cinematic-v2 (38 imgs em 512x896 vertical).
@@ -215,7 +215,7 @@ function buildShotVF(shot) {
   // 3. zoompan filter (precisa de iw/zoom calc)
   const zp = `zoompan=z='${zExpr}':d=${frames}:x='${xExpr}':y='${yExpr}':s=${W}x${H}:fps=${FPS}`;
 
-  // 4. pre-scale 2x pra evitar pixelação no zoom
+  // 4. pre-scale 2x pra evitar pixelaçêo no zoom
   const preScale = `scale=${PRE_W}:${PRE_H}:flags=lanczos,setsar=1:1`;
 
   // 5. layers globais — grain + vignette
@@ -266,7 +266,7 @@ function renderShot(shot, idx) {
 }
 
 // ================================================================
-// Concat com xfade encadeado (duração variável por transição)
+// Concat com xfade encadeado (duraçêo variável por transiçêo)
 // ================================================================
 
 function concatWithXfade(shots) {

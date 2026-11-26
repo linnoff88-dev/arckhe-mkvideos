@@ -1,7 +1,7 @@
 /**
  * GERTRAN piloto v3 — Fisioterapeuta. Aplicando 3 decisões:
- *   1. Zoom Ken Burns = 0.0022 (padrão das primeiras CriaProf, movimento visível sem tremor)
- *   2. Captions sobrepostas ao vídeo em y=1380 (dentro da área do vídeo, não no rodapé)
+ *   1. Zoom Ken Burns = 0.0022 (padrêo das primeiras CriaProf, movimento visível sem tremor)
+ *   2. Captions sobrepostas ao vídeo em y=1380 (dentro da área do vídeo, nêo no rodapé)
  *   3. Padding A: montage relâmpago de 4 imagens (0.5s cada) + hook progressivo linha-a-linha
  */
 
@@ -104,7 +104,7 @@ const narrIdx  = padImgs.length + N + 1;
 
 const filters = [];
 
-// PADDING: 1 imagem 2s, zoom bem sutil (0.001) pra não tremer rosto
+// PADDING: 1 imagem 2s, zoom bem sutil (0.001) pra nêo tremer rosto
 const padZoomRate = 0.001;
 filters.push(
   `[0:v]zoompan=z='min(1.02+on*${padZoomRate},1.08)':d=${PAD_FRAMES}:` +
@@ -112,7 +112,7 @@ filters.push(
   `pad=${W}:${H}:0:420:color=0x0A1428,format=yuv420p,setsar=1[vpad]`
 );
 
-// MAIN: 20 imgs com zoom 0.0022 (padrão CriaProf), fade-in 0.08s
+// MAIN: 20 imgs com zoom 0.0022 (padrêo CriaProf), fade-in 0.08s
 const zoomRate = 0.0022;
 imgs.forEach((_, idx) => {
   const p = presets[idx % presets.length];

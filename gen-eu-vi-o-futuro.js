@@ -1,6 +1,6 @@
 /**
  * Gera:
- *   (A) regera 3 cenas do roteiro "Antes do Futuro" com o menino loiro descendente alemão
+ *   (A) regera 3 cenas do roteiro "Antes do Futuro" com o menino loiro descendente alemêo
  *   (B) 40 imagens do novo roteiro "Eu Vi o Futuro Chegar" (20 cenas x ini+fim)
  *
  * Personagem recorrente: blond German-descendant Brazilian boy/man, fair skin,
@@ -72,7 +72,7 @@ const novo = [
   { file: 'cena08-ini.png', prompt: `Humble Brazilian community classroom at the early 2000s, rows of old desktop computers, diverse students of different ages sitting attentively, chalkboard with simple computer diagrams, natural light from windows, ${S_MID}` },
   { file: 'cena08-fim.png', prompt: `A ${CHAR} young man about 20 years old standing at the front of a classroom, gesturing while teaching, charismatic and warm expression, attentive students in foreground blurred, ${S_MID}` },
 
-  // 9 — Evolução de computadores
+  // 9 — Evoluçêo de computadores
   { file: 'cena09-ini.png', prompt: `Still-life composition of a bulky 1990s beige CRT monitor next to a colorful translucent early-2000s all-in-one computer, clean studio lighting, generational contrast, ${S_MID}` },
   { file: 'cena09-fim.png', prompt: `Row of sleek modern thin laptops aligned on a white clean minimalist desk, soft daylight, editorial product photography, ${S_MID}` },
 
@@ -100,11 +100,11 @@ const novo = [
   { file: 'cena15-ini.png', prompt: `Close-up of a dark monitor showing abstract cryptocurrency candlestick charts in teal and orange, digital wallet interface in one corner, clean futuristic UI, ${S_FUT}` },
   { file: 'cena15-fim.png', prompt: `A ${CHAR} man about 35 years old analyzing multiple screens filled with charts, serious and thoughtful expression, face lit by cool monitor glow, night office, ${S_FUT}` },
 
-  // 16 — Automação n8n / Make
+  // 16 — Automaçêo n8n / Make
   { file: 'cena16-ini.png', prompt: `Screenshot-like view of a workflow automation canvas with connected nodes and flowing data lines, abstract and futuristic, soft glow between nodes, ${S_FUT}` },
   { file: 'cena16-fim.png', prompt: `A ${CHAR} man about 37 years old with hands on a keyboard, eyes scanning a large monitor showing a complex automation workflow, satisfied focus, modern workspace, ${S_MID}` },
 
-  // 17 — Explosão de conteúdo
+  // 17 — Explosêo de conteúdo
   { file: 'cena17-ini.png', prompt: `Stylized chaotic composition of text blocks, images, and video thumbnails exploding outward from a central point, overwhelming abundance of digital content, vibrant, ${S_MID}` },
   { file: 'cena17-fim.png', prompt: `A ${CHAR} man about 38 years old working across multiple open windows on a wide monitor, rapid creation energy, slight motion blur on hands, intense creative flow, ${S_MID}` },
 

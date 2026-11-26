@@ -2,7 +2,7 @@
  * GERTRAN v5 — padding só com texto (sem imagem).
  *
  * Decisões aplicadas:
- *   - Padding: fundo azul-escuro sólido + tag da profissão + hook 4 linhas (todos 0-2s)
+ *   - Padding: fundo azul-escuro sólido + tag da profissêo + hook 4 linhas (todos 0-2s)
  *   - Main: SEM zoom (scale lanczos estático)
  *   - Captions whisper-synced em y=1380
  *   - INEMA.CLUB watermark, CTA black final 3s
@@ -100,9 +100,9 @@ filters.push(`[vpad][vmain][vblack]concat=n=3:v=1:a=0[vconcat]`);
 
 // OVERLAYS
 
-// PADDING hook — tag da profissão + hook completo, tudo 0-2s
+// PADDING hook — tag da profissêo + hook completo, tudo 0-2s
 const hookPadding = [
-  // Tag profissão no topo
+  // Tag profissêo no topo
   drawtext({ text: PROFESSION,         t0: 0, t1: 2.0, y: 280,  size: 82,  color: '#FFEB3B', bord: 6 }),
   // Hook principal — 4 linhas centralizadas
   drawtext({ text: 'VOCE JA CUROU',    t0: 0, t1: 2.0, y: 640,  size: 124, bord: 10 }),

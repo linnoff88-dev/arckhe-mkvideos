@@ -76,7 +76,7 @@ const scenes = [
   { file: 'cena14-ini.png', prompt: `Group photo energy — a diverse circle of Brazilian women of various ages gathered in a bright coworking space, laughing and talking, warm light, ${S_MID}` },
   { file: 'cena14-fim.png', prompt: `${char(51, 'community leader, silver-gray wavy hair, confident warm smile, casual blazer')} standing in the middle of a group of diverse women, genuine joyful leadership, ${S_MID}` },
 
-  // 15 — futuro: inspirando a próxima geração + hero final
+  // 15 — futuro: inspirando a próxima geraçêo + hero final
   { file: 'cena15-ini.png', prompt: `Minimalist futuristic space with soft gradient light from warm to cool, floating translucent UI panels, sense of openness and possibility, no people, ${S_FUT}` },
   { file: 'cena15-fim.png', prompt: `Heroic cinematic close-up portrait of the same ${BASE}, about 55 years old, full silver-gray wavy hair elegantly loose, subtle makeup, black blazer, quietly confident smile, looking slightly upward, soft rim light on hair, deep blue futuristic background with faint holographic UI out of focus, editorial quality, ${S_FUT}` },
 ];

@@ -1,37 +1,37 @@
 /**
  * Diversidade brasileira nas 90 profissões — overlay sobre config/profissoes-30.js.
  *
- * NÃO modifica o config original. Substitui apenas:
- *   - character (descrição visual da pessoa: pele, cabelo, traços)
+ * NêO modifica o config original. Substitui apenas:
+ *   - character (descriçêo visual da pessoa: pele, cabelo, traços)
  *   - pronoun (he/she conforme gênero)
- *   - hair_style (estilo de cabelo coerente com região/gênero/etnia)
+ *   - hair_style (estilo de cabelo coerente com regiêo/gênero/etnia)
  *
- * Distribuição (proporcional à demografia BR):
+ * Distribuiçêo (proporcional à demografia BR):
  *   - sudeste: 38 (mistura ampla — pardo/branco/preto/asiático)
  *   - nordeste: 24 (preta/parda, cabelo crespo/cacheado)
- *   - sul: 13 (branca, olhos claros, descendência alemã/italiana)
+ *   - sul: 13 (branca, olhos claros, descendência alemê/italiana)
  *   - norte: 8 (caboclo/indígena, pele oliva)
  *   - centro-oeste: 7 (sertanejo bronzeado)
  *
- * Gênero: ~32 homens / 58 mulheres (afinidade por profissão).
+ * Gênero: ~32 homens / 58 mulheres (afinidade por profissêo).
  */
 
-// Personagens base por região × gênero × variante étnica.
+// Personagens base por regiêo × gênero × variante étnica.
 // Cada string é um "character" pronto pra ser injetado nos prompts.
 const CHARACTERS = {
   // ========= SUDESTE =========
   sudeste: {
     F: {
-      branca:    'Brazilian woman from São Paulo with fair skin, light brown wavy hair, hazel eyes, refined urban presence',
-      parda:     'Brazilian woman from São Paulo with light brown skin, dark curly hair, warm brown eyes, confident metropolitan look',
+      branca:    'Brazilian woman from Sêo Paulo with fair skin, light brown wavy hair, hazel eyes, refined urban presence',
+      parda:     'Brazilian woman from Sêo Paulo with light brown skin, dark curly hair, warm brown eyes, confident metropolitan look',
       preta:     'Brazilian Black woman from Rio de Janeiro with rich dark brown skin, natural afro hair, deep expressive eyes, strong elegant presence',
-      asiatica:  'Brazilian woman of Japanese descent from São Paulo with light skin, straight black hair, dark almond eyes, composed precise presence',
-      sirio:     'Brazilian woman of Lebanese descent from São Paulo with olive skin, dark wavy hair, large dark eyes, warm Mediterranean features',
+      asiatica:  'Brazilian woman of Japanese descent from Sêo Paulo with light skin, straight black hair, dark almond eyes, composed precise presence',
+      sirio:     'Brazilian woman of Lebanese descent from Sêo Paulo with olive skin, dark wavy hair, large dark eyes, warm Mediterranean features',
     },
     M: {
-      branco:    'Brazilian man from São Paulo with fair skin, short brown hair, hazel eyes, clean professional appearance',
+      branco:    'Brazilian man from Sêo Paulo with fair skin, short brown hair, hazel eyes, clean professional appearance',
       pardo:     'Brazilian man from Rio de Janeiro with light brown skin, short dark curly hair, warm brown eyes, relaxed urban demeanor',
-      preto:     'Brazilian Black man from São Paulo with rich dark brown skin, short curly hair, expressive deep eyes, confident strong presence',
+      preto:     'Brazilian Black man from Sêo Paulo with rich dark brown skin, short curly hair, expressive deep eyes, confident strong presence',
     },
   },
   // ========= NORDESTE =========
@@ -115,7 +115,7 @@ const ASSIGNMENTS = {
   'terapeuta-ocupacional':  { region: 'sudeste',      gender: 'F', variant: 'preta' },
   'biomedica':              { region: 'sul',          gender: 'F', variant: 'italiana' },
 
-  // Educação básica (5)
+  // Educaçêo básica (5)
   'professora-fundamental': { region: 'nordeste',     gender: 'F', variant: 'preta' },
   'professora-medio':       { region: 'sudeste',      gender: 'F', variant: 'parda' },
   'pedagoga':               { region: 'sudeste',      gender: 'F', variant: 'preta' },
@@ -151,7 +151,7 @@ const ASSIGNMENTS = {
   'massoterapeuta':         { region: 'nordeste',     gender: 'F', variant: 'parda' },
   'parteira':               { region: 'norte',        gender: 'F', variant: 'cabocla' },
 
-  // Educação superior (5)
+  // Educaçêo superior (5)
   'professor-universitario':{ region: 'sul',          gender: 'M', variant: 'alemao' },
   'professor-matematica':   { region: 'sudeste',      gender: 'M', variant: 'pardo' },
   'educador-fisico':        { region: 'sudeste',      gender: 'F', variant: 'preta' },
@@ -263,7 +263,7 @@ function getDiverseProfile(originalProfile) {
 
   const regionData = CHARACTERS[a.region];
   if (!regionData || !regionData[a.gender] || !regionData[a.gender][a.variant]) {
-    console.warn(`[diverse] character não encontrado: ${slug} ${a.region}/${a.gender}/${a.variant}`);
+    console.warn(`[diverse] character nêo encontrado: ${slug} ${a.region}/${a.gender}/${a.variant}`);
     return originalProfile;
   }
 

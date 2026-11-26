@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Gen DarkStory Cinematic — versão multi-shot por beat com continuidade textual.
+ * Gen DarkStory Cinematic — versêo multi-shot por beat com continuidade textual.
  *
  * Diferencial vs gen-darkstory.js:
  *   - Cada beat narrativo tem 1-5 shots (wide/medium/close/insert/OTS/POV)
  *   - subject_lock por entidade recorrente (Krampus, Floresta, Criança) repetido em todos os prompts
- *   - Pacing variável: hook 4s, darkest 10s, etc (não uniforme)
+ *   - Pacing variável: hook 4s, darkest 10s, etc (nêo uniforme)
  *
  * Saída:
  *   output/videos/darkstory/<slug>-cinematic_<date>/
@@ -71,25 +71,25 @@ function generateBeatPlan() {
 Gere um BEAT PLAN cinematográfico em JSON puro (sem markdown) para o tema:
 
 TEMA: "${args.titulo}"
-DURAÇÃO ALVO: ${args.duracao}s · FORMATO: ${RATIO} · IDIOMA: PT-BR
+DURAÇêO ALVO: ${args.duracao}s · FORMATO: ${RATIO} · IDIOMA: PT-BR
 
-DIFERENCIAL: cada beat narrativo tem MÚLTIPLOS PLANOS (cinema, não slideshow). Use:
+DIFERENCIAL: cada beat narrativo tem MÚLTIPLOS PLANOS (cinema, nêo slideshow). Use:
 - "wide" — plano aberto, estabelecedor (4-6s)
-- "medium" — meio corpo, ação (2-3s)
-- "close" — close no rosto/objeto, emoção (1.5-2.5s)
-- "insert" — detalhe de objeto (1-1.5s) — corrente, vela, mão, lâmina
+- "medium" — meio corpo, açêo (2-3s)
+- "close" — close no rosto/objeto, emoçêo (1.5-2.5s)
+- "insert" — detalhe de objeto (1-1.5s) — corrente, vela, mêo, lâmina
 - "ots" — over-the-shoulder (2-3s)
 - "pov" — primeira pessoa (1.5-2s) — o personagem vendo
 
-ESTRUTURA OBRIGATÓRIA (otimizada pra retenção):
+ESTRUTURA OBRIGATÓRIA (otimizada pra retençêo):
 
 1. HOOK (4s, 3 shots quick — wide → close rosto → insert objeto): pergunta provocativa OU stat chocante. Para a rolagem.
 
-2-5. BUILD-UP (4-6s cada, 2-4 shots): apresenta o lado sombrio gradualmente. Use shots variados (wide pra contexto, close pra tensão, inserts pra simbolismo).
+2-5. BUILD-UP (4-6s cada, 2-4 shots): apresenta o lado sombrio gradualmente. Use shots variados (wide pra contexto, close pra tensêo, inserts pra simbolismo).
 
-6. MID PATTERN INTERRUPT (3s, 2 shots rápidos): pergunta direta ao espectador OU revelação parcial. Cria pausa.
+6. MID PATTERN INTERRUPT (3s, 2 shots rápidos): pergunta direta ao espectador OU revelaçêo parcial. Cria pausa.
 
-7. DARKEST MOMENT (~10s, 5 shots — wide medo → medium ação → close rosto vítima → POV de ser perseguido → wide afastando-se da cena): a cena climática. DWELL aqui.
+7. DARKEST MOMENT (~10s, 5 shots — wide medo → medium açêo → close rosto vítima → POV de ser perseguido → wide afastando-se da cena): a cena climática. DWELL aqui.
 
 8-10. RESOLUTION (4-5s cada, 2-3 shots): contextualiza, conecta com o presente.
 
@@ -100,7 +100,7 @@ OUTPUT — array de beats em JSON. Cada beat:
   "beat": 1..11,
   "role": "hook" | "buildup" | "mid" | "darkest" | "resolution" | "cta",
   "duration_s": 4..10,
-  "narration": "texto PT-BR (~${'duracao' in args ? Math.round(args.duracao / 11 * 2.5) : 12} palavras por beat — escala com duração)",
+  "narration": "texto PT-BR (~${'duracao' in args ? Math.round(args.duracao / 11 * 2.5) : 12} palavras por beat — escala com duraçêo)",
   "caption": "frase curta MAIÚSCULAS 4-7 palavras",
   "shots": [
     {

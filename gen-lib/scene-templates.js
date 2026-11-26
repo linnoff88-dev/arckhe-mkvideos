@@ -2,7 +2,7 @@
  * Scene templates compartilhados — CriaProf (25 cenas × 2 momentos = 50 imgs)
  * e GERTRAN nostalgia (20 cenas × 1 momento = 20 imgs).
  *
- * Cada template recebe um `profile` (config da profissão) e retorna array
+ * Cada template recebe um `profile` (config da profissêo) e retorna array
  * de { file, prompt } prontos pra generateImage().
  *
  * Estrutura do profile (ver config/profissoes-30.js):
@@ -11,14 +11,14 @@
  *     character: 'Brazilian woman with warm tan skin, ...',
  *     pronoun: 'she' | 'he',
  *     props: {
- *       child_object, // brinquedo/objeto de infância relacionado à profissão
+ *       child_object, // brinquedo/objeto de infância relacionado à profissêo
  *       school_context, // contexto escolar/aula
  *       teen_hobby, // hobby adolescente
  *       first_tool, // primeira ferramenta profissional clássica
  *       workplace, // ambiente de trabalho típico
  *       classic_task, // tarefa central clássica
  *       new_tool, // ferramenta digital/moderna
- *       ai_application, // como IA entra na profissão
+ *       ai_application, // como IA entra na profissêo
  *     },
  *     gertran_props: [20 strings - cena única era-específica]
  *   }
@@ -37,7 +37,7 @@ function criaProfScenes(p) {
   const c = p.props;
   const scenes = [
     // ========= INFÂNCIA (1980s) =========
-    // 1 — 6 anos: observando pai/mãe trabalhar
+    // 1 — 6 anos: observando pai/mêe trabalhar
     { n: 1, ini: `Cozy 1980s Brazilian home with ${c.parent_workspace}, warm afternoon light spilling through curtains, nostalgic domestic scene, ${S_OLD}`,
            fim: `${char(p, 6, `small child with tanned skin and dark hair, simple cotton clothes, curiously watching a parent ${c.parent_activity}`)}, tender observant gaze, warm lamp light, ${S_OLD}` },
     // 2 — 7 anos: brincando com objeto simbólico
@@ -57,14 +57,14 @@ function criaProfScenes(p) {
     // 6 — 14 anos: aula relacionada à área
     { n: 6, ini: `1990s brazilian classroom with ${c.class_visual} on the wall, a notebook open on a wooden desk, afternoon sunlight, ${S_OLD}`,
            fim: `${char(p, 14, `teenager with dark hair in ${p.hair_style}, tanned skin, school uniform`)} studying ${c.class_visual} with absorbed concentration, ${S_OLD}` },
-    // 7 — 16 anos: hobby adolescente ligado à profissão
+    // 7 — 16 anos: hobby adolescente ligado à profissêo
     { n: 7, ini: `Late 1990s brazilian teen bedroom with ${c.teen_hobby_setup}, posters on wall, boombox stereo, warm window light, ${S_OLD}`,
            fim: `${char(p, 16, `teenager with dark hair, tanned skin, casual 90s clothes`)} engaged in ${c.teen_hobby}, confident absorbed expression, ${S_OLD}` },
     // 8 — 18 anos: decidindo o caminho
     { n: 8, ini: `Late 1990s brazilian dining table with ${c.decision_artifacts} (course catalog, vestibular books), family kitchen warmth, ${S_MID}`,
            fim: `${char(p, 18, `young adult with dark hair, tanned skin, simple clothes`)} looking at ${c.decision_artifacts} with thoughtful determined eyes, ${S_MID}` },
 
-    // ========= UNIVERSIDADE / FORMAÇÃO INICIAL (2000s) =========
+    // ========= UNIVERSIDADE / FORMAÇêO INICIAL (2000s) =========
     // 9 — 20 anos: faculdade/curso técnico
     { n: 9, ini: `Early 2000s brazilian ${c.school_institution} hallway with bulletin board, backpacks on the floor, natural daylight through tall windows, ${S_MID}`,
            fim: `${char(p, 20, `university student, tanned skin, dark hair in ${p.hair_style}, backpack, practical student clothing`)} standing proudly in front of a ${c.institution_sign} sign, determined smile, ${S_MID}` },
@@ -85,7 +85,7 @@ function criaProfScenes(p) {
     // 14 — 30 anos: dominando ofício clássico
     { n: 14, ini: `Well-organized ${c.workplace} with ${c.mastery_setup}, soft morning light, practiced rhythm of work, ${S_MID}`,
             fim: `${char(p, 30, `established professional, tanned skin, dark hair`)} confidently performing ${c.classic_task} with ${c.mastery_setup}, quiet mastery on face, ${S_MID}` },
-    // 15 — 32 anos: relação com cliente/paciente/aluno
+    // 15 — 32 anos: relaçêo com cliente/paciente/aluno
     { n: 15, ini: `${c.workplace} set up for a ${c.client_interaction_type}, chairs or bed positioned, natural light, ${S_MID}`,
             fim: `${char(p, 32, `mid-career professional, tanned skin, dark hair`)} ${c.client_interaction_action}, warm attentive interaction, ${S_MID}` },
 
@@ -107,7 +107,7 @@ function criaProfScenes(p) {
     // 20 — 42 anos: dashboards / dados / análise
     { n: 20, ini: `Close-up of a monitor showing ${c.data_dashboard}, modern clinical/professional UI, teal accents, soft ambient light, ${S_FUT}`,
             fim: `${char(p, 42, `senior professional, tanned skin, dark hair with clear silver streaks, modern workplace uniform`)} analyzing ${c.data_dashboard} on a big monitor, reflective analytical expression, ${S_FUT}` },
-    // 21 — 44 anos: primeira exposição a IA
+    // 21 — 44 anos: primeira exposiçêo a IA
     { n: 21, ini: `Clean modern screen showing ${c.ai_interface} with personalized output and progress charts, soft teal UI accents, ${S_FUT}`,
             fim: `${char(p, 44, `veteran professional, tanned skin, dark hair elegantly streaked with silver`)} reviewing an AI-suggested ${c.ai_application} on a tablet, thoughtful experienced face, ${S_FUT}` },
     // 22 — 46 anos: IA no dia-a-dia
@@ -132,7 +132,7 @@ function criaProfScenes(p) {
 
 /**
  * GERTRAN nostalgia — 20 cenas focadas em objetos/ambientes era-específicos.
- * Não precisam do personagem — são artefatos que provocam lembrança.
+ * Nêo precisam do personagem — sêo artefatos que provocam lembrança.
  * profile.gertran_nostalgia é um array de 20 descriptors. Cada descriptor:
  *   { era: 'OLD' | 'MID' | 'FUT', subject: 'close-up description', context: 'contexto extra opcional' }
  */
@@ -140,7 +140,7 @@ function gertranNostalgiaScenes(p) {
   const eraStyle = { OLD: S_OLD, MID: S_MID, FUT: S_FUT };
   const list = [...p.gertran_nostalgia];
   const c = p.props || {};
-  // Auto-pad até 20 itens com genéricos coerentes à profissão.
+  // Auto-pad até 20 itens com genéricos coerentes à profissêo.
   const generic = [
     { era: 'OLD', subject: `Nostalgic 1980s brazilian ${c.workplace || 'workplace'} with analog tools and warm afternoon light` },
     { era: 'OLD', subject: `Close-up of a hand-written ${c.parent_activity ? 'note' : 'ledger'} from the 1980s with blue ink` },
@@ -166,15 +166,15 @@ function gertranNostalgiaScenes(p) {
 // ===================================================================
 // Templates v2 — 3 formatos "transformation-focused" (sem personagem,
 // foco em artefatos/ferramentas/ambientes que mudaram). Todos geram
-// 50 imagens por profissão.
+// 50 imagens por profissêo.
 // ===================================================================
 
 const ERA_STYLE = { OLD: S_OLD, MID: S_MID, FUT: S_FUT };
 
 /**
  * (a) Pareado — 25 pares "antes × depois", 50 imgs total.
- *   parXXa.png = versão OLD/MID (antes)
- *   parXXb.png = versão FUT (depois)
+ *   parXXa.png = versêo OLD/MID (antes)
+ *   parXXb.png = versêo FUT (depois)
  * Extrai pares de gertran_nostalgia + fallbacks de props.
  */
 function pairedChangesScenes(p) {
@@ -184,7 +184,7 @@ function pairedChangesScenes(p) {
   const futs = nost.filter((n) => n.era === 'FUT');
   const c = p.props || {};
 
-  // Pool de "befores" (old + mid) e "afters" (fut) — ciclar se não bater 25
+  // Pool de "befores" (old + mid) e "afters" (fut) — ciclar se nêo bater 25
   const befores = [...olds, ...mids];
   const afters = [...futs];
 
@@ -219,7 +219,7 @@ function pairedChangesScenes(p) {
 }
 
 /**
- * (b) Artefatos — 50 imgs de ferramentas/ambientes em progressão cronológica,
+ * (b) Artefatos — 50 imgs de ferramentas/ambientes em progressêo cronológica,
  * sem pessoas. Expande gertran_nostalgia (~20) com descriptors derivados de props
  * pra chegar em 50.
  */
@@ -263,7 +263,7 @@ function artifactTimelineScenes(p) {
 
 /**
  * (c) Décadas — 10 imgs por década (80s, 90s, 2000s, 2010s, 2020s-AI) = 50 imgs.
- * Cada década foca em como a profissão operava naquele momento, sem pessoas.
+ * Cada década foca em como a profissêo operava naquele momento, sem pessoas.
  */
 function decadeTimelineScenes(p) {
   const c = p.props || {};

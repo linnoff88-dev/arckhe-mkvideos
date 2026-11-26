@@ -4,18 +4,18 @@
  *
  * Render baseado nos 5 módulos lib/storytree-* :
  *   - presets    (vocabulário + buildShotVF + easing)
- *   - qa         (validação pré-render)
+ *   - qa         (validaçêo pré-render)
  *   - selector   (image_class × role → preset)
- *   - rhythm     (distribuição temporal por formato)
+ *   - rhythm     (distribuiçêo temporal por formato)
  *   - shot-schema (factory ShotPlan)
  *
  * Diferenças vs render-storytree-poc.js (v1):
  *   - shot plan formal validado por QA antes de render (rejeita errors)
- *   - presets escolhidos por matriz dupla (não hardcoded)
+ *   - presets escolhidos por matriz dupla (nêo hardcoded)
  *   - ritmo distribuído por formato (micro_doc 9:16 30s)
  *   - flash brightness 0.5 (era 0.8 estourado em v1)
  *   - letterbox progressive só no primeiro shot
- *   - cross-dissolve default entre shots (não hard cut)
+ *   - cross-dissolve default entre shots (nêo hard cut)
  */
 
 const fs = require('fs');
@@ -45,7 +45,7 @@ const PRE_H = Math.round(H * 1.5);
 const TOTAL_DURATION = 30; // micro_doc target
 
 // ================================================================
-// INPUT — 8 imagens classificadas (image_class manual; em produção viria de
+// INPUT — 8 imagens classificadas (image_class manual; em produçêo viria de
 // vision model ou do prompt original que gerou a img)
 // ================================================================
 

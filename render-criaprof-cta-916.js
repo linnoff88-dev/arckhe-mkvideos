@@ -1,17 +1,17 @@
 /**
  * Render CriaProf 9:16 com HOOK forte (0-3s) + CTA pesado (33-37s).
  *
- * Variante CTA do template criaprof — NÃO sobrescreve render-criaprof.js nem
+ * Variante CTA do template criaprof — NêO sobrescreve render-criaprof.js nem
  * render-criaprof-916.js. Reutiliza as 50 imgs já existentes em
  * output/videos/criaprof/<slug>_2026-04-23/imgs/.
  *
- * Usa narração NOVA (prepend hook), gerada por batch-criaprof-cta.js:
+ * Usa narraçêo NOVA (prepend hook), gerada por batch-criaprof-cta.js:
  *   /tmp/narr/narr-criaprof-cta-<variant>-<slug>.mp3
  *   /tmp/narr/whisper-criaprof-cta-<variant>-<slug>.json
  *
  * Variantes:
- *   prof    — hook usa noun da profissão (FISIOTERAPIA / MUDOU. E AGORA?)
- *   generic — hook genérico (SUA PROFISSÃO / MUDOU. E AGORA?)
+ *   prof    — hook usa noun da profissêo (FISIOTERAPIA / MUDOU. E AGORA?)
+ *   generic — hook genérico (SUA PROFISSêO / MUDOU. E AGORA?)
  *
  * Output: output/videos/criaprof-cta-916/<slug>_<date>/video/<slug>-cta-<variant>-37s.mp4
  *
@@ -41,16 +41,16 @@ const IMG_CANDIDATES = [
   path.join(__dirname, `output/videos/old/criaprof/${folder}/imgs`),
 ];
 const IMG_DIR = IMG_CANDIDATES.find((p) => fs.existsSync(p));
-if (!IMG_DIR) { console.error(`imgs não encontradas em nenhum candidato:\n  ${IMG_CANDIDATES.join('\n  ')}`); process.exit(1); }
+if (!IMG_DIR) { console.error(`imgs nêo encontradas em nenhum candidato:\n  ${IMG_CANDIDATES.join('\n  ')}`); process.exit(1); }
 
 const today = new Date().toISOString().slice(0, 10);
 const OUT_DIR = path.join(__dirname, `output/videos/criaprof-cta-916/${slug}_${today}/video`);
 fs.mkdirSync(OUT_DIR, { recursive: true });
 const OUT_FILE = path.join(OUT_DIR, `${slug}-cta-${variant}${versionSuffix}-37s.mp4`);
 
-// Música: por versão narrativa (v1-v5) ou por variante (v0/sem versão). Ver config/profissoes-cta.js.
+// Música: por versêo narrativa (v1-v5) ou por variante (v0/sem versêo). Ver config/profissoes-cta.js.
 const MUSIC = getMusicForVariantAndVersion(variant, version);
-if (!MUSIC) console.warn(`! música não encontrada — renderizando sem música de fundo`);
+if (!MUSIC) console.warn(`! música nêo encontrada — renderizando sem música de fundo`);
 const NARR = `/tmp/narr/narr-criaprof-cta-${variant}-${slug}${versionSuffix}.mp3`;
 const WHISPER_JSON = `/tmp/narr/whisper-criaprof-cta-${variant}-${slug}${versionSuffix}.json`;
 if (!fs.existsSync(NARR)) { console.error(`narr faltando: ${NARR}`); process.exit(1); }
@@ -80,8 +80,8 @@ for (let i = 1; i <= N_SCENES; i += 1) {
 }
 for (const p of imgs) if (!fs.existsSync(p)) { console.error(`faltando: ${p}`); process.exit(1); }
 
-// Whisper: narração começa em t=0 do vídeo (sem offset). Filtramos caps t0 < HOOK_DUR
-// (palavras do prefix-hook não viram legenda — o hook visual gigante já cobre).
+// Whisper: narraçêo começa em t=0 do vídeo (sem offset). Filtramos caps t0 < HOOK_DUR
+// (palavras do prefix-hook nêo viram legenda — o hook visual gigante já cobre).
 const whisperData = JSON.parse(fs.readFileSync(WHISPER_JSON, 'utf8'));
 const capChunks = whisperData.chunks
   .map((c) => ({
@@ -91,7 +91,7 @@ const capChunks = whisperData.chunks
   }))
   .filter((c) => c.t0 >= HOOK_DUR - 0.2);
 
-// IMG_TOTAL dinâmico: sincroniza com duração real da narração + 0.5s buffer.
+// IMG_TOTAL dinâmico: sincroniza com duraçêo real da narraçêo + 0.5s buffer.
 // Mínimo 25s pra todas 50 imgs respirarem (≥0.5s/img).
 const lastChunk = whisperData.chunks[whisperData.chunks.length - 1];
 const NARRATION_DUR = lastChunk ? lastChunk.t1 : 22;
@@ -144,9 +144,9 @@ const MUSIC_IDX = MUSIC ? CTA_IDX + 1 : -1;
 const NARR_IDX = MUSIC ? MUSIC_IDX + 1 : CTA_IDX + 1;
 
 // FIX tremor: pre-scale 512→2160 com Lanczos, depois zoompan opera em 2160 e produz 1080
-// (downscale suave, sem shimmer da interpolação bicubic do upscale per-frame).
+// (downscale suave, sem shimmer da interpolaçêo bicubic do upscale per-frame).
 // zoomRate 0.0015 — bem suave, contemplativo. Lanczos pre-scale eliminou o shimmer
-// que fazia zooms lentos parecerem ruins, então pode ficar lento sem tremor.
+// que fazia zooms lentos parecerem ruins, entêo pode ficar lento sem tremor.
 const PRE_SCALE = 2160;
 const zoomRate = 0.0015;
 const filters = [];
@@ -192,7 +192,7 @@ const captions = capChunks
     y: 1520, size: 56, color: '#FFEB3B', bord: 8, bordColor: 'black@0.95',
   }));
 
-// Topo durante imagens: SEMPRE o nome da profissão (mesmo na variante generic).
+// Topo durante imagens: SEMPRE o nome da profissêo (mesmo na variante generic).
 // generic atrai amplo no hook, depois revela quem é o vídeo no topo.
 const topoText = (NOUNS[slug] && NOUNS[slug].noun) || cta.hookLine1;
 const topoSize = topoText.length > 14 ? 60 : 80;
@@ -220,7 +220,7 @@ const allOverlays = [...hookOverlays, watermark, rodape, ...captions, ...ctaOver
 filters.push(`[vconc]${allOverlays}[vout]`);
 
 // === ÁUDIO ===
-// narração: 0-3s volume 2.8 (impacto do hook), 3+ volume 2.0 (normal)
+// narraçêo: 0-3s volume 2.8 (impacto do hook), 3+ volume 2.0 (normal)
 filters.push(
   `[${NARR_IDX}:a]volume='if(lt(t\\,${HOOK_DUR})\\,2.8\\,2.0)':eval=frame,` +
   `apad,atrim=0:${TOTAL_DUR},asetpts=PTS-STARTPTS[narr]`

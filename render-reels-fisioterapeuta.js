@@ -44,13 +44,13 @@ const hookBlocks = [
   { t0: 27.0, t1: 30.0, text: 'LINK NA BIO' },
 ];
 
-// Legendas (rodapé) — pedaços curtos sincronizados com narração (~0.8–28.3s)
+// Legendas (rodapé) — pedaços curtos sincronizados com narraçêo (~0.8–28.3s)
 const capY = '1620'; // dentro do rodapé 1500-1920
 const capSize = 58;
 const capBlocks = [
   { t0: 0.8,  t1: 3.0,  text: 'Desde criança' },
   { t0: 3.0,  t1: 5.2,  text: 'ela entendia o corpo' },
-  { t0: 5.2,  t1: 7.0,  text: 'pelas mãos' },
+  { t0: 5.2,  t1: 7.0,  text: 'pelas mêos' },
   { t0: 7.0,  t1: 9.0,  text: 'Massageava a avó' },
   { t0: 9.0,  t1: 11.0, text: 'ajudava amigos' },
   { t0: 11.0, t1: 13.5, text: 'aprendeu anatomia' },

@@ -281,7 +281,7 @@ button, input, select { font: inherit; color: inherit; }
   .vd-row-split { grid-template-columns: 1fr; }
 }
 
-/* Toolbar (paginação de slugs) */
+/* Toolbar (paginaçêo de slugs) */
 .vd-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 6px 6px 0 0; flex-wrap: wrap; }
 .vd-toolbar-left, .vd-toolbar-right { display: flex; align-items: center; gap: 8px; }
 .vd-page-info { font-size: 12px; color: var(--text-dim); }
@@ -323,7 +323,7 @@ button, input, select { font: inherit; color: inherit; }
 .toggle-btn:hover { color: var(--text); border-color: var(--accent-dim); }
 .toggle-btn.is-active { background: rgba(92,200,255,.18); color: var(--accent); border-color: var(--accent-dim); font-weight: 600; }
 
-/* Botão voltar ao topo (flutuante) */
+/* Botêo voltar ao topo (flutuante) */
 .vd-top {
   position: fixed; bottom: 22px; right: 22px; z-index: 10;
   background: var(--accent); color: #001821; border: 0;

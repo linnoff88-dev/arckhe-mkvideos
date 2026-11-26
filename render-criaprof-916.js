@@ -19,7 +19,7 @@ if (!profession) { console.error('Usage: node render-criaprof-916.js <slug>'); p
 
 const folder = `${profession}_2026-04-23`;
 const IMG_DIR = path.join(__dirname, `output/videos/criaprof/${folder}/imgs`);
-if (!fs.existsSync(IMG_DIR)) { console.error(`imgs não encontradas: ${IMG_DIR}`); process.exit(1); }
+if (!fs.existsSync(IMG_DIR)) { console.error(`imgs nêo encontradas: ${IMG_DIR}`); process.exit(1); }
 
 const OUT_DIR = path.join(__dirname, `output/videos/criaprof/videos`);
 const OUT_FILE = path.join(OUT_DIR, `${profession}-criaprof.mp4`);

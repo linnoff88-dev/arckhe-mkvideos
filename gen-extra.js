@@ -31,7 +31,7 @@ if (!slug || !TEMPLATES[templ]) {
 }
 
 const profile = profissoes.find((p) => p.slug === slug);
-if (!profile) { console.error(`slug não encontrado: ${slug}`); process.exit(1); }
+if (!profile) { console.error(`slug nêo encontrado: ${slug}`); process.exit(1); }
 
 const OUT = path.join(__dirname, `output/videos/extras/${TEMPLATES[templ].dir}/${slug}_${DATE}/imgs`);
 fs.mkdirSync(OUT, { recursive: true });

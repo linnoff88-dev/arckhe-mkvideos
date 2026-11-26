@@ -4,13 +4,13 @@
  *
  * Pipeline:
  *   1. Lê scene_plan.json + meta.json
- *   2. Gera narração POR CENA via Chatterbox TTS daemon (voz default josh)
+ *   2. Gera narraçêo POR CENA via Chatterbox TTS daemon (voz default josh)
  *   3. Concatena narrações com pequenos silêncios entre cenas → narration.mp3
  *   4. ffmpeg compõe:
  *      - Ken Burns lento por cena (zoom +0.0015/frame, scale 2x antes pra fluidez)
  *      - Captions ASS por cena (frase curta, MAIÚSCULAS, posicionada conforme formato)
  *      - Crossfade entre cenas (0.4s)
- *      - Narração + (opcional) trilha dark de fundo
+ *      - Narraçêo + (opcional) trilha dark de fundo
  *
  * Uso:
  *   node render-darkstory.js <slug>_<date>
@@ -31,7 +31,7 @@ if (!slug) {
 
 const DIR = path.join(__dirname, `output/videos/darkstory/${slug}`);
 if (!fs.existsSync(path.join(DIR, 'meta.json'))) {
-  console.error(`meta.json não encontrado em ${DIR}. Rode primeiro o gen.`);
+  console.error(`meta.json nêo encontrado em ${DIR}. Rode primeiro o gen.`);
   process.exit(1);
 }
 const meta = JSON.parse(fs.readFileSync(path.join(DIR, 'meta.json'), 'utf-8'));
@@ -40,7 +40,7 @@ const params = meta.params || {};
 // Chatterbox daemon só tem rachel/bella; josh/etc fazem fallback pra rachel
 const VOICE_RAW = params.voz || 'rachel';
 const VOICE = ['rachel', 'bella'].includes(VOICE_RAW) ? VOICE_RAW : 'rachel';
-if (VOICE !== VOICE_RAW) console.warn(`! voz "${VOICE_RAW}" não disponível no Chatterbox — usando "${VOICE}"`);
+if (VOICE !== VOICE_RAW) console.warn(`! voz "${VOICE_RAW}" nêo disponível no Chatterbox — usando "${VOICE}"`);
 const FORMATO = params.formato || '9:16';
 const CAPTIONS = params.captions !== false;
 const DURACAO = params.duracao || 60;
@@ -62,7 +62,7 @@ const FONT_CAPS = '/home/nmaldaner/.local/share/fonts/BebasNeue-Regular.ttf';
 const FONT_FALLBACK = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf';
 const FONT = fs.existsSync(FONT_CAPS) ? FONT_CAPS : FONT_FALLBACK;
 
-// ── Step 1: gera narração por cena via Chatterbox daemon ───────────────────
+// ── Step 1: gera narraçêo por cena via Chatterbox daemon ───────────────────
 const TTS_URL = process.env.TTS_DAEMON_URL || 'http://127.0.0.1:7860';
 
 async function chatterboxTTS(text, outPath) {
@@ -89,9 +89,9 @@ async function generateNarrations() {
     const n = String(s.n || (i + 1)).padStart(2, '0');
     const out = path.join(AUDIO_DIR, `cena${n}.mp3`);
     if (fs.existsSync(out) && fs.statSync(out).size > 1000) {
-      console.log(`── ${i + 1}/${scenes.length} narração cena${n} (cached)`);
+      console.log(`── ${i + 1}/${scenes.length} narraçêo cena${n} (cached)`);
     } else {
-      process.stdout.write(`── ${i + 1}/${scenes.length} narração cena${n} ... `);
+      process.stdout.write(`── ${i + 1}/${scenes.length} narraçêo cena${n} ... `);
       const text = (s.narration || '').trim();
       if (!text) { console.log('skip (sem texto)'); sceneAudios.push({ scene: s, audio: null, duration: 0 }); continue; }
       try {
@@ -123,12 +123,12 @@ function concatNarrations(sceneAudios) {
   }
   fs.writeFileSync(listFile, lines.join('\n'));
   spawnSync('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', listFile, '-c', 'copy', NARRATION_MP3], { stdio: 'ignore' });
-  console.log(`Narração concatenada: ${NARRATION_MP3}`);
+  console.log(`Narraçêo concatenada: ${NARRATION_MP3}`);
 }
 
 // ── Step 3: monta plano final de timing por cena ──────────────────────────
 function planTiming(sceneAudios) {
-  // Cada cena dura: max(duração da narração + 0.3s gap, 3s)
+  // Cada cena dura: max(duraçêo da narraçêo + 0.3s gap, 3s)
   let cursor = 0;
   return sceneAudios.map((a, i) => {
     const audDur = a.duration || 0;

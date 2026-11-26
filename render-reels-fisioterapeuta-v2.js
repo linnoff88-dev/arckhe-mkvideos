@@ -5,8 +5,8 @@
  * Hook structure (formula: claim > curiosidade > jornada > CTA específico):
  *   0-2.5s  HOOK PUNCH (fontsize 118): claim polêmico/específico
  *   2.5-10s curiosidade: setup do paradoxo
- *   10-19s  jornada: transformação
- *   19-27s  payoff: situação atual
+ *   10-19s  jornada: transformaçêo
+ *   19-27s  payoff: situaçêo atual
  *   27-30s  CTA direto com seta e "QUERO" (imperativo)
  */
 
@@ -61,7 +61,7 @@ const hookBlocks = [
   { t0: 10.0, t1: 19.0, text: 'DUVIDARAM. ELA APRENDEU.', size: 84,  y: 130 },
   { t0: 10.0, t1: 19.0, text: 'NUNCA PAROU.',            size: 84,  y: 250 },
   // Payoff
-  { t0: 19.0, t1: 27.0, text: 'HOJE: MÃOS + IA +',       size: 88,  y: 130 },
+  { t0: 19.0, t1: 27.0, text: 'HOJE: MêOS + IA +',       size: 88,  y: 130 },
   { t0: 19.0, t1: 27.0, text: '40 ANOS DE PRÁTICA.',     size: 88,  y: 250 },
   // CTA
   { t0: 27.0, t1: 30.0, text: 'QUERO APRENDER COM ELA',  size: 86,  y: 140 },
@@ -74,7 +74,7 @@ const capSize = 38;
 const capBlocks = [
   { t0: 0.8,  t1: 3.0,  text: 'Desde criança' },
   { t0: 3.0,  t1: 5.2,  text: 'ela entendia o corpo' },
-  { t0: 5.2,  t1: 7.0,  text: 'pelas mãos' },
+  { t0: 5.2,  t1: 7.0,  text: 'pelas mêos' },
   { t0: 7.0,  t1: 9.0,  text: 'Massageava a avó' },
   { t0: 9.0,  t1: 11.0, text: 'ajudava amigos' },
   { t0: 11.0, t1: 13.5, text: 'aprendeu anatomia' },
@@ -103,7 +103,7 @@ const drawtexts = [
     text: b.text, t0: b.t0, t1: b.t1, y: b.y, size: b.size,
     color: 'white', font: FONT_HOOK, bord: 8, bordColor: 'black@0.8',
   })),
-  // ASCII-safe: ffmpeg drawtext 6.1.1 corta chars após alguns multibytes (ã, ê, í).
+  // ASCII-safe: ffmpeg drawtext 6.1.1 corta chars após alguns multibytes (ê, ê, í).
   // Normalizamos NFD + removemos diacríticos. Perde estética mínima, ganha legibilidade.
   ...capBlocks.map((b) => dt({
     text: b.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase(),

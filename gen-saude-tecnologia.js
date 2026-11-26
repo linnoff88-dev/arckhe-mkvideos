@@ -1,6 +1,6 @@
 /**
  * 30 imagens — profissional de saúde brasileira (afro-brasileira) e sua jornada
- * de 1985 até o presente, acompanhando a evolução da tecnologia em saúde.
+ * de 1985 até o presente, acompanhando a evoluçêo da tecnologia em saúde.
  * Envelhece de ~18 até ~63 anos.
  */
 
@@ -71,7 +71,7 @@ const scenes = [
   { file: 'cena13-ini.png', prompt: `Modern clinic consultation with a large translucent screen showing AI-generated personalized treatment options side by side, clean futuristic room, ${S_FUT}` },
   { file: 'cena13-fim.png', prompt: `${char(57, 'confident senior doctor with silver-gray curly hair, white coat')} explaining AI-assisted treatment options to a patient using a transparent display, warm expression, ${S_FUT}` },
 
-  // 14 — 2026: ensinando a próxima geração
+  // 14 — 2026: ensinando a próxima geraçêo
   { file: 'cena14-ini.png', prompt: `Bright modern training room with a diverse group of young healthcare professionals gathered around a large digital display, notebooks open, ${S_MID}` },
   { file: 'cena14-fim.png', prompt: `${char(59, 'mentor, silver-gray curly hair elegantly natural, warm blazer over scrubs')} guiding a group of diverse young healthcare students, pointing at a digital screen, generous teaching smile, ${S_MID}` },
 

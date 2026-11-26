@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Render DarkStory v2 — versão DIRECTED com motion direcionado por papel da cena.
+ * Render DarkStory v2 — versêo DIRECTED com motion direcionado por papel da cena.
  *
  * Cada role aplica uma "câmera" diferente:
  *   - hook:        punch-in rápido (zoom 1.00→1.18 em 1.5s, depois segura) — impacto inicial
@@ -15,7 +15,7 @@
  *   - Fade-to-black antes do darkest (0.6s) pra reset emocional
  *   - Vignette aumenta gradativo (50% → 80% no darkest)
  *
- * Reusa as imgs + narration.mp3 do gen anterior. Não toca no scene_plan.
+ * Reusa as imgs + narration.mp3 do gen anterior. Nêo toca no scene_plan.
  *
  * Uso: node render-darkstory-directed.js <slug>_<date>
  */
@@ -171,7 +171,7 @@ for (let i = 1; i < segs.length; i += 1) {
   else if (t.role === 'resolution' && prevT.role === 'darkest') { xfType = 'fadeblack'; xfDur = 0.8; } // sai do darkest pro BW
   else if (t.role === 'mid') { xfType = 'fadewhite'; xfDur = 0.4; }      // flash branco no pattern interrupt
   else if (t.role === 'cta') { xfType = 'fadeblack'; xfDur = 0.6; }      // entrada do CTA
-  else if (t.role === 'hook' && i === 0) { xfType = 'fade'; xfDur = 0.3; } // (não chega aqui, mas safe)
+  else if (t.role === 'hook' && i === 0) { xfType = 'fade'; xfDur = 0.3; } // (nêo chega aqui, mas safe)
   else { xfType = 'fade'; xfDur = 0.4; }
 
   const offset = (accDur - xfDur).toFixed(2);
@@ -227,7 +227,7 @@ ${adjustedTimings.filter((t) => t.caption).map((t) =>
 const assPath = path.join(TMP, 'captions.ass');
 fs.writeFileSync(assPath, assContent);
 
-// ── Final mux: vídeo + captions + narração ─────────────────────────────────
+// ── Final mux: vídeo + captions + narraçêo ─────────────────────────────────
 const finalArgs = ['-y', '-i', acc, '-i', NARRATION];
 if (CAPTIONS) finalArgs.push('-vf', `subtitles='${assPath.replace(/:/g, '\\:').replace(/'/g, "\\'")}'`);
 finalArgs.push(

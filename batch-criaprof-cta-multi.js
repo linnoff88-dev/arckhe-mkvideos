@@ -2,7 +2,7 @@
  * Batch A/B testing: gera TTS+whisper + renderiza vídeos CriaProf-CTA-916
  * para todos os 90 slugs × 5 versões × 2 variantes = 900 vídeos.
  *
- * Execução sequencial para não saturar GPU/TTS daemon.
+ * Execuçêo sequencial para nêo saturar GPU/TTS daemon.
  *
  * Uso:
  *   node batch-criaprof-cta-multi.js               # tudo (900 vídeos)

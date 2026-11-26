@@ -55,11 +55,11 @@ const scenes = [
   { file: 'cena09-ini.png', prompt: `Hospital break room at night with a rumpled coat on a chair, an empty coffee cup, soft fluorescent light through the glass door, quiet exhaustion, no person visible, ${S_MID}` },
   { file: 'cena09-fim.png', prompt: `${char(29, 'resident doctor, wavy brown hair slightly messy, wearing scrubs, dark circles but resolute')} walking through a dim hospital corridor holding a tablet, focused under pressure, ${S_MID}` },
 
-  // 10 — 31 anos: especialização
+  // 10 — 31 anos: especializaçêo
   { file: 'cena10-ini.png', prompt: `Medical imaging review room with multiple large displays showing MRI and CT slices, dimmed ambient light, ${S_MID}` },
   { file: 'cena10-fim.png', prompt: `${char(31, 'specialist doctor, wavy brown hair neatly tied, white coat, glasses')} studying medical scans across multiple screens, analytical focused expression, ${S_MID}` },
 
-  // 11 — 34 anos: primeira transição para prontuário eletrônico
+  // 11 — 34 anos: primeira transiçêo para prontuário eletrônico
   { file: 'cena11-ini.png', prompt: `Modern consultation room desk with a laptop showing an electronic health record form, a paper folder being set aside, daylight through window, ${S_MID}` },
   { file: 'cena11-fim.png', prompt: `${char(34, 'doctor with wavy brown hair, professional blouse, comfortable expression')} typing into an electronic health record while glancing warmly at a patient out of frame, ${S_MID}` },
 

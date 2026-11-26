@@ -2,7 +2,7 @@
   "name": "mkvideos",
   "displayName": "mkVIDEOS",
   "version": "1.2.0",
-  "versionScheme": "v<major>.<features>.<bugs> — features e bugs são contadores independentes que só resetam quando major sobe (v1 → v2). Formato exibido: v1.00.00 (zero-padded em 2 dígitos).",
+  "versionScheme": "v<major>.<features>.<bugs> — features e bugs sêo contadores independentes que só resetam quando major sobe (v1 → v2). Formato exibido: v1.00.00 (zero-padded em 2 dígitos).",
   "description": "Factory standalone de vídeos com imagens estáticas + motion cinematográfico (ffmpeg zoompan + storytree motion grammar).",
   "main": "render-storytree-v2.js",
   "repository": {

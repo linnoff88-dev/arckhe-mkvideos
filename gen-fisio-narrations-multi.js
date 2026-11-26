@@ -1,6 +1,6 @@
 /**
  * Gera 10 narrações + whispers pra fisioterapeuta (5 estilos × 2 variantes prof/generic).
- * v1-v5 são os estilos novos de A/B testing (interativos). v0 (original) já existe cached.
+ * v1-v5 sêo os estilos novos de A/B testing (interativos). v0 (original) já existe cached.
  *
  * Uso: node gen-fisio-narrations-multi.js
  */
@@ -9,16 +9,16 @@ const fs = require('fs');
 const { spawnSync } = require('child_process');
 
 const NARRATIONS = {
-  1: 'Você lembra quando tudo era manual? Você cuidou do paciente com as mãos, aprendeu bola, pilates, TENS, videochamada. Cada onda você adaptou. Agora a IA personaliza cada protocolo. E você? Continua sendo a que cura. Inema ponto CLUB te espera.',
-  2: 'Lembra como tudo era diferente quando você começou? Anotação no papel, equipamento manual, paciente que voltava sem agenda. Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
-  3: 'Pensa rápido: quantas vezes essa profissão mudou desde que você começou? Bola, pilates, TENS, videochamada, telemedicina. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
-  4: 'Você consegue lembrar quantas vezes essa profissão se reinventou? Da bola ao pilates. Do papel ao prontuário digital. Da consulta presencial à videochamada. Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo a que cura. Inema ponto CLUB.',
+  1: 'Você lembra quando tudo era manual? Você cuidou do paciente com as mêos, aprendeu bola, pilates, TENS, videochamada. Cada onda você adaptou. Agora a IA personaliza cada protocolo. E você? Continua sendo a que cura. Inema ponto CLUB te espera.',
+  2: 'Lembra como tudo era diferente quando você começou? Anotaçêo no papel, equipamento manual, paciente que voltava sem agenda. Sempre que mudou, você mudou junto. Agora a IA chegou — e você já sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
+  3: 'Pensa rápido: quantas vezes essa profissêo mudou desde que você começou? Bola, pilates, TENS, videochamada, telemedicina. Você sempre adaptou. Agora chegou a IA. Você sabe o que fazer. Continue aprendendo no Inema ponto CLUB.',
+  4: 'Você consegue lembrar quantas vezes essa profissêo se reinventou? Da bola ao pilates. Do papel ao prontuário digital. Da consulta presencial à videochamada. Cada vez você esteve lá. Agora é a IA. E você já sabe: continua sendo a que cura. Inema ponto CLUB.',
   5: 'E se eu te disser que você já viveu isso antes? Você passou da bola ao pilates. Do papel ao digital. Da consulta presencial à videochamada. Cada vez você adaptou. Agora a IA personaliza cada protocolo. Você sabe. Continue aprendendo no Inema ponto CLUB.',
 };
 
 const PREFIXES = {
   prof: 'A fisioterapia mudou. E agora?',
-  generic: 'A sua profissão mudou. E agora?',
+  generic: 'A sua profissêo mudou. E agora?',
 };
 
 const slug = 'fisioterapeuta';

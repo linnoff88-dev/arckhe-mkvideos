@@ -1,5 +1,5 @@
 /**
- * Factory CriaProf — versão Comic Style A (Calvin & Hobbes).
+ * Factory CriaProf — versêo Comic Style A (Calvin & Hobbes).
  *
  * Reusa criaProfScenes() de gen-lib/scene-templates.js, mas substitui o
  * estilo fotográfico (S_OLD/S_MID/S_FUT) pelo prompt suffix Calvin & Hobbes.
@@ -42,7 +42,7 @@ if (!slug) {
 }
 
 const originalProfile = profissoes.find((p) => p.slug === slug);
-if (!originalProfile) { console.error(`slug não encontrado: ${slug}`); process.exit(1); }
+if (!originalProfile) { console.error(`slug nêo encontrado: ${slug}`); process.exit(1); }
 
 // Aplica overlay de diversidade brasileira (override character/pronoun/hair_style)
 const profile = getDiverseProfile(originalProfile);

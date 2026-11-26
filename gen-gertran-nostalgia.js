@@ -21,7 +21,7 @@ if (!slug) {
 }
 
 const profile = profissoes.find((p) => p.slug === slug);
-if (!profile) { console.error(`slug não encontrado: ${slug}`); process.exit(1); }
+if (!profile) { console.error(`slug nêo encontrado: ${slug}`); process.exit(1); }
 
 const DATE = '2026-04-23';
 const OUT = path.join(__dirname, `output/videos/gertran-nostalgia/${slug}_${DATE}/imgs`);

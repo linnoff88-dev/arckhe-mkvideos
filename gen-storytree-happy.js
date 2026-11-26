@@ -2,12 +2,12 @@
 /**
  * gen-storytree-happy.js
  *
- * História completa "Uma Manhã, Um Cachorro, Uma Vida" — 60s, 9:16,
+ * História completa "Uma Manhê, Um Cachorro, Uma Vida" — 60s, 9:16,
  * tema alegre/envolvente, gerada ponta-a-ponta com:
  *   - inemaimg (12 imgs novas)
  *   - storytree-classify (auto image_class do prompt)
  *   - storytree-shot-schema (plan factory)
- *   - storytree-qa (validação)
+ *   - storytree-qa (validaçêo)
  *   - storytree-presets / storytree-rhythm (render)
  *
  * Output: output/videos/happy/uma-manha_<date>/video/storytree-happy.mp4
@@ -274,7 +274,7 @@ function mixAudio(videoPath, totalDur) {
 
 (async () => {
   const t0 = Date.now();
-  console.log(`storytree-happy — "Uma Manhã, Um Cachorro, Uma Vida"`);
+  console.log(`storytree-happy — "Uma Manhê, Um Cachorro, Uma Vida"`);
   console.log(`format: ${FORMAT} | duration: ${TOTAL_DURATION}s | resolution: ${W}x${H}@${FPS}`);
   console.log(`output: ${OUT}\n`);
 
@@ -288,7 +288,7 @@ function mixAudio(videoPath, totalDur) {
 
   const meta = {
     timestamp: new Date().toISOString(),
-    title: 'Uma Manhã, Um Cachorro, Uma Vida',
+    title: 'Uma Manhê, Um Cachorro, Uma Vida',
     output: finalVid,
     duration: noAudio.dur,
     format: FORMAT,

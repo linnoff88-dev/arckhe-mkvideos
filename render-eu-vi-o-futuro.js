@@ -17,7 +17,7 @@ const MUSIC = '/tmp/musica_video/freesound_748406_Inspiring_Orchestral_Music_wit
 const N_SCENES = 30; // cena01..cena30 (ini + fim = 60 imgs)
 const FPS = 30;
 const SIZE = 1080;
-const TOTAL_DUR = 60; // mantém duração da música
+const TOTAL_DUR = 60; // mantém duraçêo da música
 // distribui uniformemente o tempo entre todas as imagens (60 / 60 = 1s cada)
 const DUR_PER_IMG = TOTAL_DUR / (N_SCENES * 2);
 const FRAMES = Math.round(DUR_PER_IMG * FPS); // 30 frames = 1s
